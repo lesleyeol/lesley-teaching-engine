@@ -1,1 +1,1 @@
-# -lesley-ai-os
+# lesley-ai-os
