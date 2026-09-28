@@ -21,7 +21,7 @@ label{display:grid;gap:6px;font-size:14px;font-weight:700}input,select,textarea{
 textarea{resize:vertical}.primary,.secondary,.danger{border:0;border-radius:12px;padding:11px 13px;font-weight:700;font:inherit}.primary{background:#111;color:#fff}.secondary{background:var(--soft);color:#111}.danger{background:var(--danger);color:#fff}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.grow{flex:1}.hidden{display:none!important}fieldset{border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:10px}legend{font-weight:800}.check{grid-template-columns:auto 1fr;align-items:center}.check input{width:auto}
 .item{display:grid;gap:8px}.itemhead{display:flex;justify-content:space-between;gap:8px}.tag{display:inline-block;background:var(--soft);border-radius:999px;padding:5px 9px;font-size:12px;margin:2px 3px 2px 0}
-.report{line-height:1.7}.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;overflow-x:auto;gap:4px;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);backdrop-filter:blur(18px)}
+.report{line-height:1.7}.statusline{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}.statusline:last-child{border-bottom:0}.statusdot{width:10px;height:10px;border-radius:50%;margin-top:6px;flex:0 0 10px;background:#777}.statusdot.done{background:#111}.statusdot.work{background:#777}.statusdot.wait{background:#bbb}.progress-note{padding:12px;border-radius:14px;background:var(--soft);line-height:1.55}.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;overflow-x:auto;gap:4px;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);backdrop-filter:blur(18px)}
 .nav button{flex:1;min-width:58px;border:0;background:transparent;border-radius:10px;padding:10px 6px;font-size:12px;font-weight:700;color:var(--muted)}.nav button.active{background:#111;color:#fff}
 .toast{position:fixed;z-index:50;left:50%;bottom:108px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none}.toast.show{opacity:1}
 @media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}#dashcards{grid-template-columns:repeat(4,1fr)}}
@@ -89,6 +89,98 @@ textarea{resize:vertical}.primary,.secondary,.danger{border:0;border-radius:12px
   <div class="card"><h3>優先補救順序</h3><div id="weaknessList"></div></div>
 </section>
 
+
+<section id="progress" class="view">
+  <div class="row"><h2 class="grow">升國中家教進度</h2><span class="tag">G6 → G7</span></div>
+
+  <div class="card">
+    <h3>目前定位</h3>
+    <p class="muted">這一頁只整合已回報過的教材與學習狀況；「教材完成」與「學生已掌握」分開顯示，沒有實測證據就不判定 mastery。</p>
+  </div>
+
+  <div class="card">
+    <h3>教材進度</h3>
+
+    <div class="statusline">
+      <span class="statusdot done"></span>
+      <div>
+        <strong>Unit 8｜Be Verbs Negatives</strong>
+        <div class="muted">教材／教學內容：已完成。核心包含 pronoun–be、am not / isn't / aren't、完整否定句、依 evidence 判斷與修正。</div>
+        <div><span class="tag">教材完成</span><span class="tag">Mastery 未驗證</span></div>
+      </div>
+    </div>
+
+    <div class="statusline">
+      <span class="statusdot work"></span>
+      <div>
+        <strong>Unit 9｜Yes/No Questions</strong>
+        <div class="muted">20 題練習已進入 Grammar／Vocabulary／Prior-retrieval／Target／Level／Leakage／Ambiguity／Diagnostic 稽核；尚不能視為已完成 mastery。</div>
+        <div><span class="tag">準備／稽核中</span><span class="tag">未建立 Mastery</span></div>
+      </div>
+    </div>
+
+    <div class="statusline">
+      <span class="statusdot work"></span>
+      <div>
+        <strong>Starter Unit｜自修評量版</strong>
+        <div class="muted">版面方向已改為緊湊但保留合理書寫距離；出題邏輯、題型分配與編排結構持續對齊市售／校用參考資料。</div>
+        <div><span class="tag">版型已定</span><span class="tag">內容持續整理</span></div>
+      </div>
+    </div>
+
+    <div class="statusline">
+      <span class="statusdot wait"></span>
+      <div>
+        <strong>Review C</strong>
+        <div class="muted">學生版／教師版／答案版／正式測驗列為 P0，但目前沒有足夠紀錄可標示為完成。</div>
+        <div><span class="tag">P0</span><span class="tag">待完成</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>目前弱點／重點監測</h3>
+    <div class="statusline">
+      <span class="statusdot work"></span>
+      <div><strong>Pronoun → Be 配對</strong><div class="muted">核心規則需能在新題中獨立提取；不能只靠題型熟悉度作答。</div></div>
+    </div>
+    <div class="statusline">
+      <span class="statusdot work"></span>
+      <div><strong>is / isn't、are / aren't 聽辨</strong><div class="muted">需要保留聽辨檢核，避免只看文字題正確但口語辨識不穩。</div></div>
+    </div>
+    <div class="statusline">
+      <span class="statusdot work"></span>
+      <div><strong>Prompt Dependency</strong><div class="muted">有提示／AI-on 成功不算獨立 mastery；要再做 AI-off 新題。</div></div>
+    </div>
+    <div class="statusline">
+      <span class="statusdot work"></span>
+      <div><strong>Delayed Retrieval</strong><div class="muted">當下會做仍不足，需用延後提取確認是否真正保留。</div></div>
+    </div>
+    <div class="progress-note"><strong>題目設計風險：</strong>陌生字彙可能干擾文法判斷，因此核心 Gate 應優先使用課本單字與已教內容。這是評量設計控制項，不直接視為學生能力缺陷。</div>
+  </div>
+
+  <div class="card">
+    <h3>Unit 8 Gate 標準</h3>
+    <div class="grid stats">
+      <div class="card stat"><span>Bridge Gate</span><strong>5/6</strong></div>
+      <div class="card stat"><span>Rescue Re-check</span><strong>≥3/4</strong></div>
+      <div class="card stat"><span>Written Exit</span><strong>4/5</strong></div>
+      <div class="card stat"><span>Oral Gate</span><strong>3/4</strong></div>
+    </div>
+    <p class="muted">Unit Quiz：85/100，且 B／C／D／F 各至少 3/4。尚未有實際學生分數紀錄，因此目前不標記「已通過」。</p>
+  </div>
+
+  <div class="card">
+    <h3>下一步教學順序</h3>
+    <ol>
+      <li><strong>先補 Unit 8 實測證據</strong>：Written Exit／Oral Gate／Unit Quiz 至少完成一組可記錄結果。</li>
+      <li><strong>再進 Unit 9</strong>：確認 Yes/No Questions 不只是句型模仿，而能獨立完成問句與回答。</li>
+      <li><strong>安排 Delayed Retrieval</strong>：新題、無提示、隔堂再測。</li>
+      <li><strong>Review C</strong>：只整合真正需要跨單元提取的能力，不把 Review 做成單元重考。</li>
+    </ol>
+  </div>
+</section>
+
 <section id="report" class="view">
   <h2>課後報告</h2>
   <div class="card form noprint"><label>學生<select id="reportStudent"></select></label><button id="makeReport" class="primary">產生報告</button></div>
@@ -105,7 +197,7 @@ textarea{resize:vertical}.primary,.secondary,.danger{border:0;border-radius:12px
 </section>
 </main>
 
-<nav class="nav"><button data-go="home" class="active">首頁</button><button data-go="students">學生</button><button data-go="session">課程</button><button data-go="errors">錯誤</button><button data-go="dashboard">弱點</button><button data-go="report">報告</button><button data-go="backup">備份</button></nav>
+<nav class="nav"><button data-go="home" class="active">首頁</button><button data-go="students">學生</button><button data-go="session">課程</button><button data-go="errors">錯誤</button><button data-go="dashboard">弱點</button><button data-go="progress">進度</button><button data-go="report">報告</button><button data-go="backup">備份</button></nav>
 <div id="toast" class="toast"></div>
 
 <script>
