@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lesley TE">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<title>Lesley Teaching Engine</title>
+<style>
+:root{--bg:#f5f5f2;--card:#fff;--ink:#111;--muted:#6c6c68;--line:#dddcd6;--soft:#ecece6;--danger:#9b2525}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;padding-bottom:88px}
+header{position:sticky;top:0;z-index:20;padding:calc(12px + env(safe-area-inset-top)) 16px 12px;background:rgba(245,245,242,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+h1{font-size:20px;margin:2px 0}.eyebrow{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700;margin:0}
+main{max-width:900px;margin:auto;padding:16px}.view{display:none}.view.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 8px 28px rgba(0,0,0,.05)}
+.hero h2{font-size:27px;line-height:1.15;margin:10px 0}.muted{color:var(--muted);line-height:1.55}.grid{display:grid;gap:10px}.stats{grid-template-columns:repeat(2,1fr)}
+.stat span{font-size:13px;color:var(--muted)}.stat strong{display:block;font-size:28px;margin-top:4px}.form{display:grid;gap:12px}
+label{display:grid;gap:6px;font-size:14px;font-weight:700}input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit;color:var(--ink)}
+textarea{resize:vertical}.primary,.secondary,.danger{border:0;border-radius:12px;padding:11px 13px;font-weight:700;font:inherit}.primary{background:#111;color:#fff}.secondary{background:var(--soft);color:#111}.danger{background:var(--danger);color:#fff}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.grow{flex:1}.hidden{display:none!important}fieldset{border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:10px}legend{font-weight:800}.check{grid-template-columns:auto 1fr;align-items:center}.check input{width:auto}
+.item{display:grid;gap:8px}.itemhead{display:flex;justify-content:space-between;gap:8px}.tag{display:inline-block;background:var(--soft);border-radius:999px;padding:5px 9px;font-size:12px;margin:2px 3px 2px 0}
+.report{line-height:1.7}.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;overflow-x:auto;gap:4px;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);backdrop-filter:blur(18px)}
+.nav button{flex:1;min-width:58px;border:0;background:transparent;border-radius:10px;padding:10px 6px;font-size:12px;font-weight:700;color:var(--muted)}.nav button.active{background:#111;color:#fff}
+.toast{position:fixed;z-index:50;left:50%;bottom:108px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none}.toast.show{opacity:1}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}#dashcards{grid-template-columns:repeat(4,1fr)}}
+@media print{header,.nav,.noprint{display:none!important}body{background:#fff;padding:0}.view{display:none!important}#report.view{display:block!important}.card{border:0;box-shadow:none;padding:0}}
+</style>
+</head>
+<body>
+<header><p class="eyebrow">OFFLINE TEACHING TOOL</p><h1>Lesley Teaching Engine</h1></header>
+<main>
+<section id="home" class="view active">
+  <div class="card hero"><span class="tag">MVP v1</span><h2>先記錄，再判斷，再補救</h2><p class="muted">不呼叫 AI、不消耗 AI 額度。資料只存在這台裝置的瀏覽器。</p><div class="row"><button class="primary" data-go="session">開始本次課程</button><button class="secondary" data-go="dashboard">查看弱點</button></div></div>
+  <div class="grid stats"><div class="card stat"><span>學生</span><strong id="statStudents">0</strong></div><div class="card stat"><span>課程</span><strong id="statSessions">0</strong></div><div class="card stat"><span>錯誤</span><strong id="statErrors">0</strong></div><div class="card stat"><span>待補救</span><strong id="statWeak">0</strong></div></div>
+  <div class="card"><strong>個資提醒</strong><p class="muted">請只用學生代號／暱稱。不要輸入生日、地址、身分證、病歷或保險客戶資料。</p></div>
+</section>
+
+<section id="students" class="view">
+  <div class="row"><h2 class="grow">學生資料</h2><button id="newStudent" class="primary">新增學生</button></div>
+  <form id="studentForm" class="card form hidden"><input type="hidden" id="studentId"><label>學生代號／暱稱<input id="studentName" maxlength="30" required placeholder="例如 S01／Kevin"></label><label>年級／程度<input id="studentLevel" placeholder="例如 小六／A1"></label><label>已學內容<textarea id="studentLearned" rows="3"></textarea></label><label>常見困難<textarea id="studentNeeds" rows="3"></textarea></label><div class="row"><button type="submit" class="primary">儲存</button><button type="button" id="cancelStudent" class="secondary">取消</button></div></form>
+  <div id="studentList"></div>
+</section>
+
+<section id="session" class="view">
+  <h2>本次課程紀錄</h2>
+  <form id="sessionForm" class="card form">
+    <label>學生<select id="sessionStudent" required></select></label>
+    <label>日期<input id="sessionDate" type="date" required></label>
+    <label>課程類型<select id="sessionType"><option>新授</option><option>練習</option><option>複習</option><option>評量</option><option>補救</option></select></label>
+    <label>本次能力目標<input id="sessionGoal" required placeholder="例如：能正確使用 is / are"></label>
+    <label>教學內容<textarea id="sessionContent" rows="3"></textarea></label>
+    <fieldset><legend>Learning Gate</legend>
+      <label class="check"><input id="gateIndependent" type="checkbox">可獨立完成</label>
+      <label class="check"><input id="gateTransfer" type="checkbox">可在新題遷移</label>
+      <label class="check"><input id="gateDelayed" type="checkbox">延後提取仍正確</label>
+      <label>達成程度<select id="gateScore"><option value="0">0｜尚未建立</option><option value="1">1｜大量提示</option><option value="2">2｜少量提示</option><option value="3">3｜可獨立完成</option><option value="4">4｜可穩定遷移</option></select></label>
+    </fieldset>
+    <fieldset><legend>執行觀察</legend>
+      <label>Task Initiation<select id="taskInitiation"><option value="0">未觀察</option><option value="1">需多次提醒</option><option value="2">一次提示可開始</option><option value="3">可自行開始</option></select></label>
+      <label>Sustained Completion<select id="sustainedCompletion"><option value="0">未觀察</option><option value="1">常中斷</option><option value="2">少量提醒可完成</option><option value="3">可自行持續完成</option></select></label>
+      <label>Prompt Level<select id="promptLevel"><option value="0">無提示</option><option value="1">最小提示</option><option value="2">中度提示</option><option value="3">大量提示</option></select></label>
+      <label class="check"><input id="independentRecheck" type="checkbox">Independent Re-check｜可自行重檢</label>
+    </fieldset>
+    <label>教師觀察<textarea id="sessionNotes" rows="4"></textarea></label>
+    <button type="submit" class="primary">儲存課程紀錄</button>
+  </form>
+</section>
+
+<section id="errors" class="view">
+  <h2>錯誤紀錄</h2>
+  <form id="errorForm" class="card form">
+    <label>學生<select id="errorStudent" required></select></label>
+    <label>能力領域<select id="errorDomain"><option>Vocabulary</option><option>Grammar</option><option>Reading</option><option>Listening</option><option>Speaking</option><option>Spelling</option><option>Execution</option></select></label>
+    <label>目標能力<input id="errorTarget" required></label>
+    <label>錯誤表現<textarea id="errorBehavior" rows="3" required></textarea></label>
+    <label>可能原因<select id="errorCause"><option>尚未理解規則</option><option>無法提取</option><option>發音／聽辨不穩</option><option>注意力或執行中斷</option><option>題意理解錯誤</option><option>過度類化</option><option>其他</option></select></label>
+    <label>嚴重度<select id="errorSeverity"><option value="1">1｜偶發</option><option value="2">2｜重複出現</option><option value="3">3｜影響核心能力</option></select></label>
+    <label>補救建議<textarea id="errorRemedy" rows="3" placeholder="例如：最小提示 → 撤除提示 → 新題重測"></textarea></label>
+    <button type="submit" class="primary">加入錯誤紀錄</button>
+  </form>
+  <div id="errorList"></div>
+</section>
+
+<section id="dashboard" class="view">
+  <div class="row"><h2 class="grow">弱點儀表板</h2><select id="dashboardStudent" style="max-width:220px"></select></div>
+  <div id="dashcards" class="grid"></div>
+  <div class="card"><h3>優先補救順序</h3><div id="weaknessList"></div></div>
+</section>
+
+<section id="report" class="view">
+  <h2>課後報告</h2>
+  <div class="card form noprint"><label>學生<select id="reportStudent"></select></label><button id="makeReport" class="primary">產生報告</button></div>
+  <article id="reportOutput" class="card report"><p class="muted">選擇學生後產生報告。</p></article>
+  <button id="printReport" class="secondary noprint hidden">列印／另存 PDF</button>
+</section>
+
+<section id="backup" class="view">
+  <h2>備份與匯出</h2>
+  <div class="card"><h3>完整 JSON 備份</h3><button id="exportJson" class="primary">匯出 JSON</button></div>
+  <div class="card"><h3>錯誤紀錄 CSV</h3><button id="exportCsv" class="secondary">匯出 CSV</button></div>
+  <div class="card form"><h3>還原備份</h3><input id="importFile" type="file" accept=".json,application/json"><button id="importJson" class="secondary">匯入 JSON</button></div>
+  <div class="card"><h3>清除本機資料</h3><p class="muted">先匯出備份。此動作無法復原。</p><button id="clearAll" class="danger">清除全部資料</button></div>
+</section>
+</main>
+
+<nav class="nav"><button data-go="home" class="active">首頁</button><button data-go="students">學生</button><button data-go="session">課程</button><button data-go="errors">錯誤</button><button data-go="dashboard">弱點</button><button data-go="report">報告</button><button data-go="backup">備份</button></nav>
+<div id="toast" class="toast"></div>
+
+<script>
+const KEY='lesley-teaching-engine-v1',EMPTY={students:[],sessions:[],errors:[]};
+const state=load();function load(){try{return {...EMPTY,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{return JSON.parse(JSON.stringify(EMPTY))}}
+function save(){localStorage.setItem(KEY,JSON.stringify(state));render()}
+function uid(){return crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2)}
+function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function today(){return new Date().toISOString().slice(0,10)}
+function toast(x){const t=document.querySelector('#toast');t.textContent=x;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+function go(n){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===n));document.querySelectorAll('[data-go]').forEach(b=>b.classList.toggle('active',b.dataset.go===n));scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));sessionDate.value=today();
+
+function options(old=''){return '<option value="">請選擇學生</option>'+state.students.map(s=>'<option value="'+s.id+'" '+(s.id===old?'selected':'')+'>'+esc(s.name)+'</option>').join('')}
+function refreshSelects(){['sessionStudent','errorStudent','dashboardStudent','reportStudent'].forEach(k=>{const e=document.querySelector('#'+k),old=e.value;e.innerHTML=options(old)})}
+
+newStudent.onclick=()=>{studentForm.reset();studentId.value='';studentForm.classList.remove('hidden')};
+cancelStudent.onclick=()=>studentForm.classList.add('hidden');
+studentForm.onsubmit=e=>{e.preventDefault();const r={id:studentId.value||uid(),name:studentName.value.trim(),level:studentLevel.value.trim(),learned:studentLearned.value.trim(),needs:studentNeeds.value.trim()};const i=state.students.findIndex(x=>x.id===r.id);i>=0?state.students[i]=r:state.students.push(r);studentForm.classList.add('hidden');save();toast('學生資料已儲存')};
+studentList.onclick=e=>{const b=e.target.closest('button[data-act]');if(!b)return;const s=state.students.find(x=>x.id===b.dataset.id);if(!s)return;if(b.dataset.act==='edit'){studentId.value=s.id;studentName.value=s.name;studentLevel.value=s.level;studentLearned.value=s.learned;studentNeeds.value=s.needs;studentForm.classList.remove('hidden')}else if(confirm('刪除 '+s.name+'？相關紀錄也會刪除。')){state.students=state.students.filter(x=>x.id!==s.id);state.sessions=state.sessions.filter(x=>x.studentId!==s.id);state.errors=state.errors.filter(x=>x.studentId!==s.id);save()}};
+
+sessionForm.onsubmit=e=>{e.preventDefault();state.sessions.push({id:uid(),studentId:sessionStudent.value,date:sessionDate.value,type:sessionType.value,goal:sessionGoal.value.trim(),content:sessionContent.value.trim(),independent:gateIndependent.checked,transfer:gateTransfer.checked,delayed:gateDelayed.checked,score:+gateScore.value,taskInitiation:+taskInitiation.value,sustainedCompletion:+sustainedCompletion.value,promptLevel:+promptLevel.value,independentRecheck:independentRecheck.checked,notes:sessionNotes.value.trim(),createdAt:new Date().toISOString()});e.target.reset();sessionDate.value=today();save();toast('課程紀錄已儲存')};
+
+errorForm.onsubmit=e=>{e.preventDefault();state.errors.push({id:uid(),studentId:errorStudent.value,domain:errorDomain.value,target:errorTarget.value.trim(),behavior:errorBehavior.value.trim(),cause:errorCause.value,severity:+errorSeverity.value,remedy:errorRemedy.value.trim(),createdAt:new Date().toISOString()});e.target.reset();save();toast('錯誤紀錄已加入')};
+errorList.onclick=e=>{const b=e.target.closest('button[data-del]');if(!b)return;if(confirm('刪除這筆錯誤紀錄？')){state.errors=state.errors.filter(x=>x.id!==b.dataset.del);save()}};
+
+function weakData(studentId){const m={};state.errors.filter(e=>e.studentId===studentId).forEach(e=>{const k=e.domain+'｜'+e.target;if(!m[k])m[k]={domain:e.domain,target:e.target,total:0,count:0,causes:{},remedies:new Set()};m[k].total+=e.severity;m[k].count++;m[k].causes[e.cause]=(m[k].causes[e.cause]||0)+1;if(e.remedy)m[k].remedies.add(e.remedy)});return Object.values(m).sort((a,b)=>b.total-a.total)}
+
+function renderStudents(){studentList.innerHTML=state.students.length?state.students.map(s=>'<article class="card item"><div class="itemhead"><div><h3 style="margin:0">'+esc(s.name)+'</h3><div class="muted">'+esc(s.level||'未填程度')+'</div></div><div class="row"><button class="secondary" data-act="edit" data-id="'+s.id+'">編輯</button><button class="danger" data-act="delete" data-id="'+s.id+'">刪除</button></div></div>'+(s.learned?'<div><strong>已學：</strong>'+esc(s.learned)+'</div>':'')+(s.needs?'<div><strong>困難：</strong>'+esc(s.needs)+'</div>':'')+'</article>').join(''):'<div class="card muted">尚未建立學生資料。</div>'}
+function renderErrors(){errorList.innerHTML=state.errors.length?[...state.errors].reverse().map(e=>{const s=state.students.find(x=>x.id===e.studentId);return '<article class="card item"><div class="itemhead"><div><h3 style="margin:0">'+esc(e.target)+'</h3><div class="muted">'+esc(s?.name||'未知學生')+' · '+esc(e.domain)+'</div></div><button class="danger" data-del="'+e.id+'">刪除</button></div><div>'+esc(e.behavior)+'</div><div><span class="tag">'+esc(e.cause)+'</span><span class="tag">嚴重度 '+e.severity+'</span></div>'+(e.remedy?'<div><strong>補救：</strong>'+esc(e.remedy)+'</div>':'')+'</article>'}).join(''):'<div class="card muted">尚無錯誤紀錄。</div>'}
+function renderStats(){statStudents.textContent=state.students.length;statSessions.textContent=state.sessions.length;statErrors.textContent=state.errors.length;const set=new Set(state.students.flatMap(s=>weakData(s.id).filter(w=>w.total>=2).map(w=>s.id+'|'+w.domain+'|'+w.target)));statWeak.textContent=set.size}
+function renderDashboard(){const sid=dashboardStudent.value;if(!sid){dashcards.innerHTML='';weaknessList.innerHTML='<p class="muted">請先選擇學生。</p>';return}const ss=state.sessions.filter(x=>x.studentId===sid),es=state.errors.filter(x=>x.studentId===sid),avg=ss.length?(ss.reduce((a,b)=>a+b.score,0)/ss.length).toFixed(1):'—',stable=ss.filter(x=>x.independent&&x.transfer&&x.delayed).length,recheck=ss.filter(x=>x.independentRecheck).length;dashcards.innerHTML='<div class="card stat"><span>平均達成</span><strong>'+avg+'</strong></div><div class="card stat"><span>穩定 Gate</span><strong>'+stable+'</strong></div><div class="card stat"><span>可自行重檢</span><strong>'+recheck+'</strong></div><div class="card stat"><span>錯誤筆數</span><strong>'+es.length+'</strong></div>';const ws=weakData(sid);weaknessList.innerHTML=ws.length?ws.map((w,i)=>{const cause=Object.entries(w.causes).sort((a,b)=>b[1]-a[1])[0]?.[0]||'未分類';return '<div class="item"><strong>'+(i+1)+'. '+esc(w.target)+'</strong><div class="muted">'+esc(w.domain)+' · 優先分數 '+w.total+' · '+w.count+' 次 · 主要原因：'+esc(cause)+'</div>'+(w.remedies.size?'<div>'+[...w.remedies].map(r=>'<span class="tag">'+esc(r)+'</span>').join('')+'</div>':'')+'</div>'}).join(''):'<p class="muted">目前沒有弱點紀錄。</p>'}
+dashboardStudent.onchange=renderDashboard;
+
+makeReport.onclick=()=>{const sid=reportStudent.value;if(!sid){reportOutput.innerHTML='<p class="muted">請先選擇學生。</p>';return}const s=state.students.find(x=>x.id===sid),ss=state.sessions.filter(x=>x.studentId===sid).sort((a,b)=>b.date.localeCompare(a.date)),latest=ss[0],ws=weakData(sid).slice(0,3),passed=latest?[latest.independent?'可獨立完成':null,latest.transfer?'可新題遷移':null,latest.delayed?'延後提取穩定':null,latest.independentRecheck?'可自行重檢':null].filter(Boolean):[];reportOutput.innerHTML='<h2>'+esc(s.name)+'｜課後學習報告</h2><p class="muted">產生日期：'+today()+'</p><h3>目前學習狀態</h3><p>'+(latest?'最近課程 '+esc(latest.date)+'「'+esc(latest.type)+'」，目標「'+esc(latest.goal)+'」，達成 '+latest.score+'/4。':'目前尚無課程紀錄。')+'</p><h3>已觀察到的能力</h3>'+(passed.length?'<ul>'+passed.map(x=>'<li>'+x+'</li>').join('')+'</ul>':'<p>目前尚無完整 Gate 通過紀錄。</p>')+'<h3>優先補強</h3>'+(ws.length?'<ol>'+ws.map(w=>'<li><strong>'+esc(w.target)+'</strong>（'+esc(w.domain)+'）— '+w.count+' 次。</li>').join('')+'</ol>':'<p>目前沒有已記錄的核心弱點。</p>')+'<h3>下一步建議</h3>'+(ws.length?'<ul>'+ws.map(w=>'<li>'+esc([...w.remedies][0]||'最小提示 → 撤除提示 → 新題重測。')+'</li>').join('')+'</ul>':'<p>持續短量延後提取與新題遷移檢核。</p>')+'<h3>教師觀察</h3><p>'+esc(latest?.notes||'尚未填寫。')+'</p><p class="muted">此報告依本機紀錄整理，不包含 AI 判讀。</p>';printReport.classList.remove('hidden')};
+printReport.onclick=()=>print();
+
+function download(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+exportJson.onclick=()=>download('Lesley_TE_backup_'+today()+'.json',JSON.stringify(state,null,2),'application/json');
+exportCsv.onclick=()=>{const rows=[['學生','領域','目標能力','錯誤表現','可能原因','嚴重度','補救建議','建立時間']];state.errors.forEach(e=>{const s=state.students.find(x=>x.id===e.studentId);rows.push([s?.name||'',e.domain,e.target,e.behavior,e.cause,e.severity,e.remedy,e.createdAt])});const csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\n');download('Lesley_TE_errors_'+today()+'.csv',csv,'text/csv;charset=utf-8')};
+importJson.onclick=async()=>{const f=importFile.files[0];if(!f)return toast('請先選擇 JSON');try{const d=JSON.parse(await f.text());if(!Array.isArray(d.students)||!Array.isArray(d.sessions)||!Array.isArray(d.errors))throw 0;if(confirm('匯入會取代目前本機資料，確定？')){state.students=d.students;state.sessions=d.sessions;state.errors=d.errors;save();toast('備份已還原')}}catch{alert('檔案格式不正確')}};
+clearAll.onclick=()=>{if(confirm('確定清除全部本機資料？')&&confirm('再次確認：你已先備份嗎？')){state.students=[];state.sessions=[];state.errors=[];save();toast('資料已清除')}};
+
+function render(){refreshSelects();renderStudents();renderErrors();renderStats();renderDashboard()}render();
+if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js'));
+</script>
+</body>
+</html>
