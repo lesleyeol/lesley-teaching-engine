@@ -1,0 +1,19 @@
+{
+  "name": "Lesley Teaching Engine",
+  "short_name": "Lesley TE",
+  "description": "離線教學紀錄、錯誤診斷、弱點儀表板與課後報告工具",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f5f2",
+  "theme_color": "#111111",
+  "lang": "zh-Hant",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
