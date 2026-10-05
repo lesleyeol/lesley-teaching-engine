@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>國一英文第一次段考｜文法立體心智圖 Demo</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+<style>
+:root{
+  --bg:#f7f3ea;
+  --paper:#fffdf8;
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --line:#374151;
+  --accent:#8b5cf6;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-rounded, "SF Pro Rounded", "Noto Sans TC", system-ui, sans-serif;
+  background:linear-gradient(180deg,var(--bg),#fff);
+  color:var(--ink);
+}
+.wrap{max-width:980px;margin:0 auto;padding:18px 14px 40px}
+.hero{
+  position:relative;
+  background:var(--paper);
+  border-radius:24px;
+  padding:22px 18px 18px;
+  margin-bottom:16px;
+  overflow:hidden;
+}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+h1{font-size:clamp(26px,7vw,42px);line-height:1.12;margin:0 0 8px;position:relative}
+.sub{font-size:15px;color:var(--muted);position:relative}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.card{
+  position:relative;
+  background:var(--card);
+  border-radius:20px;
+  padding:16px;
+  overflow:hidden;
+}
+.card canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.card h2{margin:0 0 8px;font-size:20px;position:relative}
+.card p,.card li{font-size:15px;line-height:1.65;position:relative}
+.badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#ede9fe;font-size:12px;margin:2px 4px 4px 0}
+.mermaid-box{
+  background:var(--paper);
+  border-radius:20px;
+  padding:10px;
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.mermaid{min-width:720px}
+.tip{font-size:13px;color:var(--muted);margin-top:8px}
+@media (min-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero sketch">
+    <canvas></canvas>
+    <h1>第一次段考<br>文法立體心智圖</h1>
+    <div class="sub">Starter → Unit 1 → Unit 2 ｜先看「主幹」，再補「易錯點」</div>
+  </section>
+
+  <section class="grid">
+    <article class="card sketch">
+      <canvas></canvas>
+      <h2>Starter｜be 動詞</h2>
+      <span class="badge">am / is / are</span>
+      <span class="badge">肯定句</span>
+      <span class="badge">否定句</span>
+      <span class="badge">疑問句</span>
+      <ul>
+        <li>主詞先判斷，再選 be 動詞。</li>
+        <li>否定：be + not。</li>
+        <li>疑問：be 提到句首。</li>
+      </ul>
+    </article>
+
+    <article class="card sketch">
+      <canvas></canvas>
+      <h2>Unit 1｜人稱與指示</h2>
+      <span class="badge">Who</span>
+      <span class="badge">this / that</span>
+      <span class="badge">he / she</span>
+      <ul>
+        <li>Who 問「人」。</li>
+        <li>this / that 要搭配距離概念。</li>
+        <li>代名詞改變時，be 也跟著變。</li>
+      </ul>
+    </article>
+
+    <article class="card sketch">
+      <canvas></canvas>
+      <h2>Unit 2｜名詞與複數</h2>
+      <span class="badge">a / an</span>
+      <span class="badge">複數</span>
+      <span class="badge">these / those</span>
+      <ul>
+        <li>單數可數名詞前注意 a / an。</li>
+        <li>複數名詞要看字尾變化。</li>
+        <li>these / those 搭配複數。</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="mermaid-box sketch" style="margin-top:14px;position:relative">
+    <canvas></canvas>
+    <div class="mermaid">
+flowchart TD
+  A["段考文法核心"] --> B["Starter：be 動詞"]
+  A --> C["Unit 1：人稱／指示"]
+  A --> D["Unit 2：名詞／複數"]
+
+  B --> B1["主詞 → am / is / are"]
+  B --> B2["否定：be + not"]
+  B --> B3["疑問：be 提前"]
+
+  C --> C1["Who：問人"]
+  C --> C2["this / that：單數"]
+  C --> C3["he / she / it：第三人稱單數"]
+
+  D --> D1["a / an：單數可數"]
+  D --> D2["複數字尾"]
+  D --> D3["these / those：複數"]
+
+  B3 --> E["作答時先抓主詞"]
+  C3 --> E
+  D3 --> E
+    </div>
+    <div class="tip">手機／iPad 可左右滑動查看完整關係圖。這是結構 Demo，不代表正式考試範圍已完整定稿。</div>
+  </section>
+</div>
+
+<script>
+mermaid.initialize({
+  startOnLoad:true,
+  theme:"base",
+  securityLevel:"loose",
+  themeVariables:{
+    fontFamily:'ui-rounded, "SF Pro Rounded", "Noto Sans TC", system-ui, sans-serif',
+    primaryColor:"#f5f3ff",
+    primaryTextColor:"#1f2937",
+    primaryBorderColor:"#6d28d9",
+    lineColor:"#6b7280",
+    secondaryColor:"#ecfeff",
+    tertiaryColor:"#fff7ed"
+  },
+  flowchart:{curve:"basis"}
+});
+
+function sketchBoxes(){
+  document.querySelectorAll(".sketch").forEach((el, idx)=>{
+    const canvas = el.querySelector("canvas");
+    if(!canvas) return;
+    const rect = el.getBoundingClientRect();
+    canvas.width = Math.max(1, rect.width * devicePixelRatio);
+    canvas.height = Math.max(1, rect.height * devicePixelRatio);
+    canvas.style.width = rect.width+"px";
+    canvas.style.height = rect.height+"px";
+    const rc = rough.canvas(canvas);
+    const s = devicePixelRatio;
+    rc.rectangle(5*s,5*s,(rect.width-10)*s,(rect.height-10)*s,{
+      stroke:"#374151",
+      strokeWidth:1.4*s,
+      roughness:1.8,
+      bowing:1.4,
+      fill:"rgba(255,255,255,0)",
+      seed:100+idx
+    });
+  });
+}
+window.addEventListener("load",sketchBoxes);
+window.addEventListener("resize",()=>{clearTimeout(window.__r);window.__r=setTimeout(sketchBoxes,150)});
+</script>
+</body>
+</html>
