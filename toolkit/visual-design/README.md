@@ -4,17 +4,21 @@
 
 ## 從這裡看成果
 
-[八個專案的下載工作與原始碼壓縮包](https://github.com/lesleyeol/lesley-teaching-engine/actions/runs/37342614754)
+**[開啟八個專案的版本下載頁](https://github.com/lesleyeol/lesley-teaching-engine/releases/tag/visual-toolkit-sources-2026-10-06)**
 
-開啟上面的 GitHub 工作頁，查看執行結果；在 Artifacts 區下載 `visual-toolkit-eight-sources`。請以工作實際狀態與包內 `download-report.json` 為準，不把建立工作等同於下載成功。
+**[直接下載八合一原始碼包（約 60 MB）](https://github.com/lesleyeol/lesley-teaching-engine/releases/download/visual-toolkit-sources-2026-10-06/visual-toolkit-eight-sources.zip)**
 
-原始碼包的保留期限設定為 90 天，並非永久備份。正式驗證後的版本編號會保留在本資料夾的來源鎖定記錄，供之後查找原版本。這些是來源快照，不是已安裝在 iPad 的八個 App，也沒有將八套依賴灌入現有教學程式。
+八個官方專案已下載、鎖定版本、檢查檔案雜湊與 ZIP 完整性，並保存到 GitHub Release。下載頁有八個個別專案 ZIP、八合一包、來源報告、說明及雜湊清單，共 12 個附件。這份 Release 不使用 Actions 暫存包的 90 天自動到期機制，但仍受 repository／release 存續影響。
+
+**已完成：來源收藏與選用規則。未完成／未聲稱：八套依賴安裝、應用整合、手機功能測試或正式部署。** 這些是來源快照，不是已安裝在 iPad 的八個 App。你不必先下載 60 MB 到手機，才能閱讀本指南或提出製作需求。
+
+檔案與驗證記錄見 [VERIFICATION.md](VERIFICATION.md)、[source-lock.json](source-lock.json)。原始下載工作見 [下載驗證紀錄](https://github.com/lesleyeol/lesley-teaching-engine/actions/runs/37342614754)；保存工作見 [版本發布驗證紀錄](https://github.com/lesleyeol/lesley-teaching-engine/actions/runs/37343559855)。兩項工作均已成功。
 
 ## 你說什麼，我應該選什麼
 
 | 需求 | 優先考慮 | 怎麼用在你的工作 | 必須分清楚的限制 |
 |---|---|---|---|
-| 手寫圖解、文法框線、草圖箭頭 | **Rough.js** | 以手繪感外框與連線呈現概念 | 它負責繪圖風格，不替你檢查文法或安排所有節點 |
+| 手寫圖解、文法框線、草圖箭頭 | **Rough.js** | 以手繪感外框與連線呈現概念 | 負責繪圖風格，不替你檢查文法或安排所有節點 |
 | 手機操作頁、表單、卡片、頁籤 | **shadcn/ui** | 建構可操作的網頁介面 | 是可取用和修改的元件程式碼；要配合框架，不直接塞進舊單檔 HTML |
 | 統一配色、淺色／深色介面 | **Radix Colors** | 定義背景、邊線、按鈕與文字色階 | 是色彩系統，不是 Radix Primitives；仍須檢查實際文字對比 |
 | GitHub 個人介紹頁統計卡 | **GitHub README Stats：備查** | 僅供 GitHub 活動統計卡參考 | 官方已聲明不再維護；不是保費、教學成績或營收儀表板 |
@@ -29,7 +33,7 @@
 
 **文法心智圖：** 先用 Mermaid 整理關係；只有需要手繪外觀時才考慮 Rough.js。依成品形式決定是否需要兩者，不為了收藏齊全而強行疊加。
 
-**教材／學習網頁：** 先確認是否真的要新的操作介面；需要且架構合適時採 shadcn/ui，配色再採 Radix Colors。Fontsource 只在系統字體不能满足需求時加入；列印講義仍以清晰、黑白可讀、內容正確為先。
+**教材／學習網頁：** 先確認是否真的要新的操作介面；需要且架構合適時採 shadcn/ui，配色再採 Radix Colors。Fontsource 只在系統字體不能滿足需求時加入；列印講義仍以清晰、黑白可讀、內容正確為先。
 
 **工作流程說明：** 先用 Mermaid 呈現收件、判斷與下一步；要呈現平台名稱時再用 Simple Icons。畫出 LINE 等平台圖示不代表已取得訊息存取或完成串接。
 
