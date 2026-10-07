@@ -1,123 +1,27 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light">
-<meta name="description" content="文法關係圖試作：手機直式閱讀、點開例句。基本內容不依賴外部圖表程式。">
-<title>文法關係圖｜清晰閱讀版 v2</title>
-<style>
-:root{color-scheme:light;--paper:#fffdf8;--bg:#f5f2eb;--ink:#232638;--muted:#515563;--line:#cac4d4;--accent:#58408c;--soft:#f0ebf7;--base:18px}
-*{box-sizing:border-box}html{font-size:var(--base);-webkit-text-size-adjust:100%;scroll-padding-top:1rem}body{margin:0;color:var(--ink);background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.65}button,summary{font:inherit}button,a,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}a{color:var(--accent);text-underline-offset:3px}p,h1,h2,h3{margin:0}button{min-height:44px;border:1px solid #aaa3b7;border-radius:10px;background:var(--paper);padding:7px 12px;color:var(--ink)}[hidden]{display:none!important}.wrap{max-width:1120px;margin:auto;padding:22px 20px 32px}.mast{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--muted);font-size:.78rem;letter-spacing:.04em;margin-bottom:14px}.version{border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}.hero{margin-bottom:16px}h1{font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.25;letter-spacing:-.02em}.intro{margin-top:8px;color:var(--muted);font-size:.94rem}.notice{margin:12px 0 0;padding:9px 12px;border-left:3px solid #8d7952;background:#eee9dd;font-size:.78rem;color:#50452f}.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0 18px}.toolbar button{font-size:.83rem}.toolbar .hint{color:var(--muted);font-size:.8rem;flex:1 1 180px}.toolbar button[aria-pressed="true"]{background:var(--accent);color:white}.root{max-width:570px;margin:auto;text-align:center;border:2px solid var(--accent);border-radius:16px 14px 18px 12px;background:var(--paper);padding:13px 16px;position:relative}.root small{display:block;font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.08em}.root h2{font-size:1.25rem;line-height:1.4;margin:3px 0}.root p{font-size:.88rem;color:var(--muted)}.branches{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-top:36px}.branches:before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:2px solid var(--line)}.branch{position:relative;align-self:start;background:var(--paper);border:1.5px solid var(--line);border-radius:16px 12px 18px 12px;padding:15px 14px 10px;min-width:0}.branch:before{content:"";position:absolute;top:-19px;left:-11px;right:-11px;border-top:2px solid var(--line)}.branch:first-child:before{left:50%}.branch:last-child:before{right:50%}.branch:after{content:"";position:absolute;left:50%;height:18px;top:-19px;border-left:2px solid var(--line)}.branch-head{display:flex;gap:9px;align-items:center;margin-bottom:5px}.number{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:white;font-size:.79rem;font-weight:700;flex:none}.branch h3{font-size:1.1rem;line-height:1.4}.purpose{font-size:.83rem;color:var(--muted);margin-bottom:10px}details.lesson{border-top:1px solid #ddd7e5;padding:3px 0}summary{min-height:48px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;font-weight:650;line-height:1.5;padding:10px 0;font-size:.96rem}summary::-webkit-details-marker{display:none}summary:after{content:"＋";font-weight:400;color:var(--accent);font-size:1.13rem;flex:none}details[open]>summary:after{content:"−"}summary .label{min-width:0}summary small{display:block;font-size:.76rem;color:var(--muted);font-weight:400;margin-top:2px}.body{padding:0 0 12px;font-size:.91rem;overflow-wrap:break-word}.rule{padding:8px 10px;background:var(--soft);border-radius:8px;margin-bottom:9px}.rule strong{color:#422c70}.pairs{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;margin:0}.pairs dt,.pairs dd{padding:4px 0;margin:0}.pairs dd{font-weight:750;color:var(--accent)}.example{padding:9px 11px;border-left:3px solid #a894c5;background:#f6f3ed;margin:8px 0 0;line-height:1.55}.example span{display:block}.en{font-family:inherit;letter-spacing:.01em}.translation{font-size:.82rem;color:var(--muted);margin-top:2px}.caution{margin-top:8px;color:#654b21;font-size:.81rem}.caution b{font-weight:700}.return{display:flex;gap:10px;align-items:flex-start;border-top:1px solid var(--line);padding:14px 0 0;margin-top:20px;font-size:.92rem}.return b{color:var(--accent)}.return .arrow{font-size:1.2rem;color:var(--accent);line-height:1.4}.tools{border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:0 14px;margin-top:20px}.tools>summary{font-size:.85rem}.tools p{font-size:.83rem;color:var(--muted);margin-bottom:10px}.tools .action-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.tools button{font-size:.81rem}.status{font-size:.8rem!important;margin:8px 0 12px!important}.mermaid-viewport{overflow:auto;max-height:75vh;background:white;border:1px solid var(--line);border-radius:8px;padding:12px;margin:12px 0;overscroll-behavior:contain}.mermaid-viewport svg{max-width:none!important;display:block}.sketch-border{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}.root>*:not(svg),.branch>*:not(svg){position:relative;z-index:1}footer{font-size:.76rem;color:var(--muted);margin-top:16px;line-height:1.6}.skip{position:absolute;top:-100px;left:10px;background:white;padding:10px;z-index:10}.skip:focus{top:8px}
-@media(max-width:850px){.wrap{max-width:620px;padding:18px 16px 28px}.branches{grid-template-columns:1fr;gap:14px;padding:20px 0 0 20px}.branches:before{top:0;left:8px;height:100%;border-left:2px solid var(--line)}.branch:before,.branch:first-child:before,.branch:last-child:before{top:28px;left:-14px;right:auto;width:12px;border-top:2px solid var(--line)}.branch:after{display:none}.branch{padding:14px 15px 9px}.branch:last-child:after{display:block;top:30px;bottom:-2px;left:-15px;height:auto;width:8px;border:0;background:var(--bg)}.root{margin-left:20px}.root:before{content:"";position:absolute;bottom:-2px;left:-14px;height:18px;width:12px;border-left:2px solid var(--line);border-bottom:2px solid var(--line)}.toolbar{margin-bottom:14px}.toolbar .hint{flex-basis:100%}.return{margin-left:20px}.notice{font-size:.79rem}.hero h1{font-size:1.65rem}.pairs{grid-template-columns:minmax(0,1fr) auto}}
-@media(min-width:851px) and (max-width:1000px){.wrap{padding-left:18px;padding-right:18px}.branches{gap:14px}.branch{padding-left:12px;padding-right:12px}.branch:before{left:-9px;right:-9px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-@media print{body{background:white}.wrap{max-width:none;padding:0}.toolbar,.tools,.skip{display:none!important}.branches{display:block;padding-top:12px}.branches:before,.branch:before,.branch:after,.root:before{display:none!important}.branch{break-inside:avoid;margin:10px 0}.root{margin:0}.notice{background:white}details.lesson>.body{display:block!important}.sketch-border{display:none}}
-</style>
-</head>
-<body>
-<a class="skip" href="#mindmap">跳到文法關係圖</a>
-<main class="wrap" data-version="2026-10-06-v2">
-<header class="hero">
-<div class="mast"><span>ENGLISH · 文法關係圖</span><span class="version">清晰閱讀版 v2</span></div>
-<h1>看主詞，選對 be 動詞</h1>
-<p class="intro">先看關係，再點開例句。手機直式閱讀，不必左右拖動。</p>
-<p class="notice"><strong>試作示意，非正式考前講義。</strong>沿用上一版的 be 動詞、人稱與指示、名詞與複數主題；尚未核對課本的 Starter／Unit 1／Unit 2 分課範圍。</p>
-</header>
-<div class="toolbar" id="toolbar" hidden>
-<span class="hint">點「＋」看例句，點「−」收合。</span>
-<button type="button" id="expand">全部展開</button>
-<button type="button" id="collapse">全部收合</button>
-<button type="button" id="large" aria-pressed="false">放大文字</button>
-</div>
-<section id="mindmap" aria-label="三條文法關聯分支">
-<div class="root sketch"><small>共同主幹</small><h2>主詞是誰？單數還是複數？</h2><p>辨認主詞 → 選 am / is / are → 組成句子</p></div>
-<div class="branches">
-<article class="branch sketch" aria-labelledby="be-title">
-<div class="branch-head"><span class="number" aria-hidden="true">1</span><h3 id="be-title">be 動詞</h3></div>
-<p class="purpose">主詞決定搭配，句型決定位置。</p>
-<details class="lesson" open><summary><span class="label">主詞 → am / is / are<small>先選搭配，再看句型</small></span></summary><div class="body">
-<div class="rule"><dl class="pairs"><dt lang="en">I</dt><dd lang="en">am</dd><dt lang="en">he / she / it</dt><dd lang="en">is</dd><dt lang="en">you / we / they</dt><dd lang="en">are</dd></dl></div>
-<p class="example"><span class="en" lang="en">She <strong>is</strong> a student.</span><span class="translation">她是一位學生。</span></p>
-<p class="caution"><b>易錯：</b>you 指一個人，也用 are。</p></div></details>
-<details class="lesson"><summary><span class="label">否定句 → be 後加 not</span></summary><div class="body"><p class="rule">主詞 ＋ <strong>be ＋ not</strong> ＋ 其他內容</p><p class="example"><span class="en" lang="en">She <strong>is not</strong> a student.</span><span class="translation">她不是學生。</span></p><p class="caution"><b>位置：</b>not 在 be 動詞後面。</p></div></details>
-<details class="lesson"><summary><span class="label">疑問句 → be 移到句首</span></summary><div class="body"><p class="rule"><strong>Be</strong> ＋ 主詞 ＋ 其他內容？</p><p class="example"><span class="en" lang="en"><strong>Is she</strong> a student?</span><span class="translation">她是學生嗎？</span></p><p class="caution"><b>檢查：</b>句首大寫，句尾問號。</p></div></details>
-</article>
-<article class="branch sketch" aria-labelledby="person-title">
-<div class="branch-head"><span class="number" aria-hidden="true">2</span><h3 id="person-title">人稱與指示</h3></div>
-<p class="purpose">先知道指誰，再判斷遠近與單複數。</p>
-<details class="lesson" open><summary><span class="label">this / that → is<small>this：這個；that：那個</small></span></summary><div class="body"><p class="rule"><strong>this</strong> 指近處的一個；<strong>that</strong> 指遠處的一個。</p><p class="example"><span class="en" lang="en">This <strong>is</strong> a book.</span><span class="translation">這是一本書。</span></p><p class="caution"><b>關聯：</b>this / that 作主詞時，用 is。</p></div></details>
-<details class="lesson"><summary><span class="label">Who → 問「是誰」</span></summary><div class="body"><p class="rule"><strong>Who is … ?</strong> 詢問人的身分。</p><p class="example"><span class="en" lang="en">Who is that boy?</span><span class="translation">那個男孩是誰？</span><span class="en" lang="en">He is Tom.</span><span class="translation">他是 Tom。</span></p></div></details>
-<details class="lesson"><summary><span class="label">he / she / it → is</span></summary><div class="body"><p class="rule">第三人稱單數代名詞搭配 <strong>is</strong>。</p><p class="example"><span class="en" lang="en">Tom is a student.</span><span class="en" lang="en">→ He is a student.</span><span class="translation">Tom 換成 he，be 仍是 is。</span></p><p class="caution"><b>易錯：</b>換代名詞後要重新檢查；be 不一定會改變。</p></div></details>
-</article>
-<article class="branch sketch" aria-labelledby="noun-title">
-<div class="branch-head"><span class="number" aria-hidden="true">3</span><h3 id="noun-title">名詞與複數</h3></div>
-<p class="purpose">數量改變時，名詞與 be 都要檢查。</p>
-<details class="lesson" open><summary><span class="label">these / those → are<small>these：這些；those：那些</small></span></summary><div class="body"><p class="rule"><strong>these / those</strong> 表示複數，搭配 <strong>are</strong>。</p><p class="example"><span class="en" lang="en">These <strong>are books</strong>.</span><span class="translation">這些是書。</span></p><p class="caution"><b>一起變：</b>this → these；is → are；book → books。</p></div></details>
-<details class="lesson"><summary><span class="label">a / an → 表示「一個」</span></summary><div class="body"><p class="rule">搭配單數可數名詞；選 a 或 an 要聽後面緊接的<strong>發音</strong>。</p><p class="example"><span class="en" lang="en">a book / an apple</span><span class="translation">一本書／一顆蘋果</span></p><p class="caution"><b>易錯：</b>複數 books 前不加 a / an。</p></div></details>
-<details class="lesson"><summary><span class="label">複數名詞 → 檢查字尾</span></summary><div class="body"><p class="rule">常見變化有 <strong>-s / -es</strong>，但不是每個名詞都只加 s。</p><p class="example"><span class="en" lang="en">book → books</span><span class="en" lang="en">box → boxes</span></p><p class="caution"><b>提醒：</b>這裡只示範常見變化；完整規則需配合課本範圍。</p></div></details>
-</article>
-</div>
-<div class="return"><span class="arrow" aria-hidden="true">↳</span><p><b>把三條分支接起來：</b><span lang="en">This is a book.</span> → <span lang="en">These are books.</span><br>檢查順序：<strong>主詞 → be 動詞 → 名詞</strong>，不要只改其中一個。</p></div>
-</section>
-<details class="tools" id="tools"><summary><span class="label">工具試作區 · Mermaid / Rough.js<small>不影響上方閱讀；需要連線時才載入</small></span></summary><p>上方是可直接閱讀的穩定版。這裡保留兩個工具的示範；外部服務失敗時，不會清空教材。</p><div class="action-row" id="tool-actions" hidden><button id="load-mermaid" type="button">載入 Mermaid 關聯圖</button><button id="load-rough" type="button">套用手繪框線</button></div><p id="tool-status" class="status" role="status" aria-live="polite">基本閱讀與點開例句不需要外部套件。</p><div class="mermaid-viewport" id="mermaid-viewport" hidden role="region" aria-label="Mermaid 完整關聯圖，可左右捲動" tabindex="0"></div><noscript><p>JavaScript 已停用；上方內容及「＋／−」展開功能仍可使用。</p></noscript></details>
-<footer>2026-10-06 · v2 閱讀修正｜僅更新這個 Demo，不改教學引擎或既有評量 Gate。<br>示例為一般文法說明，不代表已核對學校教材或完整考試範圍。</footer>
-</main>
-<script>
-(function(){
-'use strict';
-const lessons=Array.from(document.querySelectorAll('details.lesson'));
-const byId=id=>document.getElementById(id);
-byId('toolbar').hidden=false;byId('tool-actions').hidden=false;
-let redraw=()=>{};
-byId('expand').addEventListener('click',()=>{lessons.forEach(el=>{el.open=true;});redraw();});
-byId('collapse').addEventListener('click',()=>{lessons.forEach(el=>{el.open=false;});redraw();});
-byId('large').addEventListener('click',function(){const large=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',String(large));this.textContent=large?'還原文字':'放大文字';document.documentElement.style.setProperty('--base',large?'21px':'18px');redraw();});
-const report=message=>{byId('tool-status').textContent=message;};
-function deadline(promise,ms){let timer;return Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('timeout')),ms);})]).finally(()=>clearTimeout(timer));}
-const graph=`flowchart TD
- A["看主詞，選對 be 動詞"] --> B["be 動詞"]
- A --> C["人稱與指示"]
- A --> D["名詞與複數"]
- B --> B1["I am / he・she・it is / you・we・they are"]
- B --> B2["否定：be 後加 not"]
- B --> B3["疑問：be 移到句首"]
- C --> C1["this / that 作主詞：用 is"]
- C --> C2["Who：問是誰"]
- C --> C3["he / she / it：用 is"]
- D --> D1["these / those：用 are"]
- D --> D2["a / an：表示一個"]
- D --> D3["複數名詞：檢查字尾"]
- B3 --> E["檢查主詞 → be → 名詞"]
- C1 --> E
- D1 --> E`;
-byId('load-mermaid').addEventListener('click',async function(){
- const button=this;button.disabled=true;report('正在載入 Mermaid；上方關係圖仍可閱讀。');
- try{
-  const module=await deadline(import('https://cdn.jsdelivr.net/npm/mermaid@11.16.1/dist/mermaid.esm.min.mjs'),7000);
-  const mermaid=module.default;
-  mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'base',fontFamily:'-apple-system, BlinkMacSystemFont, sans-serif',themeVariables:{fontSize:'20px',primaryColor:'#f0ebf7',primaryTextColor:'#232638',primaryBorderColor:'#58408c',lineColor:'#6d667a'},flowchart:{htmlLabels:false,useMaxWidth:false,curve:'linear',nodeSpacing:28,rankSpacing:38}});
-  const result=await deadline(mermaid.render('grammar-mermaid-v2',graph),7000);
-  const viewport=byId('mermaid-viewport');viewport.innerHTML=result.svg;viewport.hidden=false;
-  button.textContent='重新載入關聯圖';report('Mermaid 已載入。完整圖保持字體大小，可在圖框內左右捲動；手機建議以上方閱讀版為主。');
- }catch(error){report('Mermaid 未能載入；請直接使用上方關係圖。內容與例句完整保留，也可再按一次重試。');}
- finally{button.disabled=false;}
-});
-function loadScript(src){return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.async=true;script.onload=()=>resolve();script.onerror=()=>{script.remove();reject(new Error('load failed'));};document.head.append(script);});}
-byId('load-rough').addEventListener('click',async function(){
- const button=this;button.disabled=true;report('正在載入手繪框線；文字不會改變。');
- try{
-  if(!window.rough){await deadline(loadScript('https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js'),7000);}
-  if(!window.rough)throw new Error('rough missing');
-  function draw(){document.querySelectorAll('.sketch').forEach((el,index)=>{const old=el.querySelector('.sketch-border');if(old)old.remove();const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');const width=el.clientWidth,height=el.clientHeight;svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.setAttribute('class','sketch-border');svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');const rc=window.rough.svg(svg);svg.append(rc.rectangle(4,4,Math.max(1,width-8),Math.max(1,height-8),{stroke:'#8b7ca5',strokeWidth:.8,roughness:.8,seed:42+index}));el.prepend(svg);});}
-  redraw=()=>requestAnimationFrame(draw);redraw();
-  if(!window.__grammarRoughObserved){window.__grammarRoughObserved=true;if('ResizeObserver' in window){const observer=new ResizeObserver(redraw);document.querySelectorAll('.sketch').forEach(el=>observer.observe(el));}else{window.addEventListener('resize',redraw);lessons.forEach(el=>el.addEventListener('toggle',redraw));}}
-  report('手繪框線已套用。文字仍是可縮放、可選取的原生文字。');button.textContent='重畫手繪框線';
- }catch(error){report('手繪工具未能載入；已保留清楚的基本框線，不影響閱讀。');}
- finally{button.disabled=false;}
-});
-document.documentElement.dataset.renderReady='true';
-})();
-</script>
-</body>
-</html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一次段考｜Starter＋Unit 1＋Unit 2</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f2efe7;color:#172033;font-family:-apple-system,"Noto Sans TC",sans-serif;line-height:1.55}.p{max-width:860px;margin:auto;padding:12px}.hero,.u,.box{background:#fffdf8;border:1.5px solid #bcb5a8;border-radius:17px;padding:16px;margin-bottom:12px;box-shadow:2px 3px #ddd5c7}.hero{border:2px solid #172033}.tag{font-size:12px;font-weight:800;color:#6941c6}.hero h1{font-size:clamp(27px,7vw,40px);line-height:1.08;margin:5px 0}.muted{color:#667085;font-size:14px}nav{position:sticky;top:5px;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:10px 0}nav a{background:white;border:1.5px solid #172033;border-radius:10px;text-align:center;padding:8px 2px;text-decoration:none;color:#172033;font-size:13px;font-weight:800}h2{font-size:22px;margin:0 0 6px}h3{font-size:17px;margin:15px 0 5px}.rule{border-left:5px solid #6941c6;background:#f4f0ff;border-radius:0 10px 10px 0;padding:9px 11px;margin:7px 0}.b{border-color:#175cd3;background:#eef4ff}.g{border-color:#067647;background:#ecfdf3}.f{font-size:17px;font-weight:850}.ex{margin-top:3px}.warn{background:#fff1f0;border:1px solid #f2aaa5;border-radius:10px;padding:8px 10px;margin:7px 0}.warn b{color:#b42318}.map{display:grid;gap:6px;margin:9px 0}.node{border:1.5px solid #172033;border-radius:11px;padding:9px;background:white}.main{background:#fff3c4;text-align:center;font-weight:850}.arr{text-align:center;font-weight:900}.two{display:grid;grid-template-columns:1fr 1fr;gap:6px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:7px 4px;border-bottom:1px solid #d0d5dd;text-align:left;vertical-align:top}th{color:#667085;font-size:12px}.practice{background:#f8f9fb;border:1px solid #d0d5dd;border-radius:11px;padding:10px;margin-top:9px}.q{margin:6px 0}.blank{display:inline-block;min-width:80px;border-bottom:1px solid}details{margin-top:7px;border-top:1px dashed #aaa;padding-top:6px}summary{font-weight:800}.ans{background:#ecfdf3;border-radius:8px;padding:7px;margin-top:5px}.unithead{border-bottom:2px dashed #bbb1a2;padding-bottom:7px;margin-bottom:8px}.foot{text-align:center;color:#667085;font-size:12px;margin:16px}@media(min-width:700px){.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.u{padding:21px}}
+</style></head><body><main class="p">
+<section class="hero"><div class="tag">HANLIN ENGLISH 1 · EXAM REVIEW</div><h1>第一次段考<br>Starter＋Unit 1＋Unit 2</h1><div class="muted">先找主詞與數量 → 選 be 動詞 → 再判斷姓名、年齡、人物、物品或位置。</div></section>
+<nav><a href="#all">總覽</a><a href="#s">Starter</a><a href="#u1">Unit 1</a><a href="#u2">Unit 2</a></nav>
+<section id="all" class="box"><h2>三課共用一個文法引擎</h2><div class="map"><div class="node main">① 找主詞：I / he / she / it / you / we / they / 單數 / 複數</div><div class="arr">↓</div><div class="node main">② 選 be：I → am ｜單數 → is ｜you / 複數 → are</div><div class="arr">↓</div><div class="node main">③ 看問題：NAME / AGE / PERSON / THING / PLACE</div></div><div class="cards"><div class="node"><b>NAME</b><br>What is her name?</div><div class="node"><b>PERSON</b><br>Who is he?</div><div class="node"><b>PLACE</b><br>Where are they?</div></div></section>
+<section id="s" class="u"><div class="unithead"><h2>Starter｜主詞、be、姓名與年齡</h2><div class="muted">先分清楚「誰」和「誰的」。</div></div>
+<h3>1｜人稱 vs. 所有格</h3><table><tr><th>誰</th><th>誰的</th><th>例句</th></tr><tr><td>I</td><td>my</td><td>My name is Amy.</td></tr><tr><td>you</td><td>your</td><td>What is your name?</td></tr><tr><td>he</td><td>his</td><td>His name is Tony.</td></tr><tr><td>she</td><td>her</td><td>Her name is Judy.</td></tr><tr><td>it</td><td>its</td><td>Its name is Lucky.</td></tr></table><div class="warn"><b>易錯：</b>its = 它的；it's = it is。</div>
+<h3>2｜be 動詞</h3><div class="rule"><div class="f">I am ｜ he / she / it is ｜ you / we / they are</div><div class="ex">She <b>is</b> thirteen.　We <b>are</b> classmates.</div></div>
+<h3>3｜問什麼，問句就不同</h3><div class="rule b"><b>姓名</b><div class="f">What is her name?</div>Her name is Mia.</div><div class="rule g"><b>年齡</b><div class="f">How old is he?</div>He is eleven years old.</div><div class="rule"><b>狀態</b><div class="f">How is she?</div>She is fine.</div>
+<div class="practice"><b>立即練習</b><div class="q">Zoe is twelve. <span class="blank"></span> is twelve. <span class="blank"></span> name is Zoe.</div><details><summary>答案</summary><div class="ans">She / Her</div></details></div></section>
+<section id="u1" class="u"><div class="unithead"><h2>Unit 1｜Who’s That Handsome Boy?</h2><div class="muted">人物身分、親屬、職業、外貌、年齡都共用 be 句式。</div></div>
+<div class="cards"><div class="node"><b>Who｜人物</b><br>Who is that tall boy?</div><div class="node"><b>Family｜親屬</b><br>mother / uncle / cousin</div><div class="node"><b>Job｜職業</b><br>What is his job?</div></div>
+<h3>1｜Who 問人物</h3><div class="rule"><div class="f">Who is he?</div>He’s my uncle, Paul.</div>
+<h3>2｜形容詞位置</h3><div class="rule b"><div class="f">He is tall. ↔ He is a tall boy.</div><div class="muted">形容詞可在 be 後，也可放名詞前。</div></div>
+<h3>3｜年齡兩種寫法</h3><div class="rule g"><div class="f">He is eight years old.</div><div class="f">He is an eight-year-old boy.</div></div><div class="warn"><b>易錯：</b>名詞前的 eight-year-old 要連字號，year 不加 s；eight 前用 an。</div>
+<h3>4｜所有格</h3><table><tr><th>意思</th><th>寫法</th></tr><tr><td>共同的一個兒子</td><td>Amy and Paul's son</td></tr><tr><td>兩人各自的書包</td><td>Amy's and Paul's school bags</td></tr></table>
+<div class="practice"><b>立即練習</b><div class="q">Nina is eight years old. → Nina is <span class="blank"></span> girl.</div><details><summary>答案</summary><div class="ans">an eight-year-old</div></details></div></section>
+<section id="u2" class="u"><div class="unithead"><h2>Unit 2｜Where Are My Pencils?</h2><div class="muted">距離 × 數量決定指示詞；數量也決定 is / are。</div></div>
+<h3>1｜this / that / these / those</h3><table><tr><th></th><th>近</th><th>遠</th></tr><tr><td><b>單數</b></td><td>this + is</td><td>that + is</td></tr><tr><td><b>複數</b></td><td>these + are</td><td>those + are</td></tr></table>
+<div class="map"><div class="node main">先看 ONE 還是 MANY</div><div class="arr">↓</div><div class="two"><div class="node">ONE → this / that → <b>is</b></div><div class="node">MANY → these / those → <b>are</b></div></div></div>
+<div class="rule"><b>近＋單數</b><div class="f">What is this? → This is an apple.</div></div><div class="rule b"><b>遠＋複數</b><div class="f">What are those? → They are watches.</div></div>
+<h3>2｜a / an 與複數</h3><div class="warn"><b>不能：</b>These are <s>a</s> new pencil cases. 複數前不能放 a / an。</div><div class="rule g"><div class="f">box → boxes ｜ baby → babies ｜ woman → women</div></div>
+<h3>3｜Where 問位置</h3><div class="rule"><div class="f">Where is the cat?</div>It is under the sofa.<br><div class="f">Where are the watches?</div>They are by the door.</div><table><tr><td>on</td><td>在……上</td></tr><tr><td>under</td><td>在……下</td></tr><tr><td>next to / by</td><td>在……旁</td></tr><tr><td>between A and B</td><td>在 A、B 之間</td></tr></table>
+<div class="practice"><b>立即練習</b><div class="q">近處兩本 notebooks：What <span class="blank"></span> these? → They <span class="blank"></span> notebooks.</div><details><summary>答案</summary><div class="ans">are / are</div></details></div></section>
+<section class="box"><h2>最後 Gate｜5 題混合</h2><div class="q">1. Ryan and I → <span class="blank"></span> are classmates.</div><div class="q">2. What is her name? Name: NINA → <span class="blank"></span></div><div class="q">3. He is eleven years old. → He is <span class="blank"></span> boy.</div><div class="q">4. 遠處三支 watches：「那些是什麼？」→ <span class="blank"></span></div><div class="q">5. The cat is under the sofa. → Where 問句：<span class="blank"></span></div><details><summary>核對答案</summary><div class="ans">1 We　2 Her name is Nina.　3 an eleven-year-old　4 What are those?　5 Where is the cat?</div></details></section>
+<div class="foot">正式複習頁 v3｜Starter + Unit 1 + Unit 2｜Unit 3 不在本頁</div></main></body></html>
