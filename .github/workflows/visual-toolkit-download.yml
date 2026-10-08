@@ -1,0 +1,134 @@
+name: Download Visual Toolkit Sources
+
+on:
+  push:
+    branches: [toolkit/visual-design-20261006]
+    paths: [.github/workflows/visual-toolkit-download.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download, pin, and verify all eight source projects
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, hashlib, json, os, pathlib, shutil, stat, tempfile, time, urllib.request, zipfile
+          from datetime import datetime, timezone
+          projects = [
+            ('roughjs', 'rough-stuff/rough'),
+            ('shadcn-ui', 'shadcn-ui/ui'),
+            ('radix-colors', 'radix-ui/colors'),
+            ('github-readme-stats', 'anuraghazra/github-readme-stats'),
+            ('mermaid', 'mermaid-js/mermaid'),
+            ('simple-icons', 'simple-icons/simple-icons'),
+            ('fontsource', 'fontsource/fontsource'),
+            ('markdown-badges', 'Ileriayo/markdown-badges'),
+          ]
+          out = pathlib.Path('visual-toolkit-sources')
+          out.mkdir()
+          font_exts = {'.woff', '.woff2', '.ttf', '.otf', '.ttc', '.eot', '.dfont', '.pfa', '.pfb', '.fon'}
+          def api(path):
+              request = urllib.request.Request('https://api.github.com/repos/' + path,
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json', 'User-Agent': 'visual-toolkit-archiver'})
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  return json.load(response)
+          def download(item):
+              slug, repo = item
+              meta = api(repo)
+              latest = api(repo + '/commits?per_page=1')[0]
+              sha = latest['sha']
+              if len(sha) != 40 or any(c not in '0123456789abcdef' for c in sha):
+                  raise ValueError('Invalid commit SHA: ' + repo)
+              url = 'https://codeload.github.com/' + repo + '/zip/' + sha
+              excluded, count = [], 0
+              with tempfile.TemporaryDirectory() as temporary:
+                  raw = pathlib.Path(temporary) / 'upstream.zip'
+                  request = urllib.request.Request(url, headers={'User-Agent': 'visual-toolkit-archiver'})
+                  total = 0
+                  digest = hashlib.sha256()
+                  with urllib.request.urlopen(request, timeout=180) as response, raw.open('wb') as handle:
+                      while block := response.read(1024 * 1024):
+                          total += len(block)
+                          if total > 1024 * 1024 * 1024:
+                              raise ValueError('Source archive exceeds 1 GiB: ' + repo)
+                          handle.write(block)
+                          digest.update(block)
+                  target = out / (slug + '-source-no-font-binaries.zip')
+                  with zipfile.ZipFile(raw) as source, zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as dest:
+                      entries = source.infolist()
+                      if len(entries) > 200000 or sum(x.file_size for x in entries) > 3 * 1024**3:
+                          raise ValueError('Unreasonable archive size: ' + repo)
+                      for info in entries:
+                          path = pathlib.PurePosixPath(info.filename)
+                          if path.is_absolute() or '..' in path.parts or '\\' in info.filename:
+                              raise ValueError('Unsafe archive path: ' + info.filename)
+                          mode = info.external_attr >> 16
+                          if stat.S_ISLNK(mode):
+                              excluded.append({'path': info.filename, 'reason': 'symlink'})
+                              continue
+                          if path.suffix.lower() in font_exts:
+                              excluded.append({'path': info.filename, 'reason': 'font binary; obtain separately from official source'})
+                              continue
+                          dest.writestr(info, source.read(info))
+                          count += int(not info.is_dir())
+                  with zipfile.ZipFile(target) as verify:
+                      if verify.testzip() is not None:
+                          raise ValueError('Archive CRC validation failed: ' + repo)
+              report = {
+                  'id': slug, 'repository': repo, 'source_url': 'https://github.com/' + repo,
+                  'commit': sha, 'commit_date': latest['commit']['committer']['date'],
+                  'default_branch': meta['default_branch'], 'archived': meta['archived'],
+                  'license': (meta.get('license') or {}).get('spdx_id'),
+                  'upstream_archive_url': url, 'upstream_archive_sha256': digest.hexdigest(),
+                  'archive_file': target.name, 'archive_bytes': target.stat().st_size,
+                  'archive_sha256': hashlib.file_digest(target.open('rb'), 'sha256').hexdigest(),
+                  'included_files': count, 'excluded_files': excluded,
+                  'source_downloaded': True, 'runtime_installed': False, 'application_deployed': False,
+                  'verified_at': datetime.now(timezone.utc).isoformat(),
+              }
+              print('DOWNLOAD_OK ' + json.dumps({k: report[k] for k in ['id','commit','archive_bytes','included_files']}, ensure_ascii=False), flush=True)
+              return report
+          reports = []
+          errors = []
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              futures = {pool.submit(download, project): project for project in projects}
+              for future in concurrent.futures.as_completed(futures):
+                  try:
+                      reports.append(future.result())
+                  except Exception as error:
+                      errors.append({'repository': futures[future][1], 'error': str(error)})
+          reports.sort(key=lambda row: next(i for i, item in enumerate(projects) if item[0] == row['id']))
+          manifest = {'format_version': 1, 'kind': 'source-archives-not-installed-apps',
+                      'font_binaries_included': False, 'projects': reports, 'errors': errors}
+          (out / 'download-report.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          (out / 'README.txt').write_text('Eight upstream source snapshots. Each snapshot is pinned to a commit and CRC-verified.\nFont binaries and symlinks are excluded and listed in download-report.json.\nThese are source archives, not installed iPad apps. No upstream code or install scripts were executed.\nOriginal licenses remain within each archive. Font and trademark rights require separate review.\nGitHub README Stats is retained for reference; its upstream README reports it is no longer maintained.\n', encoding='utf-8')
+          print('SOURCE_LOCK_JSON=' + json.dumps(manifest, ensure_ascii=False), flush=True)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('# Visual toolkit source download\n\n')
+              summary.write(f'Completed: {len(reports)}/8 source archives. Runtime installs: 0. Live app changes: 0.\n\n')
+              summary.write('| Project | Commit | Files | Bytes | Excluded |\n|---|---|---:|---:|---:|\n')
+              for report in reports:
+                  summary.write(f"| {report['id']} | `{report['commit']}` | {report['included_files']} | {report['archive_bytes']} | {len(report['excluded_files'])} |\n")
+              for error in errors:
+                  summary.write('\nERROR: ' + json.dumps(error) + '\n')
+          if errors or len(reports) != 8:
+              raise SystemExit('Not all sources downloaded. See download-report.json.')
+          PY
+      - name: Save source archives and verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-toolkit-eight-sources
+          path: visual-toolkit-sources/
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 0
