@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Adaptive Lesson Designer｜Lesley Teaching Engine</title>
+<style>
+:root{--ink:#223144;--muted:#66788a;--line:#d5dfe5;--bg:#f4f7f8;--paper:#fff;--accent:#22576b;--soft:#e9f1f3;--amber:#775e31;--amber-bg:#fff5df;--danger:#8b3933}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);font-size:15px;line-height:1.6}
+button,select,input,textarea{font:inherit}button{cursor:pointer}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #8bbbd0;outline-offset:2px}
+a{color:var(--accent)}
+.header{background:#1b3543;color:#fff;padding:16px clamp(16px,3vw,32px)}
+.header .eyebrow{font-size:11px;letter-spacing:.17em;font-weight:700;opacity:.8;margin:0 0 5px}
+.header h1{font-size:clamp(23px,3vw,33px);letter-spacing:-.025em;margin:0}
+.header p{margin:5px 0 0;max-width:750px;color:#d6e4e9;font-size:13px}
+.shell{max-width:1340px;margin:auto;padding:20px;display:grid;grid-template-columns:minmax(305px,390px) minmax(0,1fr);gap:18px;align-items:start}
+.panel{border:1px solid var(--line);border-radius:15px;background:#fff;padding:21px;box-shadow:0 8px 27px rgba(35,68,81,.035)}
+.setup{position:sticky;top:16px;max-height:calc(100vh - 30px);overflow:auto}
+.setup h2,.paper h2{font-size:18px;letter-spacing:-.025em;margin:0 0 4px}
+.lead{font-size:13px;color:var(--muted);margin:0 0 15px}
+.field{margin:0 0 15px;display:block;font-size:13px;font-weight:750}
+.field small{font-size:12px;color:var(--muted);font-weight:450;display:block;margin:2px 0 5px}
+input,textarea,select{display:block;width:100%;color:#1d3442;border:1px solid #becbd3;background:white;border-radius:9px;padding:10px 12px;min-height:44px;margin:5px 0 0}
+textarea{resize:vertical;min-height:70px}
+.fieldgroup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.callout{padding:11px 13px;background:var(--soft);border-left:4px solid var(--accent);border-radius:8px;color:#325466;font-size:13px;margin:13px 0}
+.buttonbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;min-height:44px;padding:9px 14px;border-radius:10px;border:1px solid #becdd2;background:white;color:var(--ink);font-weight:720;white-space:nowrap}
+.btn.primary{background:var(--accent);color:white;border-color:var(--accent)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.small{min-height:32px;font-size:13px;padding:4px 10px}
+.previewHead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.previewHead strong{font-size:17px}
+.pill{display:inline-flex;align-items:center;gap:5px;background:#e9eef1;border-radius:50px;padding:4px 10px;font-size:12px;color:#415967;font-weight:720}
+.pill.warn{background:var(--amber-bg);color:#765920}
+.paper{background:var(--paper);border:1px solid #d6e0e6;border-radius:12px;padding:clamp(20px,4.1vw,39px);box-shadow:0 10px 33px rgba(24,59,75,.07);min-height:520px}
+.paperTitle .eyebrow{font-size:11px;letter-spacing:.1em;color:var(--accent);font-weight:850}
+.paperTitle h2{font-size:clamp(23px,2.5vw,28px);margin:8px 0}
+.paperTitle .sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.meta div{background:#f4f7f7;border-radius:8px;padding:8px 11px;font-size:13px}
+.meta .k{font-weight:750;color:var(--accent);display:block;font-size:11px}
+.rule{border-left:3px solid var(--accent);padding:8px 11px;margin:14px 0;background:#f0f5f6;font-size:14px}
+.faint{font-size:12px;color:var(--muted)}
+.stageTitle{margin:23px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:2px solid var(--line);padding-bottom:5px;font-size:16px;font-weight:850}
+.cards{display:grid;gap:13px}
+.activity{border:1px solid var(--line);border-radius:10px;padding:15px;break-inside:avoid;page-break-inside:avoid}
+.activity h3{margin:0 0 9px;font-size:17px}
+.activity .num{display:inline-block;width:27px;height:27px;line-height:27px;text-align:center;background:#254c5e;color:#fff;border-radius:50%;font-size:13px;margin-right:8px}
+.activity p{margin:6px 0;font-size:13px}
+.activity p b{color:#254e60}
+.cardtop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.cardtools{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.cardtools button{border:1px solid #ced8dd;background:#fff;padding:2px 8px;border-radius:7px;min-height:30px;font-size:13px;white-space:nowrap}
+.writeLines{margin-top:13px;height:28px;border-bottom:1px solid #d7e0e4}
+.noteTitle{font-size:13px;font-weight:850;margin:14px 0 7px}
+.checkLine{font-size:13px;padding:8px 0;border-bottom:1px solid #e3e9ec;display:flex;gap:9px}
+.checkSquare{flex:0 0 15px;border:1.5px solid #66798a;width:15px;height:15px;border-radius:3px;margin-top:3px}
+.alert{background:#fff4e3;border:1px solid #efd5ab;border-radius:9px;padding:12px 14px;margin:17px 0;color:#735524;font-size:13px}
+.blocked{border-left:4px solid var(--danger);background:#fff6f5;padding:15px 18px;border-radius:8px;margin:25px 0}
+.blocked b{color:var(--danger)}
+.blocked ul{padding-left:20px}
+.manual{margin:14px 0;display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding:13px;border:1px dashed #b9cbd2;border-radius:10px}
+.manual select{width:min(300px,100%);margin:0}
+.record{margin-top:16px;break-inside:avoid}
+.recordRow{padding:9px 0;border-bottom:1px solid #dce4e8;font-size:13px}
+.lineForNotes{height:45px;border-bottom:1px solid #cbd5dc;margin-top:10px}
+.teacherStatus{font-size:12px;color:var(--amber);background:var(--amber-bg);padding:7px 10px;border-radius:7px;margin:10px 0}
+.foot{border-top:1px solid var(--line);margin-top:20px;padding-top:8px;color:var(--muted);font-size:11px}
+.noprint{}
+@media(max-width:860px){.shell{display:block;padding:11px}.setup{position:static;max-height:none;margin-bottom:13px}.paper{padding:22px 18px}.panel{padding:16px}.previewHead{position:static}}
+@media(max-width:450px){.fieldgroup{grid-template-columns:1fr}.meta{grid-template-columns:1fr}.cardtop{display:block}.cardtools{margin-top:6px}.header{padding:14px 16px}.paperTitle h2{font-size:22px}}
+@page{size:A4 portrait;margin:15mm 16mm}
+@media print{
+ html,body{background:white!important;color:#1c2630;font-size:12.5pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .header,.setup,.previewHead,.noprint{display:none!important}
+ .shell{display:block;max-width:none;margin:0;padding:0}
+ .paper{border:0;box-shadow:none;border-radius:0;padding:0;min-height:0}
+ .paperTitle h2{font-size:20pt}.stageTitle{font-size:14pt;margin-top:16px}
+ .activity{padding:9px 12px;margin:0;break-inside:avoid}
+ .activity h3{font-size:13pt}.activity p,.checkLine,.alert,.rule{font-size:11pt}
+ .activity .num{background:#333!important;color:white!important}
+ .printNewPage{break-before:page;page-break-before:always;padding-top:3mm}
+ .recordRow{font-size:10.5pt}.lineForNotes{height:52px}
+ .meta div,.rule{background:#f5f5f5!important}
+ .foot{font-size:9pt}
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="eyebrow">LESLEY TEACHING ENGINE · CONTROLLED DEMO</div><h1>Adaptive Lesson Designer</h1><p>先看教學目標，再選最有用的活動。不為了符合四大任務模板而增加學生負擔。</p></header>
+<main class="shell">
+ <section class="panel setup" aria-labelledby="settingTitle">
+  <h2 id="settingTitle">設計條件</h2><p class="lead">此工具不連線、不儲存學生資料。提供教師用教學設計草案，不產出未核對的正式試題。</p>
+  <label class="field">單元或主題<select id="topic"></select></label>
+  <label class="field">本課的學習目標<small>只選一個當堂核心目標；可自行修改。</small><textarea id="target" maxlength="240" rows="2"></textarea></label>
+  <label class="field">來源名稱／頁次<small>此欄是教師輸入，系統不會自動驗證內容。</small><textarea id="source" maxlength="300" rows="2"></textarea></label>
+  <label class="field">來源核對狀態<select id="readiness"><option value="partial">部分確認｜只能做受限草案</option><option value="confirmed">教師已核對來源｜仍需出版 QA</option><option value="missing">來源不足｜停止生成</option></select></label>
+  <div class="fieldgroup">
+   <label class="field">本課主要動作<select id="goal"><option value="understand">理解／觀察</option><option value="apply" selected>規則應用</option><option value="retrieve">主動提取</option><option value="transfer">遷移應用</option></select></label>
+   <label class="field">學習路線<select id="route"><option value="core">核心學習</option><option value="repair">針對已確認缺口補救</option><option value="extension">精簡重複、增加挑戰</option></select></label>
+   <label class="field">本次可用時間<select id="minutes"><option value="15">15 分鐘</option><option value="30" selected>30 分鐘</option><option value="45">45 分鐘</option></select></label>
+   <label class="field">需降低的負荷<select id="load"><option value="standard">無特別限制</option><option value="reading">非目標閱讀負荷</option><option value="initiation">任務啟動負荷</option><option value="writing">非必要抄寫負荷</option></select></label>
+  </div>
+  <div class="callout"><strong>只調整方式，不降低標準。</strong> 即使只安排一個活動，也要在教學後另收集新題、無提示的獨立證據。</div>
+  <label class="field">教師備註（可留空）<textarea id="notes" rows="2" maxlength="400" placeholder="例如：今天只修正主詞與 be 的搭配；不重教整課。"></textarea></label>
+  <div class="buttonbar"><button class="btn primary" type="button" id="build">產生教學設計</button><button class="btn" type="button" id="starterDemo">恢復 Starter 範例</button></div>
+ </section>
+ <section id="preview" aria-labelledby="previewTitle">
+  <div class="previewHead noprint"><strong id="previewTitle">課程設計預覽</strong><div class="buttonbar" style="margin:0"><button type="button" class="btn" id="download" disabled>匯出 JSON</button><button type="button" class="btn primary" id="print" disabled>列印／存成 PDF</button></div></div>
+  <div id="paper" class="paper" aria-live="polite"></div>
+ </section>
+</main>
+<script src="./adaptive-lesson-rules.js"></script>
+<script>
+(function(){
+'use strict';
+const $ = id => document.getElementById(id);
+const API = window.LesleyAdaptive;
+const clean = x => String(x??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const tSelect = $('topic');
+Object.entries(API.topics).forEach(([id, t])=>{const op=document.createElement('option');op.value=id;op.textContent=t.label;tSelect.appendChild(op)});
+let plan=null, chosen=[];
+const getSettings=()=>({topic:$('topic').value,target:$('target').value,source:$('source').value,readiness:$('readiness').value,route:$('route').value,goal:$('goal').value,minutes:Number($('minutes').value),load:$('load').value});
+function loadTopic(){const d=API.topics[$('topic').value];$('target').value=d.target;$('source').value=d.sourceHint;}
+function starterDemo(){ $('topic').value='starter-be';loadTopic();$('readiness').value='partial';$('route').value='core';$('goal').value='apply';$('minutes').value='30';$('load').value='standard';$('notes').value='';build();}
+function build(){plan=API.recommend(getSettings());chosen=plan.activities.map(x=>x.id);render();}
+function paragraph(title,text){return `<p><b>${clean(title)}</b> ${clean(text)}</p>`;}
+function render(){
+ const s=plan.settings;
+ $('download').disabled=plan.blocked; $('print').disabled=plan.blocked;
+ if(plan.blocked){
+  $('paper').innerHTML=`<div class="paperTitle"><div class="eyebrow">SOURCE READINESS</div><h2>來源狀態：BLOCKED</h2></div><div class="blocked"><b>目前不能產生正式學習目標、活動與題目。</b><p>${clean(plan.explanation)}</p><ul>${plan.gaps.map(x=>`<li>${clean(x)}</li>`).join('')}</ul></div><p class="faint">請先核對教材來源與目標，再重新產生。這不代表學生缺乏能力。</p>`;
+  return;
+ }
+ const topic=API.topics[s.topic];
+ let cards=chosen.map((id,i)=>{
+  const a=API.activities[id];
+  return `<article class="activity"><div class="cardtop"><div><h3><span class="num">${i+1}</span>${clean(a.label)}</h3><span class="pill">${clean(a.stage)} · 約 ${a.minutes} 分鐘</span></div><div class="cardtools noprint"><button type="button" data-move="up" data-id="${id}" aria-label="上移${clean(a.label)}" ${i===0?'disabled':''}>↑</button><button type="button" data-move="down" data-id="${id}" aria-label="下移${clean(a.label)}" ${i===chosen.length-1?'disabled':''}>↓</button><button type="button" data-remove="${id}" aria-label="移除${clean(a.label)}">移除</button></div></div>${paragraph('選用理由｜',a.why)}${paragraph('怎麼進行｜',a.action)}${paragraph('支持／撤除｜',a.support)}<div class="writeLines" aria-label="手寫補充區"></div></article>`;
+ }).join('');
+ const options=Object.entries(API.activities).filter(([id])=>!chosen.includes(id)).map(([id,a])=>`<option value="${id}">${clean(a.label)}</option>`).join('');
+ const manual=chosen.length< Object.keys(API.activities).length ? `<div class="manual noprint"><b>調整活動</b><select id="addChoice" aria-label="加選活動"><option value="">選擇加選活動...</option>${options}</select><button id="addActivity" type="button" class="btn small">加入（需自行核對目標）</button></div>` : '';
+ $('paper').innerHTML=`<div class="paperTitle"><div class="eyebrow">TEACHER BLUEPRINT · NOT STUDENT RELEASE</div><h2>${clean(topic.label)}</h2><div class="sub">適性設計草案 · ${new Date().toLocaleDateString('zh-TW',{year:'numeric',month:'numeric',day:'numeric'})}</div></div>
+ <div class="teacherStatus">${s.readiness==='confirmed'?'教師自述已核對來源；不等於系統已驗證':'來源部分確認，只能用於已確認部分的課程草案'} · 尚未通過正式 Release QA</div>
+ <div class="meta"><div><span class="k">來源（教師提供）</span>${clean(s.source)}</div><div><span class="k">教學條件</span>${clean($('route').selectedOptions[0].textContent)} · ${s.minutes} 分鐘 · ${clean($('goal').selectedOptions[0].textContent)}</div></div>
+ <div class="rule"><b>本課目標</b><div>${clean(s.target)}</div></div>
+ <div class="rule"><b>支持原則</b><div>${clean(plan.support)}</div></div>
+ <div class="stageTitle"><span>建議活動 <span class="pill">目前 ${chosen.length} 種</span></span><span class="faint">依教學目標選擇，非固定四步</span></div>
+ <div class="cards">${cards||'<div class="alert">已移除所有活動。可自行加選，但仍須規劃核心學習證據。</div>'}</div>
+ ${manual}
+ <div class="stageTitle ${chosen.length>=2?'printNewPage':''}">證據與後續安排</div>
+ <p style="font-size:13px">${clean(plan.routeNote)}</p>
+ ${plan.evidence.map(x=>`<div class="checkLine"><span class="checkSquare"></span><span>${clean(x)}</span></div>`).join('')}
+ <div class="noteTitle">改變情境的方向（教師另行命題）</div><p style="font-size:13px">${clean(plan.transfer)}</p>
+ <div class="noteTitle">這一課不必硬加</div><p class="faint">${clean(plan.omitted)}</p>
+ ${$('notes').value.trim()?`<div class="noteTitle">教師備註</div><p style="font-size:13px;white-space:pre-wrap">${clean($('notes').value.trim())}</p>`:''}
+ <div class="alert"><b>本階段用途限制：</b> ${clean(plan.limitations)}</div>
+ <div class="record">
+  <div class="stageTitle">課堂證據紀錄（選填）</div>
+  <div class="recordRow">實際使用提示： □ 無提示　□ 最少提示　□ 中度提示　□ 完整示範</div>
+  <div class="recordRow">撤除提示後的新題： □ 獨立完成　□ 仍需補救　□ 尚未檢核</div>
+  <div class="recordRow">學生主要卡點（僅記可觀察事實）：<div class="lineForNotes"></div></div>
+  <div class="recordRow">下一次新題與延後檢核日期／間隔：<div class="lineForNotes"></div></div>
+ </div>
+ <div class="foot">Lesley Teaching Engine · Adaptive Lesson Design Prototype v0.1 · Blueprint only · Offline / No AI calls</div>`;
+}
+$('paper').addEventListener('click',e=>{
+ const remove=e.target.closest('[data-remove]');
+ if(remove){chosen=chosen.filter(x=>x!==remove.dataset.remove);render();return;}
+ const move=e.target.closest('[data-move]');
+ if(move){const i=chosen.indexOf(move.dataset.id);const j=move.dataset.move==='up'?i-1:i+1;if(i>=0&&j>=0&&j<chosen.length){[chosen[i],chosen[j]]=[chosen[j],chosen[i]];render();}return;}
+ if(e.target.closest('#addActivity')){const value=$('addChoice')?.value;if(value&&API.activities[value]&&!chosen.includes(value)){chosen.push(value);render();}}
+});
+$('topic').addEventListener('change',loadTopic);
+$('build').addEventListener('click',build);
+$('starterDemo').addEventListener('click',starterDemo);
+$('print').addEventListener('click',()=>{if(!plan?.blocked){window.print();}});
+$('download').addEventListener('click',()=>{
+ if(!plan||plan.blocked)return;
+ const output={kind:'teacher-blueprint-only',version:'0.1',generatedAt:new Date().toISOString(),sourceStatus:'teacher-declared-not-verified',settings:plan.settings,activities:chosen.map(id=>({id,...API.activities[id]})),evidence:plan.evidence,release:'NOT READY'};
+ const blob=new Blob([JSON.stringify(output,null,2)],{type:'application/json;charset=utf-8'});
+ const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='adaptive_lesson_blueprint.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+});
+starterDemo();
+})();
+</script>
+</body>
+</html>
