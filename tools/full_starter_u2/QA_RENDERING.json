@@ -1,0 +1,83 @@
+{
+  "overflow_count": 0,
+  "overflow_details": [],
+  "rendered": [
+    {
+      "file": "student_practice",
+      "html_pages": 19,
+      "pdf_pages": 19,
+      "page_size_errors": [],
+      "bytes": 1184766
+    },
+    {
+      "file": "starter_student",
+      "html_pages": 5,
+      "pdf_pages": 5,
+      "page_size_errors": [],
+      "bytes": 387729
+    },
+    {
+      "file": "unit1_student",
+      "html_pages": 4,
+      "pdf_pages": 4,
+      "page_size_errors": [],
+      "bytes": 473099
+    },
+    {
+      "file": "unit2_student",
+      "html_pages": 8,
+      "pdf_pages": 8,
+      "page_size_errors": [],
+      "bytes": 565133
+    },
+    {
+      "file": "review_student",
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "page_size_errors": [],
+      "bytes": 195239
+    },
+    {
+      "file": "independent_check_teacher_hold",
+      "html_pages": 10,
+      "pdf_pages": 10,
+      "page_size_errors": [],
+      "bytes": 500036
+    },
+    {
+      "file": "delayed_teacher_hold",
+      "html_pages": 4,
+      "pdf_pages": 4,
+      "page_size_errors": [],
+      "bytes": 286204
+    },
+    {
+      "file": "teacher_complete",
+      "html_pages": 36,
+      "pdf_pages": 36,
+      "page_size_errors": [],
+      "bytes": 1403756
+    },
+    {
+      "file": "answer_key",
+      "html_pages": 19,
+      "pdf_pages": 19,
+      "page_size_errors": [],
+      "bytes": 495151
+    },
+    {
+      "file": "vocabulary_companion",
+      "html_pages": 12,
+      "pdf_pages": 12,
+      "page_size_errors": [],
+      "bytes": 738225
+    },
+    {
+      "file": "source_matrix",
+      "html_pages": 8,
+      "pdf_pages": 8,
+      "page_size_errors": [],
+      "bytes": 828579
+    }
+  ]
+}
