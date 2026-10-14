@@ -1,0 +1,94 @@
+{
+  "format_version": 1,
+  "checked_date_taipei": "2026-10-06",
+  "source_workflow_run": 37342614754,
+  "source_artifact_id": 11359550618,
+  "snapshot_type": "upstream-default-branch-commit; not stable-release guarantee",
+  "font_binaries_included": false,
+  "source_downloaded_count": 8,
+  "runtime_installed_count": 0,
+  "live_application_changed": false,
+  "source_file_count": 22807,
+  "projects": [
+    {
+      "id": "roughjs",
+      "repository": "rough-stuff/rough",
+      "commit": "56a2762171b1294d643501e8d14f120db6b27bd7",
+      "upstream_archive_url": "https://codeload.github.com/rough-stuff/rough/zip/56a2762171b1294d643501e8d14f120db6b27bd7",
+      "archive_file": "roughjs-source-no-font-binaries.zip",
+      "archive_sha256": "b298e4c497400f67582873c5d323afc9ede8d2052aafa6c12ccfea2cb3f7cb90",
+      "included_files": 79,
+      "excluded_file_count": 0
+    },
+    {
+      "id": "shadcn-ui",
+      "repository": "shadcn-ui/ui",
+      "commit": "0e3abd65a97707f4a9cc3ed07bf5006e1cb67b13",
+      "upstream_archive_url": "https://codeload.github.com/shadcn-ui/ui/zip/0e3abd65a97707f4a9cc3ed07bf5006e1cb67b13",
+      "archive_file": "shadcn-ui-source-no-font-binaries.zip",
+      "archive_sha256": "d17ee983becb969cc5974cb2811e375301cf0515ffdc331eea20497a496a1ab1",
+      "included_files": 5852,
+      "excluded_file_count": 0
+    },
+    {
+      "id": "radix-colors",
+      "repository": "radix-ui/colors",
+      "commit": "dbdb85470547c7d34b9001f48fddb08ded335979",
+      "upstream_archive_url": "https://codeload.github.com/radix-ui/colors/zip/dbdb85470547c7d34b9001f48fddb08ded335979",
+      "archive_file": "radix-colors-source-no-font-binaries.zip",
+      "archive_sha256": "a2fdfb715d64ab6cf12f51f835b92a8018f2efd7b29436354528b225db6338aa",
+      "included_files": 20,
+      "excluded_file_count": 0
+    },
+    {
+      "id": "github-readme-stats",
+      "repository": "anuraghazra/github-readme-stats",
+      "commit": "54a7985aeefda00d5eadb55b80c17c7f976c37d2",
+      "upstream_archive_url": "https://codeload.github.com/anuraghazra/github-readme-stats/zip/54a7985aeefda00d5eadb55b80c17c7f976c37d2",
+      "archive_file": "github-readme-stats-source-no-font-binaries.zip",
+      "archive_sha256": "575c736c17f5f1ebd3aba8e1e48ed9ac660e4d3504cc67e355da1f9753a3ca38",
+      "included_files": 132,
+      "excluded_file_count": 0
+    },
+    {
+      "id": "mermaid",
+      "repository": "mermaid-js/mermaid",
+      "commit": "97b345154f2cd71f23a2aadb14af6dad46f63173",
+      "upstream_archive_url": "https://codeload.github.com/mermaid-js/mermaid/zip/97b345154f2cd71f23a2aadb14af6dad46f63173",
+      "archive_file": "mermaid-source-no-font-binaries.zip",
+      "archive_sha256": "4855d8fa3585b22d4392f8ad8c89d1674511c6884df549add45294593e85aae9",
+      "included_files": 3231,
+      "excluded_file_count": 1
+    },
+    {
+      "id": "simple-icons",
+      "repository": "simple-icons/simple-icons",
+      "commit": "98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d",
+      "upstream_archive_url": "https://codeload.github.com/simple-icons/simple-icons/zip/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d",
+      "archive_file": "simple-icons-source-no-font-binaries.zip",
+      "archive_sha256": "b5746bb071dd0b1f6a637e0ff6f94244988f4ac404b5d2b9ee955f4e334d46fb",
+      "included_files": 3528,
+      "excluded_file_count": 1
+    },
+    {
+      "id": "fontsource",
+      "repository": "fontsource/fontsource",
+      "commit": "a8b8e4b972eeeba0f8815015887f613c9bf311a4",
+      "upstream_archive_url": "https://codeload.github.com/fontsource/fontsource/zip/a8b8e4b972eeeba0f8815015887f613c9bf311a4",
+      "archive_file": "fontsource-source-no-font-binaries.zip",
+      "archive_sha256": "d9cc5e0c2eec1ad36eb17cda5acd4fd2f5ac09ef8604908b118ebe9478641538",
+      "included_files": 9948,
+      "excluded_file_count": 12
+    },
+    {
+      "id": "markdown-badges",
+      "repository": "Ileriayo/markdown-badges",
+      "commit": "c1fe0799ae69d4b163714e4a4b98d4d8f51b8d66",
+      "upstream_archive_url": "https://codeload.github.com/Ileriayo/markdown-badges/zip/c1fe0799ae69d4b163714e4a4b98d4d8f51b8d66",
+      "archive_file": "markdown-badges-source-no-font-binaries.zip",
+      "archive_sha256": "a6c3d98478beb2ecbc63ae039946881bcac23af57f5f174a556618c5a7b5a929",
+      "included_files": 17,
+      "excluded_file_count": 0
+    }
+  ]
+}
