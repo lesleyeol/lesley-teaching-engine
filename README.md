@@ -21,6 +21,13 @@ https://lesleyeol.github.io/lesley-teaching-engine/
 - 依教學目標、時間及需要的支持選活動；可手動增刪、排序，並列印 A4 教師草案。
 - **僅為 BLUEPRINT／草案工具**，不自動產生正式學習單、題目或核准證據；來源仍須教師核對，正式發行仍須完成 Teaching Engine v2.4 Stable 的 QA。
 
+## Source-bound Starter Unit Pack（限定範圍教材示範）
+
+- [來源治理、教學證據及操作說明](docs/STARTER_SOURCE_TO_PACKET.md)
+- [題目與答案共用資料](curriculum/starter/subject-be.items.json) · [來源範圍與教學鎖定](curriculum/starter/subject-be.manifest.json)
+- 使用 `node tools/build-starter-pack.cjs --check` 檢查來源限制、`node tests/starter-pack.test.cjs` 執行測試，再用 `node tools/build-starter-pack.cjs` 生成 A4 HTML 預覽。
+- **本版本仍是待教師審閱的 DRAFT**：課本版次、正式教師核准與 Release QA 未完成，不得宣稱學生已獨立掌握或正式教材已發布。
+
 ## Privacy
 
 - Data is stored locally in the browser.
