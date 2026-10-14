@@ -1,0 +1,5609 @@
+{
+  "schema": "lesley-lesson-through-u2-v0.1",
+  "status": "DRAFT_FOR_TEACHER_REVIEW",
+  "policy": "LESLEY_TEACHING_ENGINE_v2.4_STABLE.md",
+  "scope": [
+    "Starter",
+    "Unit 1",
+    "Unit 2",
+    "Review"
+  ],
+  "source_status": "READY_WITH_LIMITS",
+  "not_verified": [
+    "學校指定現行課本確切版次/ISBN",
+    "老師核准全單元實際進度",
+    "當次正式段考通知與特定學生獨立掌握",
+    "官方音檔與聽力答案"
+  ],
+  "source_restrictions": [
+    "完整課本掃描與學生筆跡不提交 GitHub",
+    "部分原題已批改，不作獨立證據",
+    "所有新題都是教師／AI 製作草稿，未取得正式核准",
+    "獨立練習題公開後不得視為未曝光正式考卷"
+  ],
+  "sources": {
+    "SL": {
+      "name": "翰林國中英文七上 Starter｜字母書寫",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "5",
+      "printed": "1–2",
+      "note": "大小寫、抄寫、拼字與書寫格線"
+    },
+    "SP": {
+      "name": "Starter｜字母拼讀",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "6",
+      "printed": "3–4",
+      "note": "a/e/i/o/u 短母音、仿讀；聽力無音檔不得驗收"
+    },
+    "SG": {
+      "name": "Starter｜代名詞與所有格",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "7",
+      "printed": "5–6",
+      "note": "主格／所有格、be 搭配／縮寫、姓名問答"
+    },
+    "SW": {
+      "name": "Starter｜年齡、數字與書寫",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "8",
+      "printed": "7–8",
+      "note": "年齡、數字、大小寫標點與短對話"
+    },
+    "U1D": {
+      "name": "Unit 1｜對話與人物／職業",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "9–11",
+      "printed": "9–14",
+      "note": "人物身分與職業、be 肯定／否定／疑問、問候與身分"
+    },
+    "U1G": {
+      "name": "Unit 1｜形容詞與家庭 Who",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "12–13",
+      "printed": "15–18",
+      "note": "形容詞、問 Who、家族成員與人物指涉"
+    },
+    "U1R": {
+      "name": "Unit 1｜閱讀 My Dear Family",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "14",
+      "printed": "19–20",
+      "note": "從人物、年齡、職業與學校階段回文定位"
+    },
+    "U1S": {
+      "name": "Unit 1｜Sounds and Letters",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "15",
+      "printed": "21–22",
+      "note": "初始及尾音字母拼讀；無音檔時只作字形與讀法支架"
+    },
+    "U1E": {
+      "name": "Unit 1｜Extension Word Power",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "17",
+      "printed": "25–26",
+      "note": "-er 職業構詞；標示延伸，未確認教師採教進度"
+    },
+    "U1W": {
+      "name": "Unit 1｜Word Bank",
+      "file": "學校課本Starter & Unit 1.pdf",
+      "pdf": "18",
+      "printed": "137–138",
+      "note": "課本單字與例句，並非單獨的學會證據"
+    },
+    "U2D": {
+      "name": "Unit 2｜對話與文具／房屋詞彙",
+      "file": "Unit 2.pdf",
+      "pdf": "1–3",
+      "printed": "27–32",
+      "note": "名詞、房間、物品、單數 What is this/that"
+    },
+    "U2P": {
+      "name": "Unit 2｜名詞複數、指示詞",
+      "file": "Unit 2.pdf",
+      "pdf": "4",
+      "printed": "33–34",
+      "note": "-s/-es/-ies/-ves、不規則、近遠與單複數、詞尾讀音"
+    },
+    "U2L": {
+      "name": "Unit 2｜位置介系詞與 Where",
+      "file": "Unit 2.pdf",
+      "pdf": "5–6",
+      "printed": "35–38",
+      "note": "房間、in/on/under/behind/between/next to/near/in front of, Where is/are"
+    },
+    "U2R": {
+      "name": "Unit 2｜閱讀 The Keret House",
+      "file": "Unit 2.pdf",
+      "pdf": "7",
+      "printed": "39–40",
+      "note": "特別房屋的描述與位置關係、inside/above/right next to/enough"
+    },
+    "U2S": {
+      "name": "Unit 2｜Sounds and Letters",
+      "file": "Unit 2.pdf",
+      "pdf": "8",
+      "printed": "41–42",
+      "note": "字形對應與聲音分類；未提供音檔不能當聽辨證據"
+    },
+    "U2V": {
+      "name": "Unit 2｜Word Bank／Review 1",
+      "file": "Unit 2.pdf",
+      "pdf": "10–11,13–14",
+      "printed": "45–48,139–141",
+      "note": "Unit 2 詞彙、Starter–U2 螺旋複習、口語目標"
+    }
+  },
+  "knowledge_points": [
+    {
+      "id": "S01",
+      "unit": "Starter",
+      "name": "A–Z 大小寫對應與正確字形",
+      "sources": [
+        "SL"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S02",
+      "unit": "Starter",
+      "name": "拼字、大小寫及書寫規範",
+      "sources": [
+        "SL"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S03",
+      "unit": "Starter",
+      "name": "短母音 a 的字形與拼讀辨識",
+      "sources": [
+        "SP"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "字母及音節的書面辨識；需另外口頭或正式音檔檢核發音"
+    },
+    {
+      "id": "S04",
+      "unit": "Starter",
+      "name": "短母音 e 的字形與拼讀辨識",
+      "sources": [
+        "SP"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "字母及音節的書面辨識；需另外口頭或正式音檔檢核發音"
+    },
+    {
+      "id": "S05",
+      "unit": "Starter",
+      "name": "短母音 i 的字形與拼讀辨識",
+      "sources": [
+        "SP"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "字母及音節的書面辨識；需另外口頭或正式音檔檢核發音"
+    },
+    {
+      "id": "S06",
+      "unit": "Starter",
+      "name": "短母音 o 的字形與拼讀辨識",
+      "sources": [
+        "SP"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "字母及音節的書面辨識；需另外口頭或正式音檔檢核發音"
+    },
+    {
+      "id": "S07",
+      "unit": "Starter",
+      "name": "短母音 u 的字形與拼讀辨識",
+      "sources": [
+        "SP"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "字母及音節的書面辨識；需另外口頭或正式音檔檢核發音"
+    },
+    {
+      "id": "S08",
+      "unit": "Starter",
+      "name": "主格代名詞 I/you/he/she/it/we/they",
+      "sources": [
+        "SG"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S09",
+      "unit": "Starter",
+      "name": "所有格 my/your/his/her/its/our/their",
+      "sources": [
+        "SG"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S10",
+      "unit": "Starter",
+      "name": "主格與 am/is/are 肯定式一致",
+      "sources": [
+        "SG"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S11",
+      "unit": "Starter",
+      "name": "主格與 be 縮寫與 apostrophe",
+      "sources": [
+        "SG"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S12",
+      "unit": "Starter",
+      "name": "What is ... name? 姓名問答",
+      "sources": [
+        "SG"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S13",
+      "unit": "Starter",
+      "name": "How old ...? 年齡問答",
+      "sources": [
+        "SW"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S14",
+      "unit": "Starter",
+      "name": "0–99 基礎數字、拼寫與連字號",
+      "sources": [
+        "SW"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S15",
+      "unit": "Starter",
+      "name": "句首、人名、I 大寫及標點／空格",
+      "sources": [
+        "SW"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "S16",
+      "unit": "Starter",
+      "name": "問候與對話角色回應",
+      "sources": [
+        "SW"
+      ],
+      "method": "practice",
+      "kind": "Core / Oral Check",
+      "comment": ""
+    },
+    {
+      "id": "U101",
+      "unit": "Unit 1",
+      "name": "人物職業與身分單字辨識／拼寫",
+      "sources": [
+        "U1D",
+        "U1W"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U102",
+      "unit": "Unit 1",
+      "name": "家庭親屬關係與指涉",
+      "sources": [
+        "U1G",
+        "U1W"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U103",
+      "unit": "Unit 1",
+      "name": "Who is he/she/that ...? 人物詢問",
+      "sources": [
+        "U1D",
+        "U1G"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U104",
+      "unit": "Unit 1",
+      "name": "be 肯定、否定、Yes/No 問句與簡答",
+      "sources": [
+        "U1D"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U105",
+      "unit": "Unit 1",
+      "name": "形容詞 be 後與名詞前的語序",
+      "sources": [
+        "U1G"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U106",
+      "unit": "Unit 1",
+      "name": "用 what job / 身分回答職業",
+      "sources": [
+        "U1D",
+        "U1W"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U107",
+      "unit": "Unit 1",
+      "name": "名詞所有格 ’s 與家屬指涉",
+      "sources": [
+        "U1D",
+        "U1G"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U108",
+      "unit": "Unit 1",
+      "name": "年齡 years old 與人物外貌描述",
+      "sources": [
+        "U1D",
+        "U1G"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U109",
+      "unit": "Unit 1",
+      "name": "家庭介紹閱讀回文找證據",
+      "sources": [
+        "U1R"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U110",
+      "unit": "Unit 1",
+      "name": "英語清濁輔音拼讀辨識",
+      "sources": [
+        "U1S"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "無原始音檔，不能驗證聽辨"
+    },
+    {
+      "id": "U111",
+      "unit": "Unit 1",
+      "name": "-er 人物／職業構詞",
+      "sources": [
+        "U1E"
+      ],
+      "method": "practice",
+      "kind": "Extension",
+      "comment": "延伸範圍；教師需確認已教"
+    },
+    {
+      "id": "U112",
+      "unit": "Unit 1",
+      "name": "介紹自己／家人並回答問句",
+      "sources": [
+        "U1D",
+        "U1E"
+      ],
+      "method": "practice",
+      "kind": "Core / Oral Check",
+      "comment": ""
+    },
+    {
+      "id": "U113",
+      "unit": "Unit 1",
+      "name": "Who／How old／What 的問句功能區辨",
+      "sources": [
+        "U1D",
+        "U1G"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U201",
+      "unit": "Unit 2",
+      "name": "文具、房間與生活物品詞彙",
+      "sources": [
+        "U2D",
+        "U2V"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U202",
+      "unit": "Unit 2",
+      "name": "單數可數名詞 a／an、one 與 is",
+      "sources": [
+        "U2D"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U203",
+      "unit": "Unit 2",
+      "name": "複數 -s / -es",
+      "sources": [
+        "U2P"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U204",
+      "unit": "Unit 2",
+      "name": "複數字尾 y→ies 與 f/fe→ves",
+      "sources": [
+        "U2P"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U205",
+      "unit": "Unit 2",
+      "name": "不規則複數 mouse/mice、person/people、woman/women",
+      "sources": [
+        "U2P"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U206",
+      "unit": "Unit 2",
+      "name": "複合名詞複數 pencil boxes／comic books",
+      "sources": [
+        "U2P"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U207",
+      "unit": "Unit 2",
+      "name": "this/that/these/those 的遠近與數量",
+      "sources": [
+        "U2D",
+        "U2P"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U208",
+      "unit": "Unit 2",
+      "name": "What is／are + 指示詞問答",
+      "sources": [
+        "U2D",
+        "U2P"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U209",
+      "unit": "Unit 2",
+      "name": "單複數主詞、they 與 be 動詞一致",
+      "sources": [
+        "U2P",
+        "U2L"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U210",
+      "unit": "Unit 2",
+      "name": "Where is／are 問位置並以 It/They 回答",
+      "sources": [
+        "U2L"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U211",
+      "unit": "Unit 2",
+      "name": "in/on/under/next to/near/behind/between/in front of",
+      "sources": [
+        "U2L"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U212",
+      "unit": "Unit 2",
+      "name": "房間名稱、方位描述及閱讀",
+      "sources": [
+        "U2L",
+        "U2R"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U213",
+      "unit": "Unit 2",
+      "name": "顏色與 favorite color、肯否定短對話",
+      "sources": [
+        "U2D"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U214",
+      "unit": "Unit 2",
+      "name": "複數 -s 字尾 /s/ /z/ /ɪz/ 讀音區辨",
+      "sources": [
+        "U2P",
+        "U2S"
+      ],
+      "method": "practice",
+      "kind": "Text Only",
+      "comment": "僅書面分類與口頭跟讀，無音檔不做正式聽力"
+    },
+    {
+      "id": "U215",
+      "unit": "Unit 2",
+      "name": "特殊空間屋描述 inside/above/right next to/enough",
+      "sources": [
+        "U2R",
+        "U2V"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U216",
+      "unit": "Unit 2",
+      "name": "Unit 1–2 合併閱讀與跨單元問答",
+      "sources": [
+        "U2V"
+      ],
+      "method": "practice",
+      "kind": "Core",
+      "comment": ""
+    },
+    {
+      "id": "U217",
+      "unit": "Unit 2",
+      "name": "口頭指認物品和位置",
+      "sources": [
+        "U2L"
+      ],
+      "method": "practice",
+      "kind": "Core / Oral Check",
+      "comment": ""
+    }
+  ],
+  "sections": [
+    {
+      "id": "S-A",
+      "unit": "Starter",
+      "title": "字母與拼讀",
+      "summary": "先辨識大小寫，再把字母和聲音連起來。",
+      "kps": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "rule": "小寫變化要保留正確字母形狀。短母音練習是**文字辨識**，真正發音需教師另外聽學生唸。",
+      "display": "worksheet"
+    },
+    {
+      "id": "S-B",
+      "unit": "Starter",
+      "title": "主格、所有格與 be",
+      "summary": "先判斷「誰」和「誰的」，再選正確的 be。",
+      "kps": [
+        "S08",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "rule": "I–am；he/she/it–is；you/we/they–are。主格作主詞，所有格放名詞前。",
+      "display": "guided"
+    },
+    {
+      "id": "S-C",
+      "unit": "Starter",
+      "title": "姓名、年齡與數字",
+      "summary": "看到問題，先判斷是問「姓名」還是「年齡」。",
+      "kps": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "rule": "姓名：What is ... name?；年齡：How old is ...?。40 拼成 forty。",
+      "display": "worksheet"
+    },
+    {
+      "id": "S-D",
+      "unit": "Starter",
+      "title": "書寫與問候",
+      "summary": "改正大小寫及標點，最後完成簡短對話。",
+      "kps": [
+        "S15",
+        "S16"
+      ],
+      "rule": "句首與姓名大寫；問句用 ?；I 永遠大寫。",
+      "display": "worksheet"
+    },
+    {
+      "id": "U1-A",
+      "unit": "Unit 1",
+      "title": "職業與人物",
+      "summary": "先辨識人物，再用職業與身分詞造句。",
+      "kps": [
+        "U101",
+        "U106"
+      ],
+      "rule": "職業：teacher / nurse / cook / singer / writer / office worker / police officer / housewife；單數職業前使用 a / an。",
+      "display": "worksheet"
+    },
+    {
+      "id": "U1-B",
+      "unit": "Unit 1",
+      "title": "家庭關係與 Who",
+      "summary": "先看家庭結構，再回答人物關係。",
+      "kps": [
+        "U102",
+        "U103",
+        "U107"
+      ],
+      "rule": "家庭圖：Paul 與 Carol 為父母；Zac 與 Zoe 是他們的兒女；Max 是 Zoe 的兒子。",
+      "display": "family"
+    },
+    {
+      "id": "U1-C",
+      "unit": "Unit 1",
+      "title": "be 句型與形容詞",
+      "summary": "肯定、否定、疑問與簡答，要配合主詞。",
+      "kps": [
+        "U104",
+        "U105",
+        "U108",
+        "U113"
+      ],
+      "rule": "Yes/No：Is he...? Yes, he is. / No, he isn’t.；形容詞可在 be 後或名詞前。",
+      "display": "worksheet"
+    },
+    {
+      "id": "U1-D",
+      "unit": "Unit 1",
+      "title": "閱讀、拼讀與構詞",
+      "summary": "讀短文找證據；構詞與聲音放在獨立的小區塊。",
+      "kps": [
+        "U109",
+        "U110",
+        "U111",
+        "U112"
+      ],
+      "rule": "閱讀先定位文字資訊；-er 為本單元 Extension，非全體學生必考。",
+      "display": "worksheet"
+    },
+    {
+      "id": "U2-A",
+      "unit": "Unit 2",
+      "title": "文具與名詞複數",
+      "summary": "先會辨識物品，再觀察一個變多個的詞形。",
+      "kps": [
+        "U201",
+        "U202",
+        "U203",
+        "U204",
+        "U205",
+        "U206"
+      ],
+      "rule": "單數用 a/an；複數常加 -s/-es；有些 y→ies、fe→ves，且 mouse→mice。",
+      "display": "worksheet"
+    },
+    {
+      "id": "U2-B",
+      "unit": "Unit 2",
+      "title": "This / That / These / Those",
+      "summary": "先看近或遠，再看一個或多個。",
+      "kps": [
+        "U207",
+        "U208",
+        "U209"
+      ],
+      "rule": "近單 this、近複 these；遠單 that、遠複 those。單數 is，複數 are。",
+      "display": "distance"
+    },
+    {
+      "id": "U2-C",
+      "unit": "Unit 2",
+      "title": "Where 與位置",
+      "summary": "讀位置圖，回答物品所在。",
+      "kps": [
+        "U210",
+        "U211",
+        "U212",
+        "U217"
+      ],
+      "rule": "Where is + 單數? / Where are + 複數?；位置詞看圖而不是猜。",
+      "display": "location"
+    },
+    {
+      "id": "U2-D",
+      "unit": "Unit 2",
+      "title": "對話、顏色與閱讀",
+      "summary": "將文本證據和自己的判斷分開。",
+      "kps": [
+        "U213",
+        "U215",
+        "U216"
+      ],
+      "rule": "先找到原文中的人、物、位置，再回答，不只靠猜測。",
+      "display": "worksheet"
+    },
+    {
+      "id": "U2-E",
+      "unit": "Unit 2",
+      "title": "複數讀音與詞形檢查",
+      "summary": "書面練習字尾讀音分類，補正容易混淆的複數。",
+      "kps": [
+        "U203",
+        "U204",
+        "U205",
+        "U214"
+      ],
+      "rule": "-s 字尾有 /s/、/z/、/ɪz/；書面分類不能取代聽力測驗。",
+      "display": "worksheet"
+    },
+    {
+      "id": "R-M",
+      "unit": "Review",
+      "title": "Starter–Unit 2 統整應用",
+      "summary": "混合舊知識，但不把新舊能力混成單一診斷。",
+      "kps": [
+        "S08",
+        "S12",
+        "S13",
+        "U102",
+        "U104",
+        "U207",
+        "U209",
+        "U210",
+        "U211",
+        "U216"
+      ],
+      "rule": "圈出問句線索：Who / What / How old / Where；再判斷單複數與語境。",
+      "display": "worksheet"
+    },
+    {
+      "id": "S-CHECK",
+      "unit": "Starter",
+      "title": "Starter 新題檢核",
+      "summary": "教師先收走學習頁；每項能力分開記錄。",
+      "kps": [
+        "S01",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "rule": "這是獨立檢核的草稿，正式發行仍待來源及教師 Gate 核准。",
+      "display": "checkpoint"
+    },
+    {
+      "id": "U1-CHECK",
+      "unit": "Unit 1",
+      "title": "Unit 1 新題檢核",
+      "summary": "人物與語法新題，不使用練習頁原題。",
+      "kps": [
+        "U101",
+        "U102",
+        "U103",
+        "U104",
+        "U105",
+        "U106",
+        "U107",
+        "U108",
+        "U109",
+        "U113"
+      ],
+      "rule": "正式 Gate 仍待教師確認。",
+      "display": "checkpoint"
+    },
+    {
+      "id": "U2-CHECK",
+      "unit": "Unit 2",
+      "title": "Unit 2 新題檢核",
+      "summary": "詞形、指示詞、位置與閱讀。",
+      "kps": [
+        "U201",
+        "U202",
+        "U203",
+        "U204",
+        "U205",
+        "U206",
+        "U207",
+        "U208",
+        "U209",
+        "U210",
+        "U211",
+        "U212",
+        "U213",
+        "U215"
+      ],
+      "rule": "正式 Gate 仍待教師核准。",
+      "display": "checkpoint"
+    },
+    {
+      "id": "R-CHECK",
+      "unit": "Review",
+      "title": "跨單元新情境",
+      "summary": "混合知識時，教師須拆開記錄錯誤原因。",
+      "kps": [
+        "S08",
+        "S09",
+        "S12",
+        "S14",
+        "U102",
+        "U103",
+        "U104",
+        "U207",
+        "U210",
+        "U216"
+      ],
+      "rule": "學生先獨立作答，教師判讀哪些技能需要最小修復。",
+      "display": "checkpoint"
+    },
+    {
+      "id": "S-DELAY",
+      "unit": "Starter",
+      "title": "Starter 延後無提示",
+      "summary": "請記錄兩次施測相隔天數。",
+      "kps": [
+        "S08",
+        "S09",
+        "S10",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "rule": "如果有提示，應標成 supported practice。",
+      "display": "delayed"
+    },
+    {
+      "id": "U1-DELAY",
+      "unit": "Unit 1",
+      "title": "Unit 1 延後無提示",
+      "summary": "未曝光新題，與上次練習分開。",
+      "kps": [
+        "U101",
+        "U102",
+        "U103",
+        "U104",
+        "U105",
+        "U108"
+      ],
+      "rule": "教師應分別記錄是否有提示。",
+      "display": "delayed"
+    },
+    {
+      "id": "U2-DELAY",
+      "unit": "Unit 2",
+      "title": "Unit 2 延後無提示",
+      "summary": "未曝光新題，與上次練習分開。",
+      "kps": [
+        "U203",
+        "U204",
+        "U205",
+        "U207",
+        "U210",
+        "U211"
+      ],
+      "rule": "不能用當堂再做來冒充延後保留。",
+      "display": "delayed"
+    }
+  ],
+  "items": [
+    {
+      "id": "S-A-P01",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S01",
+      "prompt": "請將 B 改成小寫。",
+      "answer": "b",
+      "rationale": "B 的小寫是 b。",
+      "source_refs": [
+        "SL"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "b"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「A–Z 大小寫對應與正確字形」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P02",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S01",
+      "prompt": "請將 q 改成大寫。",
+      "answer": "Q",
+      "rationale": "q 的大寫是 Q。",
+      "source_refs": [
+        "SL"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Q"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「A–Z 大小寫對應與正確字形」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P03",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S02",
+      "prompt": "將 QUIZ 全部寫成小寫。",
+      "answer": "quiz",
+      "rationale": "英文大小寫變換不改字母順序。",
+      "source_refs": [
+        "SL"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "quiz"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「拼字、大小寫及書寫規範」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P04",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S03",
+      "prompt": "哪個字與 van 的短母音相同？請選寫：ham / bed",
+      "answer": "ham",
+      "rationale": "van 與 ham 含相同短母音。",
+      "source_refs": [
+        "SP"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "ham"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「短母音 a 的字形與拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P05",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S04",
+      "prompt": "哪個字與 bed 的短母音相同？請選寫：red / pig",
+      "answer": "red",
+      "rationale": "bed 與 red 含相同短母音。",
+      "source_refs": [
+        "SP"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "red"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「短母音 e 的字形與拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P06",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S05",
+      "prompt": "哪個字與 pig 的短母音相同？請選寫：kilt / mug",
+      "answer": "kilt",
+      "rationale": "pig 與 kilt 含相同短母音。",
+      "source_refs": [
+        "SP"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "kilt"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「短母音 i 的字形與拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P07",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S06",
+      "prompt": "哪個字與 fox 的短母音相同？請選寫：box / wet",
+      "answer": "box",
+      "rationale": "fox 與 box 含相同短母音。",
+      "source_refs": [
+        "SP"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "box"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「短母音 o 的字形與拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-A-P08",
+      "section": "S-A",
+      "unit": "Starter",
+      "kp": "S07",
+      "prompt": "哪個字與 sun 的短母音相同？請選寫：mug / red",
+      "answer": "mug",
+      "rationale": "sun 與 mug 含相同短母音。",
+      "source_refs": [
+        "SP"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "mug"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「短母音 u 的字形與拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P01",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "I am Mark. ______ name is Mark.",
+      "answer": "My",
+      "rationale": "I 的所有格是 my，放 name 前。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "My"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P02",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "She is Tina. ______ name is Tina.",
+      "answer": "Her",
+      "rationale": "She 的所有格是 her。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Her"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P03",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "They are Mr. and Mrs. Lin. ______ son is Ben.",
+      "answer": "Their",
+      "rationale": "They 的所有格是 their。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Their"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P04",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "It is Lucky. ______ name is Lucky.",
+      "answer": "Its",
+      "rationale": "Its 是它的；It’s 是 it is。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Its"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P05",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S11",
+      "prompt": "He is Gary. → 寫出縮寫句。",
+      "answer": "He's Gary.",
+      "rationale": "he is 縮寫為 he’s；要保留撇號。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "He's Gary."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格與 be 縮寫與 apostrophe」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P06",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S11",
+      "prompt": "We are students. → 寫出縮寫句。",
+      "answer": "We're students.",
+      "rationale": "we are 縮寫為 we’re；students 見原課例句。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "We're students."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格與 be 縮寫與 apostrophe」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P07",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S08",
+      "prompt": "Gary and Mark 要用哪個主格代名詞？",
+      "answer": "They",
+      "rationale": "兩名非說話者，用 they。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "They"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格代名詞 I/you/he/she/it/we/they」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-B-P08",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "You and I ____ students.",
+      "answer": "are",
+      "rationale": "兩人合稱 we，故用 are；此題不代替視角檢核。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格與 am/is/are 肯定式一致」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P01",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S12",
+      "prompt": "Name card: Tina (girl). Q: What is her name? A: ______",
+      "answer": "Her name is Tina.",
+      "rationale": "her 指女性人物的所有格；答人名 Tina。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Her name is Tina."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is ... name? 姓名問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P02",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S12",
+      "prompt": "Name card: Lucky (dog). Q: What is its name? A: ______",
+      "answer": "Its name is Lucky.",
+      "rationale": "its 修飾 name；狗名 Lucky。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Its name is Lucky."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is ... name? 姓名問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P03",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S12",
+      "prompt": "將「his / name / What / is / ?」重排成問句。",
+      "answer": "What is his name?",
+      "rationale": "疑問詞 What + is + his name。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "What is his name?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is ... name? 姓名問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P04",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S13",
+      "prompt": "Age card: Gary, 13. Q: How old is Gary? A: ______",
+      "answer": "He is thirteen years old.",
+      "rationale": "Gary 為男性，13 讀 thirteen。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "He is thirteen years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「How old ...? 年齡問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P05",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S13",
+      "prompt": "Age card: Tina, 14. Q: How old is she? A: ______",
+      "answer": "She is fourteen years old.",
+      "rationale": "第三人稱單數 she 搭配 is。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "She is fourteen years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「How old ...? 年齡問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P06",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S14",
+      "prompt": "請將數字 40 寫成英文。",
+      "answer": "forty",
+      "rationale": "整十字形及二位數連字號要正確。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "forty"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P07",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S14",
+      "prompt": "請將數字 15 寫成英文。",
+      "answer": "fifteen",
+      "rationale": "整十字形及二位數連字號要正確。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "fifteen"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P08",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S14",
+      "prompt": "請將數字 82 寫成英文。",
+      "answer": "eighty-two",
+      "rationale": "整十字形及二位數連字號要正確。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "eighty-two"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-C-P09",
+      "section": "S-C",
+      "unit": "Starter",
+      "kp": "S14",
+      "prompt": "請將數字 33 寫成英文。",
+      "answer": "thirty-three",
+      "rationale": "整十字形及二位數連字號要正確。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "thirty-three"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-D-P01",
+      "section": "S-D",
+      "unit": "Starter",
+      "kp": "S15",
+      "prompt": "請改正：what is your name.",
+      "answer": "What is your name?",
+      "rationale": "句首、人名大寫；句末標點依語氣。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "What is your name?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「句首、人名、I 大寫及標點／空格」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-D-P02",
+      "section": "S-D",
+      "unit": "Starter",
+      "kp": "S15",
+      "prompt": "請改正：my name is kelly.",
+      "answer": "My name is Kelly.",
+      "rationale": "句首、人名大寫；句末標點依語氣。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "My name is Kelly."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「句首、人名、I 大寫及標點／空格」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-D-P03",
+      "section": "S-D",
+      "unit": "Starter",
+      "kp": "S15",
+      "prompt": "請改正：how old is tina?",
+      "answer": "How old is Tina?",
+      "rationale": "句首、人名大寫；句末標點依語氣。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "How old is Tina?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「句首、人名、I 大寫及標點／空格」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-D-P04",
+      "section": "S-D",
+      "unit": "Starter",
+      "kp": "S16",
+      "prompt": "A: Hello, Gary. How are you?  B: ______ (我很好，謝謝。)",
+      "answer": "I'm fine. Thank you.",
+      "rationale": "應答詢問近況，可用 I’m fine. Thank you。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "I'm fine. Thank you."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「問候與對話角色回應」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-D-P05",
+      "section": "S-D",
+      "unit": "Starter",
+      "kp": "S16",
+      "prompt": "兩位學生剛見面。寫一句合適的英文打招呼。",
+      "answer": "Hello.",
+      "rationale": "可接受 Hi. / Hello.；此題不作唯一答案正式檢核。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Hello.",
+        "Hi."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「問候與對話角色回應」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P01",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "把「警察」寫成英文。",
+      "answer": "police officer",
+      "rationale": "來自 Unit 1 的 Theme Words。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "police officer"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P02",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "把「歌手」寫成英文。",
+      "answer": "singer",
+      "rationale": "來自 Unit 1 的 Theme Words。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "singer"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P03",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "把「護士」寫成英文。",
+      "answer": "nurse",
+      "rationale": "來自 Unit 1 的 Theme Words。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "nurse"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P04",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "把「家庭主婦」寫成英文。",
+      "answer": "housewife",
+      "rationale": "來自 Unit 1 的 Theme Words。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "housewife"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P05",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "把「辦公室職員」寫成英文。",
+      "answer": "office worker",
+      "rationale": "來自 Unit 1 的 Theme Words。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "office worker"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P06",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U106",
+      "prompt": "Job card: Zac is a doctor. Q: What is Zac’s job? A: ______",
+      "answer": "He is a doctor.",
+      "rationale": "依 job card 回答職業，he 指 Zac。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "He is a doctor."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「用 what job / 身分回答職業」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-A-P07",
+      "section": "U1-A",
+      "unit": "Unit 1",
+      "kp": "U106",
+      "prompt": "職業卡：Zoe 是 writer。請用一句英文介紹 Zoe。",
+      "answer": "She is a writer.",
+      "rationale": "she is + a + 職業。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "She is a writer."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「用 what job / 身分回答職業」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-B-P01",
+      "section": "U1-B",
+      "unit": "Unit 1",
+      "kp": "U102",
+      "prompt": "根據家庭圖：Who is Max’s mother?",
+      "answer": "Zoe.",
+      "rationale": "Max 是 Zoe 的兒子，因此母親為 Zoe。",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Zoe."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-B-P02",
+      "section": "U1-B",
+      "unit": "Unit 1",
+      "kp": "U102",
+      "prompt": "根據家庭圖：Zac is Max’s ______.",
+      "answer": "uncle",
+      "rationale": "Zac 與 Zoe 是兄妹／姊弟；Max 是 Zoe 的兒子，因此 Zac 是舅舅／叔叔。",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "uncle"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-B-P03",
+      "section": "U1-B",
+      "unit": "Unit 1",
+      "kp": "U102",
+      "prompt": "根據家庭圖：Paul is Carol’s ______.",
+      "answer": "husband",
+      "rationale": "圖中 Paul 與 Carol 為夫妻。",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "husband"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-B-P04",
+      "section": "U1-B",
+      "unit": "Unit 1",
+      "kp": "U103",
+      "prompt": "問人物：______ is that boy? He is Max.",
+      "answer": "Who",
+      "rationale": "Who 問人；What 不適合問特定人物身分。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Who"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who is he/she/that ...? 人物詢問」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-B-P05",
+      "section": "U1-B",
+      "unit": "Unit 1",
+      "kp": "U103",
+      "prompt": "A: Who is Zoe? B: ______",
+      "answer": "She is Max’s mother.",
+      "rationale": "根據已給家庭圖，單數女性用 she。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "She is Max’s mother."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who is he/she/that ...? 人物詢問」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-B-P06",
+      "section": "U1-B",
+      "unit": "Unit 1",
+      "kp": "U107",
+      "prompt": "將「Paul 的兒子」譯成英文名詞片語。",
+      "answer": "Paul's son",
+      "rationale": "單一人物的所有格為 Paul’s。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Paul's son"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「名詞所有格 ’s 與家屬指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P01",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U104",
+      "prompt": "She is a nurse. → 改成否定句。",
+      "answer": "She isn't a nurse.",
+      "rationale": "is not 可縮寫為 isn’t。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "She isn't a nurse.",
+        "She is not a nurse."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P02",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U104",
+      "prompt": "They are students. → 改成 Yes/No 問句。",
+      "answer": "Are they students?",
+      "rationale": "be 提到主詞前。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "Are they students?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P03",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U104",
+      "prompt": "A: Are you a teacher?  B: ______（否定簡答）",
+      "answer": "No, I'm not.",
+      "rationale": "對 are you 由回答者用 I；否定可答 No, I’m not。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "No, I'm not."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P04",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U104",
+      "prompt": "A: Is the boy tall? B: ______（肯定簡答）",
+      "answer": "Yes, he is.",
+      "rationale": "the boy 用 he；肯定簡答不用縮寫 yes he’s。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Yes, he is."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P05",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U105",
+      "prompt": "將「a / handsome / boy」排成名詞片語。",
+      "answer": "a handsome boy",
+      "rationale": "形容詞置名詞 boy 前。",
+      "source_refs": [
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "a handsome boy"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「形容詞 be 後與名詞前的語序」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P06",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U105",
+      "prompt": "將「The girl is happy.」改成「她是個快樂的女孩」。",
+      "answer": "She is a happy girl.",
+      "rationale": "形容詞名詞前，單數 girl 前加 a。",
+      "source_refs": [
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "She is a happy girl."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「形容詞 be 後與名詞前的語序」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P07",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U108",
+      "prompt": "Age card: Max, 7. 用完整英文句介紹年齡。",
+      "answer": "Max is seven years old.",
+      "rationale": "數字後接 years old。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Max is seven years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「年齡 years old 與人物外貌描述」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-C-P08",
+      "section": "U1-C",
+      "unit": "Unit 1",
+      "kp": "U113",
+      "prompt": "要問人物身分，選 Who / How old：______ is that girl?",
+      "answer": "Who",
+      "rationale": "Who 問身分；How old 問年齡。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Who"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who／How old／What 的問句功能區辨」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P01",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U109",
+      "prompt": "依閱讀短文：How old is Ben?",
+      "answer": "He is thirteen.",
+      "rationale": "文中直接指出 Ben is thirteen。",
+      "source_refs": [
+        "U1R"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "He is thirteen.",
+        "He is thirteen years old."
+      ],
+      "context": "Ben is thirteen. His mother is a teacher. His father is a police officer. His sister, Zoe, is an elementary school student. Ben is a junior high school student.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭介紹閱讀回文找證據」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P02",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U109",
+      "prompt": "依閱讀短文：Who is a police officer?",
+      "answer": "Ben's father.",
+      "rationale": "文中 His father is a police officer。",
+      "source_refs": [
+        "U1R"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Ben's father."
+      ],
+      "context": "Ben is thirteen. His mother is a teacher. His father is a police officer. His sister, Zoe, is an elementary school student. Ben is a junior high school student.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭介紹閱讀回文找證據」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P03",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U109",
+      "prompt": "依閱讀短文：Which school is Zoe in?",
+      "answer": "Elementary school.",
+      "rationale": "文中 Zoe is an elementary school student。",
+      "source_refs": [
+        "U1R"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Elementary school."
+      ],
+      "context": "Ben is thirteen. His mother is a teacher. His father is a police officer. His sister, Zoe, is an elementary school student. Ben is a junior high school student.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭介紹閱讀回文找證據」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P04",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U110",
+      "prompt": "辨識字首聲音：哪個字以字母 b 開頭？ bed / red",
+      "answer": "bed",
+      "rationale": "此處僅辨認字母／可見字形，不宣稱完成聽辨。",
+      "source_refs": [
+        "U1S"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "bed"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「英語清濁輔音拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P05",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U110",
+      "prompt": "辨識尾音字形：哪個字以字母 t 結尾？ pet / bed",
+      "answer": "pet",
+      "rationale": "pet 以 t 結尾；屬文字檢核。",
+      "source_refs": [
+        "U1S"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "pet"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「英語清濁輔音拼讀辨識」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P06",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U111",
+      "prompt": "延伸構詞（若已教）：teach + er → ______",
+      "answer": "teacher",
+      "rationale": "-er 表示執行工作的人；本題屬課本 Extension，教師須確認。",
+      "source_refs": [
+        "U1E"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "teacher"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「-er 人物／職業構詞」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P07",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U111",
+      "prompt": "延伸構詞（若已教）：sing + er → ______",
+      "answer": "singer",
+      "rationale": "sing 加 er 形成 singer。",
+      "source_refs": [
+        "U1E"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "singer"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「-er 人物／職業構詞」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-D-P08",
+      "section": "U1-D",
+      "unit": "Unit 1",
+      "kp": "U112",
+      "prompt": "角色：Zoe 正介紹自己是學生。請寫完整一句。",
+      "answer": "I am a student.",
+      "rationale": "由 Zoe 自己說話，要用 I；口說能力須另由教師觀察。",
+      "source_refs": [
+        "U1D",
+        "U1E"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "I am a student."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「介紹自己／家人並回答問句」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P01",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U201",
+      "prompt": "把「鉛筆盒」寫成英文。",
+      "answer": "pencil case",
+      "rationale": "屬 Unit 2 Theme Words。",
+      "source_refs": [
+        "U2D",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "pencil case"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「文具、房間與生活物品詞彙」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P02",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U201",
+      "prompt": "把「筆記本」寫成英文。",
+      "answer": "notebook",
+      "rationale": "屬 Unit 2 Theme Words。",
+      "source_refs": [
+        "U2D",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "notebook"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「文具、房間與生活物品詞彙」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P03",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U201",
+      "prompt": "把「禮物」寫成英文。",
+      "answer": "gift",
+      "rationale": "屬 Unit 2 Theme Words。",
+      "source_refs": [
+        "U2D",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "gift"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「文具、房間與生活物品詞彙」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P04",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U201",
+      "prompt": "把「漫畫書」寫成英文。",
+      "answer": "comic book",
+      "rationale": "屬 Unit 2 Theme Words。",
+      "source_refs": [
+        "U2D",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "comic book"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「文具、房間與生活物品詞彙」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P05",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U202",
+      "prompt": "____ eraser （填 a / an）",
+      "answer": "an",
+      "rationale": "eraser 的起始音為母音，使用 an。",
+      "source_refs": [
+        "U2D"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "an"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「單數可數名詞 a／an、one 與 is」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P06",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U203",
+      "prompt": "請寫出 box 的複數。",
+      "answer": "boxes",
+      "rationale": "box 的課本對應複數為 boxes。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "boxes"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s / -es」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P07",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U203",
+      "prompt": "請寫出 watch 的複數。",
+      "answer": "watches",
+      "rationale": "watch 的課本對應複數為 watches。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "watches"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s / -es」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P08",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U204",
+      "prompt": "請寫出 baby 的複數。",
+      "answer": "babies",
+      "rationale": "baby 的課本對應複數為 babies。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "babies"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數字尾 y→ies 與 f/fe→ves」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P09",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U204",
+      "prompt": "請寫出 wife 的複數。",
+      "answer": "wives",
+      "rationale": "wife 的課本對應複數為 wives。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "wives"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數字尾 y→ies 與 f/fe→ves」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P10",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U205",
+      "prompt": "請寫出 mouse 的複數。",
+      "answer": "mice",
+      "rationale": "mouse 的課本對應複數為 mice。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "mice"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「不規則複數 mouse/mice、person/people、woman/women」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P11",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U205",
+      "prompt": "請寫出 person 的複數。",
+      "answer": "people",
+      "rationale": "person 的課本對應複數為 people。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "people"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「不規則複數 mouse/mice、person/people、woman/women」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P12",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U206",
+      "prompt": "請寫出 pencil box 的複數。",
+      "answer": "pencil boxes",
+      "rationale": "pencil box 的課本對應複數為 pencil boxes。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "pencil boxes"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複合名詞複數 pencil boxes／comic books」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-A-P13",
+      "section": "U2-A",
+      "unit": "Unit 2",
+      "kp": "U206",
+      "prompt": "請寫出 comic book 的複數。",
+      "answer": "comic books",
+      "rationale": "comic book 的課本對應複數為 comic books。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "comic books"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複合名詞複數 pencil boxes／comic books」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P01",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U207",
+      "prompt": "【近處 1 支 pencil】______ is a pencil.",
+      "answer": "This",
+      "rationale": "按照說話者距離與數量選指示詞。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "This"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P02",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U207",
+      "prompt": "【遠處 1 把 ruler】______ is a ruler.",
+      "answer": "That",
+      "rationale": "按照說話者距離與數量選指示詞。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "That"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P03",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U207",
+      "prompt": "【近處 2 支 pens】______ are pens.",
+      "answer": "These",
+      "rationale": "按照說話者距離與數量選指示詞。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "These"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P04",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U207",
+      "prompt": "【遠處 3 本 notebooks】______ are notebooks.",
+      "answer": "Those",
+      "rationale": "按照說話者距離與數量選指示詞。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Those"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P05",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U208",
+      "prompt": "對近處兩個 pencil cases 問「這些是什麼？」寫英文問句。",
+      "answer": "What are these?",
+      "rationale": "近處複數用 What are these?。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "What are these?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is／are + 指示詞問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P06",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U208",
+      "prompt": "Q: What is that? A: ______（遠處 1 個 comic book）",
+      "answer": "That is a comic book.",
+      "rationale": "單數 that 對 is，名詞前需 a。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "That is a comic book."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is／are + 指示詞問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P07",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U209",
+      "prompt": "____ two watches on the table.（選 These are / This is）",
+      "answer": "These are",
+      "rationale": "複數 two watches 對應 these are。",
+      "source_refs": [
+        "U2P",
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "These are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「單複數主詞、they 與 be 動詞一致」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-B-P08",
+      "section": "U2-B",
+      "unit": "Unit 2",
+      "kp": "U209",
+      "prompt": "A: Are those your markers? B: ______（肯定簡答）",
+      "answer": "Yes, they are.",
+      "rationale": "those 為複數，簡答用 they are。",
+      "source_refs": [
+        "U2P",
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Yes, they are."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「單複數主詞、they 與 be 動詞一致」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P01",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "依位置圖：The clock is ______ the table.",
+      "answer": "above",
+      "rationale": "圖中 clock 在 table 上方，並未接觸桌面。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "above"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P02",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "依位置圖：The cat is ______ the table.",
+      "answer": "under",
+      "rationale": "圖中 cat 位於桌面下方。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "under"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P03",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "依位置圖：The notebook is ______ the table.",
+      "answer": "on",
+      "rationale": "圖中 notebook 放在桌面上。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "on"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P04",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "依位置圖：The ruler is ______ the pencil and the eraser.",
+      "answer": "between",
+      "rationale": "ruler 在 pencil 與 eraser 之間。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "between"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P05",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "文字情境：the sofa is behind the table。請寫出「在桌子的後面」。",
+      "answer": "behind the table",
+      "rationale": "behind = 在……後方。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "behind the table"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P06",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "文字情境：the table is in front of the sofa。請寫出「在沙發前面」。",
+      "answer": "in front of the sofa",
+      "rationale": "in front of = 在……前方。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "in front of the sofa"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P07",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U210",
+      "prompt": "根據圖：Where is the cat? A: ______",
+      "answer": "It is under the table.",
+      "rationale": "單數 cat 用 It is；圖提供位置證據。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "It is under the table."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P08",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U210",
+      "prompt": "情境：Two pencils are in the pencil case. Q: Where are the pencils? A: ______",
+      "answer": "They are in the pencil case.",
+      "rationale": "複數 pencils 用 They are；位置在 pencil case。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are in the pencil case."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P09",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U212",
+      "prompt": "選出房間名稱：吃飯的房間是 bedroom / dining room？",
+      "answer": "dining room",
+      "rationale": "dining room 是飯廳，bedroom 是臥室。",
+      "source_refs": [
+        "U2L",
+        "U2R"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "dining room"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「房間名稱、方位描述及閱讀」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P10",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "用兩個英文單字說「緊鄰客廳」：______ the living room.",
+      "answer": "next to",
+      "rationale": "next to 表緊鄰；此題限制兩個單字以免多解。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "next to"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P11",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "用一個介系詞說「在我家附近」：______ my house.",
+      "answer": "near",
+      "rationale": "near 是在……附近。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "near"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P01",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U213",
+      "prompt": "依短文：What color are the living room walls?",
+      "answer": "Purple.",
+      "rationale": "文中 The living room walls are purple。",
+      "source_refs": [
+        "U2D"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Purple."
+      ],
+      "context": "This is Ben's house. The living room walls are purple. Purple is Ben's favorite color. The kitchen is next to the dining room. His notebook is on the table. Two pencils are in a pencil case.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「顏色與 favorite color、肯否定短對話」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P02",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U215",
+      "prompt": "依短文：Which room is next to the dining room?",
+      "answer": "The kitchen.",
+      "rationale": "文中 The kitchen is next to the dining room。",
+      "source_refs": [
+        "U2R",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "The kitchen."
+      ],
+      "context": "This is Ben's house. The living room walls are purple. Purple is Ben's favorite color. The kitchen is next to the dining room. His notebook is on the table. Two pencils are in a pencil case.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「特殊空間屋描述 inside/above/right next to/enough」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P03",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U210",
+      "prompt": "依短文：Where is Ben’s notebook?",
+      "answer": "It is on the table.",
+      "rationale": "文中 notebook is on the table。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "It is on the table."
+      ],
+      "context": "This is Ben's house. The living room walls are purple. Purple is Ben's favorite color. The kitchen is next to the dining room. His notebook is on the table. Two pencils are in a pencil case.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P04",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U216",
+      "prompt": "依短文：pencil case 裡有幾支 pencils？",
+      "answer": "Two.",
+      "rationale": "文中 Two pencils are in a pencil case，答案為 2。",
+      "source_refs": [
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Two.",
+        "Two pencils."
+      ],
+      "context": "This is Ben's house. The living room walls are purple. Purple is Ben's favorite color. The kitchen is next to the dining room. His notebook is on the table. Two pencils are in a pencil case.",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Unit 1–2 合併閱讀與跨單元問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P05",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U215",
+      "prompt": "讀房屋提示：The bedroom is above the kitchen. 哪個房間在下面？",
+      "answer": "The kitchen.",
+      "rationale": "above the kitchen 表 bedroom 在 kitchen 上方。",
+      "source_refs": [
+        "U2R",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "The kitchen."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「特殊空間屋描述 inside/above/right next to/enough」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P06",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U213",
+      "prompt": "A: My favorite color is gray. Q: What is the speaker’s favorite color?",
+      "answer": "Gray.",
+      "rationale": "favorite color 是最喜歡的顏色。",
+      "source_refs": [
+        "U2D"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Gray."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「顏色與 favorite color、肯否定短對話」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P07",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U215",
+      "prompt": "根據原課閱讀的空間用語：The bathroom is ______ the house.",
+      "answer": "inside",
+      "rationale": "inside 表在房屋裡面。",
+      "source_refs": [
+        "U2R",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "inside"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「特殊空間屋描述 inside/above/right next to/enough」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P08",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U215",
+      "prompt": "房屋雖小但足夠一人住：It is ______ for one person.",
+      "answer": "enough",
+      "rationale": "enough 表足夠的，課文以房屋大小形成對比。",
+      "source_refs": [
+        "U2R",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "enough"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「特殊空間屋描述 inside/above/right next to/enough」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-D-P09",
+      "section": "U2-D",
+      "unit": "Unit 2",
+      "kp": "U215",
+      "prompt": "把 right、next、to 排成正確的位置片語。",
+      "answer": "right next to",
+      "rationale": "right next to 表就在……旁邊。",
+      "source_refs": [
+        "U2R",
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "right next to"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「特殊空間屋描述 inside/above/right next to/enough」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-E-P01",
+      "section": "U2-E",
+      "unit": "Unit 2",
+      "kp": "U214",
+      "prompt": "參照課本表，將 notebooks 字尾讀音分類：/s/、/z/、/ɪz/。",
+      "answer": "/s/",
+      "rationale": "books 字尾 /s/",
+      "source_refs": [
+        "U2P",
+        "U2S"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "/s/"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s 字尾 /s/ /z/ /ɪz/ 讀音區辨」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-E-P02",
+      "section": "U2-E",
+      "unit": "Unit 2",
+      "kp": "U214",
+      "prompt": "參照課本表，將 rooms 字尾讀音分類：/s/、/z/、/ɪz/。",
+      "answer": "/z/",
+      "rationale": "rooms 字尾 /z/",
+      "source_refs": [
+        "U2P",
+        "U2S"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "/z/"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s 字尾 /s/ /z/ /ɪz/ 讀音區辨」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-E-P03",
+      "section": "U2-E",
+      "unit": "Unit 2",
+      "kp": "U214",
+      "prompt": "參照課本表，將 watches 字尾讀音分類：/s/、/z/、/ɪz/。",
+      "answer": "/ɪz/",
+      "rationale": "watches 字尾 /ɪz/",
+      "source_refs": [
+        "U2P",
+        "U2S"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "/ɪz/"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s 字尾 /s/ /z/ /ɪz/ 讀音區辨」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-E-P04",
+      "section": "U2-E",
+      "unit": "Unit 2",
+      "kp": "U204",
+      "prompt": "依複數規則：family → ______",
+      "answer": "families",
+      "rationale": "子音+y 改 ies。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "families"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數字尾 y→ies 與 f/fe→ves」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-E-P05",
+      "section": "U2-E",
+      "unit": "Unit 2",
+      "kp": "U205",
+      "prompt": "依課本不規則複數：woman → ______",
+      "answer": "women",
+      "rationale": "woman 複數為 women。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "women"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「不規則複數 mouse/mice、person/people、woman/women」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P01",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "S08",
+      "prompt": "Paul and I are students. ______ are students.",
+      "answer": "We",
+      "rationale": "Paul + 說話者 I，用 we。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "We"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格代名詞 I/you/he/she/it/we/they」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P02",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "U104",
+      "prompt": "A: Is Zoe a teacher? B: ______（否定）",
+      "answer": "No, she isn't.",
+      "rationale": "Zoe 用 she，is 否定簡答。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "No, she isn't."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P03",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "S13",
+      "prompt": "Name card: Jamie, age 13. Q: How old is Jamie?",
+      "answer": "Jamie is thirteen years old.",
+      "rationale": "以年齡 13 回答。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Jamie is thirteen years old.",
+        "He is thirteen years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「How old ...? 年齡問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P04",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "U207",
+      "prompt": "【遠處 2 本 notebooks】______ are notebooks.",
+      "answer": "Those",
+      "rationale": "遠＋複數 those。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Those"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P05",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "U210",
+      "prompt": "情境：The pencils are under the desk. 問：Where are the pencils?",
+      "answer": "They are under the desk.",
+      "rationale": "複數 they / are；位置 under。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are under the desk."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P06",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "U102",
+      "prompt": "Zoe 是 Max 的媽媽。Max 是 Zoe 的 ______（用英文）。",
+      "answer": "son",
+      "rationale": "家庭關係 son。",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "son"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P07",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "U216",
+      "prompt": "選正確：What are these? A: (They are pencils. / He is a pencil.)",
+      "answer": "They are pencils.",
+      "rationale": "複數問句配 They are。",
+      "source_refs": [
+        "U2V"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are pencils."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Unit 1–2 合併閱讀與跨單元問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-M-P08",
+      "section": "R-M",
+      "unit": "Review",
+      "kp": "U211",
+      "prompt": "位置：cat 在 box 裡。Where is the cat?",
+      "answer": "It is in the box.",
+      "rationale": "Where+is；in the box。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "It is in the box."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-C-P12",
+      "section": "U2-C",
+      "unit": "Unit 2",
+      "kp": "U217",
+      "prompt": "口說練習：指出教室內一項已知物品，問一次 Where is it?，再口頭回答。",
+      "answer": "含 Where is it? 與一個合適位置答句",
+      "rationale": "教師須現場觀察口說；不能由紙本答案推論口語能力。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "practice",
+      "form": "oral",
+      "options": [],
+      "accepted": [
+        "依現場物品位置合理回答"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「口頭指認物品和位置」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C01",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S01",
+      "prompt": "將小寫 m 改成大寫。",
+      "answer": "M",
+      "rationale": "m→M。",
+      "source_refs": [
+        "SL"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "M"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「A–Z 大小寫對應與正確字形」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C02",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "We are students. ______ teacher is Mr. Lin.",
+      "answer": "Our",
+      "rationale": "we 的所有格 our；此題 teacher 為課本詞彙。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Our"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C03",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "He is Gary. ______ name is Gary.",
+      "answer": "His",
+      "rationale": "he 的所有格 his。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "His"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C04",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S11",
+      "prompt": "They are students. → 寫成縮寫句。",
+      "answer": "They're students.",
+      "rationale": "they are→they’re。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "They're students."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格與 be 縮寫與 apostrophe」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C05",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S12",
+      "prompt": "Name card: Ben (boy). 寫出「他的名字是什麼？」",
+      "answer": "What is his name?",
+      "rationale": "his name 用 What is 來詢問。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "What is his name?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is ... name? 姓名問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C06",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S13",
+      "prompt": "Age card: Tina, 12. Q: How old is Tina?",
+      "answer": "She is twelve years old.",
+      "rationale": "用 she is twelve years old。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "She is twelve years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「How old ...? 年齡問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C07",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S14",
+      "prompt": "將 47 寫成英文。",
+      "answer": "forty-seven",
+      "rationale": "forty 沒有 u；整十加連字號。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "forty-seven"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C08",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S15",
+      "prompt": "改正：her name is tina.",
+      "answer": "Her name is Tina.",
+      "rationale": "句首 H、姓名 T 大寫。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "check",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "Her name is Tina."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「句首、人名、I 大寫及標點／空格」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-CHECK-C09",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S16",
+      "prompt": "A: How are you? B: ______（我很好。）",
+      "answer": "I'm fine.",
+      "rationale": "狀態問句需回答狀態，不是姓名／年齡。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "I'm fine."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「問候與對話角色回應」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C01",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "「作家」的英文是什麼？",
+      "answer": "writer",
+      "rationale": "Unit 1 詞彙 writer。",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "writer"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C02",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U102",
+      "prompt": "根據家庭圖：Carol is Max’s ______.",
+      "answer": "grandmother",
+      "rationale": "Carol 是 Zoe 的母親；Zoe 是 Max 的母親。",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "grandmother"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C03",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U103",
+      "prompt": "想問「那個女生是誰？」請寫英文。",
+      "answer": "Who is that girl?",
+      "rationale": "Who + is + that girl。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Who is that girl?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who is he/she/that ...? 人物詢問」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C04",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U104",
+      "prompt": "A: Are they students? B: ______（否定簡答）",
+      "answer": "No, they aren't.",
+      "rationale": "複數 they 搭配 are not。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "No, they aren't.",
+        "No, they are not."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C05",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U105",
+      "prompt": "重排：is / nurse / a / young / She / .",
+      "answer": "She is a young nurse.",
+      "rationale": "單數職業前 a；形容詞 young 修飾 nurse。",
+      "source_refs": [
+        "U1G"
+      ],
+      "stage": "check",
+      "form": "rewrite",
+      "options": [],
+      "accepted": [
+        "She is a young nurse."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「形容詞 be 後與名詞前的語序」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C06",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U107",
+      "prompt": "將「Zoe 的兒子」譯成英文。",
+      "answer": "Zoe's son",
+      "rationale": "Zoe’s + son。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Zoe's son"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「名詞所有格 ’s 與家屬指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C07",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U108",
+      "prompt": "Age card: Paul, 45. Q: How old is Paul?",
+      "answer": "He is forty-five years old.",
+      "rationale": "男性 he；forty-five 為 45。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "He is forty-five years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「年齡 years old 與人物外貌描述」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-CHECK-C08",
+      "section": "U1-CHECK",
+      "unit": "Unit 1",
+      "kp": "U113",
+      "prompt": "A: ______ is that man? B: He is my uncle.",
+      "answer": "Who",
+      "rationale": "回答人物關係，需用 Who。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Who"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who／How old／What 的問句功能區辨」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C01",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U201",
+      "prompt": "「橡皮擦」的英文是什麼？",
+      "answer": "eraser",
+      "rationale": "Unit 2 文具詞彙。",
+      "source_refs": [
+        "U2D",
+        "U2V"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "eraser"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「文具、房間與生活物品詞彙」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C02",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U202",
+      "prompt": "____ umbrella（填 a/an）",
+      "answer": "an",
+      "rationale": "umbrella 起始母音 /ʌ/，故用 an。",
+      "source_refs": [
+        "U2D"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "an"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「單數可數名詞 a／an、one 與 is」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C03",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U203",
+      "prompt": "複數：brush → ______",
+      "answer": "brushes",
+      "rationale": "以 sh 結尾常加 es。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "brushes"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s / -es」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C04",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U204",
+      "prompt": "複數：housewife → ______",
+      "answer": "housewives",
+      "rationale": "housewife 末尾 wife→wives。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "housewives"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數字尾 y→ies 與 f/fe→ves」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C05",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U205",
+      "prompt": "複數：mouse → ______",
+      "answer": "mice",
+      "rationale": "不規則。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "mice"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「不規則複數 mouse/mice、person/people、woman/women」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C06",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U206",
+      "prompt": "複數：living room → ______",
+      "answer": "living rooms",
+      "rationale": "複合名詞在核心名詞 room 後加 s。",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "living rooms"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複合名詞複數 pencil boxes／comic books」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C07",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U207",
+      "prompt": "【近處 2 把 rulers】______ are rulers.",
+      "answer": "These",
+      "rationale": "近＋複數 these。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "These"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C08",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U208",
+      "prompt": "【遠處 2 支 pencils】問「那些是什麼？」",
+      "answer": "What are those?",
+      "rationale": "遠＋複數 what are those。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "What are those?"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is／are + 指示詞問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C09",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U209",
+      "prompt": "That ______ a brush.",
+      "answer": "is",
+      "rationale": "單數 that 用 is。",
+      "source_refs": [
+        "U2P",
+        "U2L"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「單複數主詞、they 與 be 動詞一致」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C10",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U210",
+      "prompt": "位置資料：Three books are in the box. Q: Where are the books?",
+      "answer": "They are in the box.",
+      "rationale": "複數用 They are，位置 in the box。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are in the box."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C11",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "已知 table 在 sofa 的前面。The sofa is ______ the table.",
+      "answer": "behind",
+      "rationale": "兩者前後相對：table 在 sofa 前，sofa 就在 table 後方。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "behind"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C12",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U212",
+      "prompt": "Name a room: 「廚房」的英文是什麼？",
+      "answer": "kitchen",
+      "rationale": "kitchen 是廚房。",
+      "source_refs": [
+        "U2L",
+        "U2R"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "kitchen"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「房間名稱、方位描述及閱讀」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C13",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U213",
+      "prompt": "A: What is your favorite color? B: ______（我最喜歡紫色。）",
+      "answer": "Purple.",
+      "rationale": "可答 Purple.；若完整句需 My favorite color is purple。",
+      "source_refs": [
+        "U2D"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Purple.",
+        "My favorite color is purple."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「顏色與 favorite color、肯否定短對話」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-CHECK-C14",
+      "section": "U2-CHECK",
+      "unit": "Unit 2",
+      "kp": "U215",
+      "prompt": "The bedroom is above the dining room. 哪個房間在上方？",
+      "answer": "The bedroom.",
+      "rationale": "above 連接的前方名詞在上。",
+      "source_refs": [
+        "U2R",
+        "U2V"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "The bedroom."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「特殊空間屋描述 inside/above/right next to/enough」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C01",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "S09",
+      "prompt": "She is my sister. ______ name is Zoe.",
+      "answer": "Her",
+      "rationale": "she 的所有格 her。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Her"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C02",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "U103",
+      "prompt": "A: ______ is that handsome boy? B: He is my cousin.",
+      "answer": "Who",
+      "rationale": "詢問人物身份／關係。",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "Who"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who is he/she/that ...? 人物詢問」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C03",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "U104",
+      "prompt": "A: Is Max a student? B: ______（肯定簡答）",
+      "answer": "Yes, he is.",
+      "rationale": "he 單數用 is。",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Yes, he is."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C04",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "U207",
+      "prompt": "【遠處 1 個 pencil box】______ is a pencil box.",
+      "answer": "That",
+      "rationale": "遠處單數 that。",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "That"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C05",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "U210",
+      "prompt": "Situation: The watches are on the table. Q: Where are the watches?",
+      "answer": "They are on the table.",
+      "rationale": "複數 they are。",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are on the table."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C06",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "S14",
+      "prompt": "把 58 寫成英文。",
+      "answer": "fifty-eight",
+      "rationale": "fifty + eight。",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "fifty-eight"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C07",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "U102",
+      "prompt": "Paul is Zoe’s father. Max is Zoe’s son. Who is Max’s grandfather?",
+      "answer": "Paul.",
+      "rationale": "母親 Zoe 的父親是 Paul。",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Paul."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "R-CHECK-C08",
+      "section": "R-CHECK",
+      "unit": "Review",
+      "kp": "U216",
+      "prompt": "【近處 2 本 comic books】A: What are these? B: ______",
+      "answer": "They are comic books.",
+      "rationale": "用複數 they are。",
+      "source_refs": [
+        "U2V"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are comic books."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Unit 1–2 合併閱讀與跨單元問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-DELAY-D01",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S09",
+      "prompt": "She is Jan. ______ name is Jan.",
+      "answer": "Her",
+      "rationale": "she→her",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Her"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「所有格 my/your/his/her/its/our/their」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-DELAY-D02",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "We ______ Gary and Ben.",
+      "answer": "are",
+      "rationale": "we→are",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「主格與 am/is/are 肯定式一致」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-DELAY-D03",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S12",
+      "prompt": "Name card: Mark (boy). Q: What is his name? A: ______",
+      "answer": "His name is Mark.",
+      "rationale": "姓名問答",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "His name is Mark."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「What is ... name? 姓名問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-DELAY-D04",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S13",
+      "prompt": "Age card: Kelly, 19. Q: How old is Kelly?",
+      "answer": "She is nineteen years old.",
+      "rationale": "年齡問答",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "She is nineteen years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「How old ...? 年齡問答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "S-DELAY-D05",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S14",
+      "prompt": "將 29 寫成英文。",
+      "answer": "twenty-nine",
+      "rationale": "數字字形",
+      "source_refs": [
+        "SW"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "twenty-nine"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「0–99 基礎數字、拼寫與連字號」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-DELAY-D01",
+      "section": "U1-DELAY",
+      "unit": "Unit 1",
+      "kp": "U101",
+      "prompt": "「廚師」的英文是？",
+      "answer": "cook",
+      "rationale": "職業詞義提取",
+      "source_refs": [
+        "U1D",
+        "U1W"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "cook"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「人物職業與身分單字辨識／拼寫」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-DELAY-D02",
+      "section": "U1-DELAY",
+      "unit": "Unit 1",
+      "kp": "U102",
+      "prompt": "Zoe is Max’s mother. Max is Zoe’s ______.",
+      "answer": "son",
+      "rationale": "家屬關係",
+      "source_refs": [
+        "U1G",
+        "U1W"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "son"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「家庭親屬關係與指涉」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-DELAY-D03",
+      "section": "U1-DELAY",
+      "unit": "Unit 1",
+      "kp": "U103",
+      "prompt": "A: ______ is she? B: She is my aunt.",
+      "answer": "Who",
+      "rationale": "問身份",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "Who"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Who is he/she/that ...? 人物詢問」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-DELAY-D04",
+      "section": "U1-DELAY",
+      "unit": "Unit 1",
+      "kp": "U104",
+      "prompt": "They are happy. → 改為否定句。",
+      "answer": "They aren't happy.",
+      "rationale": "be 的否定",
+      "source_refs": [
+        "U1D"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They aren't happy."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「be 肯定、否定、Yes/No 問句與簡答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U1-DELAY-D05",
+      "section": "U1-DELAY",
+      "unit": "Unit 1",
+      "kp": "U108",
+      "prompt": "Age card: Max, 18. A: How old is he?",
+      "answer": "He is eighteen years old.",
+      "rationale": "年齡",
+      "source_refs": [
+        "U1D",
+        "U1G"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "He is eighteen years old."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「年齡 years old 與人物外貌描述」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-DELAY-D01",
+      "section": "U2-DELAY",
+      "unit": "Unit 2",
+      "kp": "U203",
+      "prompt": "複數：box → ______",
+      "answer": "boxes",
+      "rationale": "詞尾 es",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "boxes"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數 -s / -es」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-DELAY-D02",
+      "section": "U2-DELAY",
+      "unit": "Unit 2",
+      "kp": "U204",
+      "prompt": "複數：baby → ______",
+      "answer": "babies",
+      "rationale": "y→ies",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "babies"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「複數字尾 y→ies 與 f/fe→ves」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-DELAY-D03",
+      "section": "U2-DELAY",
+      "unit": "Unit 2",
+      "kp": "U205",
+      "prompt": "複數：woman → ______",
+      "answer": "women",
+      "rationale": "不規則",
+      "source_refs": [
+        "U2P"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "women"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「不規則複數 mouse/mice、person/people、woman/women」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-DELAY-D04",
+      "section": "U2-DELAY",
+      "unit": "Unit 2",
+      "kp": "U207",
+      "prompt": "【近處 1 個 gift】______ is a gift.",
+      "answer": "This",
+      "rationale": "近處單數",
+      "source_refs": [
+        "U2D",
+        "U2P"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "This"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「this/that/these/those 的遠近與數量」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-DELAY-D05",
+      "section": "U2-DELAY",
+      "unit": "Unit 2",
+      "kp": "U210",
+      "prompt": "Q: Where are the brushes? 資料：They are under the desk.",
+      "answer": "They are under the desk.",
+      "rationale": "位置答案",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They are under the desk."
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「Where is／are 問位置並以 It/They 回答」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "U2-DELAY-D06",
+      "section": "U2-DELAY",
+      "unit": "Unit 2",
+      "kp": "U211",
+      "prompt": "【新情境：notebook 在桌面上】The notebook is ______ the table.",
+      "answer": "on",
+      "rationale": "中文情境給關係，需用 on 獨立寫出位置",
+      "source_refs": [
+        "U2L"
+      ],
+      "stage": "delayed",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "on"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先查核「in/on/under/next to/near/behind/between/in front of」的理解，再用未曝光題重測。"
+    },
+    {
+      "id": "LEG-G01",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "I ____ Mark.",
+      "answer": "am",
+      "rationale": "I 搭配 am；當堂引導練習不得算獨立掌握。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "am"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "若錯，先檢查主詞辨識，不直接推論記憶不穩。",
+      "legacy_original": {
+        "id": "G01",
+        "stage": "guided",
+        "prompt": "I ____ Mark.",
+        "answers": [
+          "am"
+        ],
+        "target": "pronoun-be",
+        "construct": "Guided Practice",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "rule application with support",
+        "rationale": "I 搭配 am；當堂引導練習不得算獨立掌握。",
+        "diagnosis": "若錯，先檢查主詞辨識，不直接推論記憶不穩。",
+        "leakage": "與規則表同頁，僅供引導。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-G02",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "They ____ Kelly and Ben.",
+      "answer": "are",
+      "rationale": "They 搭配 are；此句重新組合課本中的名字。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查複數人稱代名詞與 are 的對應。",
+      "legacy_original": {
+        "id": "G02",
+        "stage": "guided",
+        "prompt": "They ____ Kelly and Ben.",
+        "answers": [
+          "are"
+        ],
+        "target": "pronoun-be",
+        "construct": "Guided Practice",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "rule application with support",
+        "rationale": "They 搭配 are；此句重新組合課本中的名字。",
+        "diagnosis": "檢查複數人稱代名詞與 are 的對應。",
+        "leakage": "與規則表同頁，僅供引導。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-G03",
+      "section": "S-B",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "She ____ Tina.",
+      "answer": "is",
+      "rationale": "She 搭配 is。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "practice",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查第三人稱單數與 is。",
+      "legacy_original": {
+        "id": "G03",
+        "stage": "guided",
+        "prompt": "She ____ Tina.",
+        "answers": [
+          "is"
+        ],
+        "target": "pronoun-be",
+        "construct": "Guided Practice",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "rule application with support",
+        "rationale": "She 搭配 is。",
+        "diagnosis": "檢查第三人稱單數與 is。",
+        "leakage": "與規則表同頁，僅供引導。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I01",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "You ____ Jan.",
+      "answer": "are",
+      "rationale": "You 搭配 are；不同於引導練習的主詞與姓名組合。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "把 you 當單數而選 is，屬主詞－be 對應可能混淆。",
+      "legacy_original": {
+        "id": "I01",
+        "stage": "independent",
+        "prompt": "You ____ Jan.",
+        "answers": [
+          "are"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "You 搭配 are；不同於引導練習的主詞與姓名組合。",
+        "diagnosis": "把 you 當單數而選 is，屬主詞－be 對應可能混淆。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I02",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "It ____ Lucky.",
+      "answer": "is",
+      "rationale": "It 搭配 is；名稱 Lucky 出自課本主詞表。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "it 錯誤搭配 are，檢查單數主詞對應。",
+      "legacy_original": {
+        "id": "I02",
+        "stage": "independent",
+        "prompt": "It ____ Lucky.",
+        "answers": [
+          "is"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "It 搭配 is；名稱 Lucky 出自課本主詞表。",
+        "diagnosis": "it 錯誤搭配 are，檢查單數主詞對應。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I03",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "We ____ Gary and Mark.",
+      "answer": "are",
+      "rationale": "We 搭配 are；兩個已見姓名重新組合。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "主格 we 與 are 配對是否穩定。",
+      "legacy_original": {
+        "id": "I03",
+        "stage": "independent",
+        "prompt": "We ____ Gary and Mark.",
+        "answers": [
+          "are"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "We 搭配 are；兩個已見姓名重新組合。",
+        "diagnosis": "主格 we 與 are 配對是否穩定。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I04",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "He ____ Ben.",
+      "answer": "is",
+      "rationale": "He 搭配 is。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查 he 的單數配對。",
+      "legacy_original": {
+        "id": "I04",
+        "stage": "independent",
+        "prompt": "He ____ Ben.",
+        "answers": [
+          "is"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "He 搭配 is。",
+        "diagnosis": "檢查 he 的單數配對。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I05",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "I ____ Tina.",
+      "answer": "am",
+      "rationale": "I 搭配 am，採不同於 G01 的組合。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "am"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "I 若填 is，屬 am 的專屬配對待修復。",
+      "legacy_original": {
+        "id": "I05",
+        "stage": "independent",
+        "prompt": "I ____ Tina.",
+        "answers": [
+          "am"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "I 搭配 am，採不同於 G01 的組合。",
+        "diagnosis": "I 若填 is，屬 am 的專屬配對待修復。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I06",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "They ____ Jan and Kelly.",
+      "answer": "are",
+      "rationale": "They 搭配 are。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查 they 的複數配對。",
+      "legacy_original": {
+        "id": "I06",
+        "stage": "independent",
+        "prompt": "They ____ Jan and Kelly.",
+        "answers": [
+          "are"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "They 搭配 are。",
+        "diagnosis": "檢查 they 的複數配對。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-I07",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "She ____ Jan.",
+      "answer": "is",
+      "rationale": "She 搭配 is；與 G03 的完整句不同。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查 she 的單數配對。",
+      "legacy_original": {
+        "id": "I07",
+        "stage": "independent",
+        "prompt": "She ____ Jan.",
+        "answers": [
+          "is"
+        ],
+        "target": "pronoun-be",
+        "construct": "Pure Core",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "independent application",
+        "rationale": "She 搭配 is；與 G03 的完整句不同。",
+        "diagnosis": "檢查 she 的單數配對。",
+        "leakage": "學生頁無字庫及答案。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-T01",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S08",
+      "prompt": "____ ____ Ben and Tina.",
+      "answer": "We / are",
+      "rationale": "兩人共同自我介紹，用 We are；判斷說話者視角。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "We / are"
+      ],
+      "context": "Ben 與 Tina 兩人一起說話，介紹自己。",
+      "hint": "",
+      "diagnosis": "We 錯屬視角問題；are 錯屬 be 配對問題，應分開記錄。",
+      "legacy_original": {
+        "id": "T01",
+        "stage": "transfer",
+        "context_zh": "Ben 與 Tina 兩人一起說話，介紹自己。",
+        "prompt": "____ ____ Ben and Tina.",
+        "answers": [
+          "We",
+          "are"
+        ],
+        "target": "pronoun-perspective-and-be",
+        "construct": "Near Transfer L2",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "perspective transfer",
+        "rationale": "兩人共同自我介紹，用 We are；判斷說話者視角。",
+        "diagnosis": "We 錯屬視角問題；are 錯屬 be 配對問題，應分開記錄。",
+        "leakage": "題幹提供必要說話者資訊，但不給英文字庫。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-T02",
+      "section": "S-CHECK",
+      "unit": "Starter",
+      "kp": "S08",
+      "prompt": "____ ____ Kelly and Jan.",
+      "answer": "They / are",
+      "rationale": "介紹在場的另外兩人，用 They are；視角由第一人稱變為第三人稱複數。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "check",
+      "form": "short",
+      "options": [],
+      "accepted": [
+        "They / are"
+      ],
+      "context": "Gary 站在旁邊，向人介紹 Kelly 與 Jan。",
+      "hint": "",
+      "diagnosis": "They 錯屬指涉／視角問題；are 錯屬 be 配對問題。",
+      "legacy_original": {
+        "id": "T02",
+        "stage": "transfer",
+        "context_zh": "Gary 站在旁邊，向人介紹 Kelly 與 Jan。",
+        "prompt": "____ ____ Kelly and Jan.",
+        "answers": [
+          "They",
+          "are"
+        ],
+        "target": "pronoun-perspective-and-be",
+        "construct": "Near Transfer L2",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "perspective transfer",
+        "rationale": "介紹在場的另外兩人，用 They are；視角由第一人稱變為第三人稱複數。",
+        "diagnosis": "They 錯屬指涉／視角問題；are 錯屬 be 配對問題。",
+        "leakage": "題幹提供必要說話者資訊，但不給英文字庫。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-D01",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "I ____ Gary.",
+      "answer": "am",
+      "rationale": "後續課程在無提示情況重新回想 I / am。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "am"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "記錄實際延後天數與所需提示。",
+      "legacy_original": {
+        "id": "D01",
+        "stage": "delayed",
+        "prompt": "I ____ Gary.",
+        "answers": [
+          "am"
+        ],
+        "target": "pronoun-be",
+        "construct": "Delayed Retrieval (new item)",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "delayed no-cue recall",
+        "rationale": "後續課程在無提示情況重新回想 I / am。",
+        "diagnosis": "記錄實際延後天數與所需提示。",
+        "leakage": "僅供教師於延後課程單獨發放，不能提前展示。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-D02",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "They ____ Mark and Jan.",
+      "answer": "are",
+      "rationale": "改變姓名組合，重新回想 They / are。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "are"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "記錄實際延後天數與所需提示。",
+      "legacy_original": {
+        "id": "D02",
+        "stage": "delayed",
+        "prompt": "They ____ Mark and Jan.",
+        "answers": [
+          "are"
+        ],
+        "target": "pronoun-be",
+        "construct": "Delayed Retrieval (new item)",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "delayed no-cue recall",
+        "rationale": "改變姓名組合，重新回想 They / are。",
+        "diagnosis": "記錄實際延後天數與所需提示。",
+        "leakage": "不得與立即測驗同時發放。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-D03",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "She ____ Mrs. Lin.",
+      "answer": "is",
+      "rationale": "She 搭配 is，使用課本人物名稱形式。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查第三人稱單數；記錄延後天數。",
+      "legacy_original": {
+        "id": "D03",
+        "stage": "delayed",
+        "prompt": "She ____ Mrs. Lin.",
+        "answers": [
+          "is"
+        ],
+        "target": "pronoun-be",
+        "construct": "Delayed Retrieval (new item)",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "delayed no-cue recall",
+        "rationale": "She 搭配 is，使用課本人物名稱形式。",
+        "diagnosis": "檢查第三人稱單數；記錄延後天數。",
+        "leakage": "不得與立即測驗同時發放。"
+      },
+      "legacy_preserved": true
+    },
+    {
+      "id": "LEG-D04",
+      "section": "S-DELAY",
+      "unit": "Starter",
+      "kp": "S10",
+      "prompt": "He ____ Mr. Lin.",
+      "answer": "is",
+      "rationale": "He 搭配 is，內容與立即檢核不同。",
+      "source_refs": [
+        "SG"
+      ],
+      "stage": "delayed",
+      "form": "write",
+      "options": [],
+      "accepted": [
+        "is"
+      ],
+      "context": "",
+      "hint": "",
+      "diagnosis": "檢查 he 與 be；記錄延後天數。",
+      "legacy_original": {
+        "id": "D04",
+        "stage": "delayed",
+        "prompt": "He ____ Mr. Lin.",
+        "answers": [
+          "is"
+        ],
+        "target": "pronoun-be",
+        "construct": "Delayed Retrieval (new item)",
+        "source_refs": [
+          "S1"
+        ],
+        "cognitive_level": "delayed no-cue recall",
+        "rationale": "He 搭配 is，內容與立即檢核不同。",
+        "diagnosis": "檢查 he 與 be；記錄延後天數。",
+        "leakage": "不得與立即測驗同時發放。"
+      },
+      "legacy_preserved": true
+    }
+  ],
+  "audio_gaps": [
+    {
+      "unit": "Starter",
+      "source": "SP",
+      "aspect": "短母音字音的實際聽辨與讀音",
+      "state": "AUDIO_PENDING",
+      "action": "取得官方 CD 音訊後另出聽力，不以文字選擇替代"
+    },
+    {
+      "unit": "Unit 1",
+      "source": "U1S",
+      "aspect": "Sounds and Letters 實際聽辨",
+      "state": "AUDIO_PENDING",
+      "action": "需官方音檔／教師現場發音逐題紀錄"
+    },
+    {
+      "unit": "Unit 2",
+      "source": "U2S",
+      "aspect": "字尾 /s/ /z/ /ɪz/ 實際聽辨",
+      "state": "AUDIO_PENDING",
+      "action": "需官方錄音與獨立聽辨題"
+    },
+    {
+      "unit": "Unit 1/2",
+      "source": "U1D",
+      "aspect": "課本對話的聽力題",
+      "state": "AUDIO_PENDING",
+      "action": "未附正式音檔，不提供虛構聽力逐字答案"
+    }
+  ],
+  "unit_intro": {
+    "Starter": "英文字母與短母音、主格／所有格、be、姓名年齡、數字及英文書寫。",
+    "Unit 1": "人物、職業、家庭關係、Who 問句、be 肯否定與簡答、形容詞、閱讀、字音與構詞。",
+    "Unit 2": "文具／房間／顏色、名詞單複數、this/that/these/those、Where 與位置、閱讀、複數尾音。",
+    "Review": "Starter＋Unit 1＋Unit 2 的跨單元運用；錯誤須分開診斷。"
+  },
+  "word_banks": {
+    "Unit 1": [
+      [
+        "handsome",
+        "英俊的"
+      ],
+      [
+        "new",
+        "新的"
+      ],
+      [
+        "classmate",
+        "同學"
+      ],
+      [
+        "young",
+        "年輕的"
+      ],
+      [
+        "woman",
+        "女人（複數 women）"
+      ],
+      [
+        "very",
+        "非常"
+      ],
+      [
+        "beautiful",
+        "美麗的"
+      ],
+      [
+        "too",
+        "也"
+      ],
+      [
+        "Nice to meet you.",
+        "很高興認識你"
+      ],
+      [
+        "cousin",
+        "堂／表兄弟姊妹"
+      ],
+      [
+        "really",
+        "真的"
+      ],
+      [
+        "year(s) old",
+        "……歲"
+      ],
+      [
+        "I see.",
+        "我知道了"
+      ],
+      [
+        "singer",
+        "歌手"
+      ],
+      [
+        "office worker",
+        "上班族"
+      ],
+      [
+        "housewife",
+        "家庭主婦"
+      ],
+      [
+        "police officer",
+        "警察"
+      ],
+      [
+        "writer",
+        "作家"
+      ],
+      [
+        "uncle",
+        "叔伯舅等男性長輩"
+      ],
+      [
+        "aunt",
+        "姑姨等女性長輩"
+      ],
+      [
+        "wife",
+        "妻子"
+      ],
+      [
+        "daughter",
+        "女兒"
+      ],
+      [
+        "husband",
+        "丈夫"
+      ],
+      [
+        "son",
+        "兒子"
+      ],
+      [
+        "dear",
+        "親愛的"
+      ],
+      [
+        "family",
+        "家庭／家人"
+      ],
+      [
+        "elementary school",
+        "國小"
+      ],
+      [
+        "junior high school",
+        "國中"
+      ],
+      [
+        "baby",
+        "嬰兒；年幼的"
+      ]
+    ],
+    "Unit 2": [
+      [
+        "house",
+        "房子"
+      ],
+      [
+        "parents",
+        "父母親"
+      ],
+      [
+        "living room",
+        "客廳"
+      ],
+      [
+        "wall",
+        "牆壁"
+      ],
+      [
+        "purple",
+        "紫色的"
+      ],
+      [
+        "favorite",
+        "最喜愛的"
+      ],
+      [
+        "color",
+        "顏色"
+      ],
+      [
+        "kitchen",
+        "廚房"
+      ],
+      [
+        "dining room",
+        "飯廳"
+      ],
+      [
+        "but",
+        "但是"
+      ],
+      [
+        "gray",
+        "灰色的"
+      ],
+      [
+        "brown",
+        "棕色的"
+      ],
+      [
+        "cookie",
+        "餅乾"
+      ],
+      [
+        "mice",
+        "老鼠（mouse 複數）"
+      ],
+      [
+        "maybe",
+        "可能"
+      ],
+      [
+        "sofa",
+        "沙發"
+      ],
+      [
+        "hungry",
+        "餓的"
+      ],
+      [
+        "notebook",
+        "筆記本"
+      ],
+      [
+        "marker",
+        "彩色筆／麥克筆"
+      ],
+      [
+        "brush",
+        "刷子／畫筆"
+      ],
+      [
+        "gift",
+        "禮物"
+      ],
+      [
+        "pencil case",
+        "鉛筆盒"
+      ],
+      [
+        "bathroom",
+        "浴室"
+      ],
+      [
+        "table",
+        "桌子"
+      ],
+      [
+        "bedroom",
+        "臥室"
+      ],
+      [
+        "near",
+        "在附近"
+      ],
+      [
+        "between",
+        "在……之間"
+      ],
+      [
+        "behind",
+        "在後面"
+      ],
+      [
+        "in front of",
+        "在前面"
+      ],
+      [
+        "special",
+        "特別的"
+      ],
+      [
+        "inside",
+        "在……裡面"
+      ],
+      [
+        "right",
+        "就；恰好"
+      ],
+      [
+        "each other",
+        "彼此／互相"
+      ],
+      [
+        "above",
+        "在……上方"
+      ],
+      [
+        "enough",
+        "足夠的"
+      ],
+      [
+        "person",
+        "人（複數 people）"
+      ]
+    ]
+  },
+  "source_vocabulary": {
+    "Starter phonics": [
+      "yam",
+      "ham",
+      "van",
+      "man",
+      "wet",
+      "jet",
+      "red",
+      "bed",
+      "kilt",
+      "quilt",
+      "pig",
+      "zigzag",
+      "cot",
+      "dot",
+      "fox",
+      "box",
+      "sun",
+      "run",
+      "bug",
+      "mug"
+    ],
+    "Unit 1 theme words": [
+      "teacher",
+      "nurse",
+      "cook",
+      "student",
+      "grandfather",
+      "grandmother",
+      "mother",
+      "father",
+      "brother",
+      "sister",
+      "police officer",
+      "office worker",
+      "housewife",
+      "singer",
+      "writer"
+    ],
+    "Unit 2 theme words": [
+      "pen",
+      "pencil",
+      "eraser",
+      "ruler",
+      "clock",
+      "notebook",
+      "marker",
+      "brush",
+      "gift",
+      "cookie",
+      "comic book",
+      "pencil case",
+      "bathroom",
+      "dining room",
+      "kitchen",
+      "living room",
+      "bedroom",
+      "in",
+      "on",
+      "under",
+      "next to",
+      "near",
+      "between",
+      "behind",
+      "in front of"
+    ]
+  }
+}
