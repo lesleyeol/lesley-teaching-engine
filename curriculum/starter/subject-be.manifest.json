@@ -1,0 +1,66 @@
+{
+  "schema": "lesley-source-lock-v0.1",
+  "unit_id": "hanlin7a-starter-subject-be",
+  "title": "Starter Unit｜主格代名詞與 be 動詞",
+  "policy_authority": "LESLEY_TEACHING_ENGINE_v2.4_STABLE.md",
+  "content_authority": {
+    "kind": "user-provided textbook page photographs",
+    "original_title": "翰林七年級上學期英語 Starter Unit（以上傳課本內頁辨認）",
+    "original_complete": false,
+    "official_edition_confirmed": false,
+    "teacher_confirmed_current_source": false,
+    "source_readiness": "READY_WITH_LIMITS",
+    "source_limits": "僅鎖定所見印刷頁第5頁主格代名詞表，及第6頁人稱代名詞與所有格表。不聲稱全單元或學校正式段考範圍已確認。",
+    "source_files_are_committed": false,
+    "source_items_answer_exposed": true,
+    "source_items_use": "只作課本內容與詞彙證據；原始已作答題目不得作為獨立評量。",
+    "sources": [
+      {
+        "ref": "S1",
+        "file": "學校課本Starter & Unit 1.pdf",
+        "file_page_1_indexed": 7,
+        "printed_page": 5,
+        "section": "3 複習人稱代名詞主格",
+        "observed": "I am / you are / he is / she is / it is / we are / they are；Tina、Gary、Mark、Kelly、Lucky、Ben、Jan、Mr. and Mrs. Lin",
+        "provenance": "user-provided photograph of textbook; annotated answers visible"
+      },
+      {
+        "ref": "S2",
+        "file": "學校課本Starter & Unit 1.pdf",
+        "file_page_1_indexed": 7,
+        "printed_page": 6,
+        "section": "4 複習人稱代名詞所有格",
+        "observed": "I/my, you/your, he/his, she/her, it/its, we/our, they/their；只用作交叉核對本稿主格詞形",
+        "provenance": "user-provided photograph of textbook; annotated answers visible"
+      }
+    ]
+  },
+  "content_source_lock": {
+    "verified_curriculum": ["I", "you", "he", "she", "it", "we", "they", "am", "is", "are"],
+    "verified_names_and_connectors": ["Tina", "Gary", "Mark", "Kelly", "Lucky", "Ben", "Jan", "Mr.", "Mrs.", "Lin", "and"],
+    "verified_prior_exposure_for_particular_student": "UNVERIFIED",
+    "in_scope": "主格代名詞與 am/is/are 的肯定直述句搭配；用已見名字構成新的短句。",
+    "out_of_scope": ["a/an", "名詞複數規則", "Unit 1 Who 問句", "Unit 2 Where 與位置介系詞", "姓名／年齡問答", "正式段考題型代表性"],
+    "lexical_allowlist": ["i", "you", "he", "she", "it", "we", "they", "am", "is", "are", "tina", "gary", "mark", "kelly", "lucky", "ben", "jan", "mr", "mrs", "lin", "and"]
+  },
+  "pedagogy_lock": {
+    "learning_target": "辨識主詞並在新的直述句中正確選擇 am/is/are。",
+    "cognitive_action": "從句子的主格代名詞決定正確 be 形式；後段另以清楚的說話者情境提取主詞與 be。",
+    "evidence_types": ["Guided Practice", "Independent Application", "Near Transfer (L2)", "Delayed Retrieval"],
+    "scaffolds": "引導頁提供規則表和主詞圈選；獨立頁不提供規則／字庫／示範答案。",
+    "support_removal_point": "翻至獨立檢核頁前，遮住或收走第1頁。",
+    "parallel_recheck": "獨立題 I01-I07 不等同引導題 G01-G03；提示介入後必須以尚未曝光的新題複查。",
+    "transfer": "T01-T02 使用說話者情境，要求學生同時決定代名詞與 be 動詞；需分開記錄可能的視角錯誤。",
+    "delayed_plan": "D01-D04 由教師於後續課程單獨發放，記錄實際延後天數，不能由本次列印推論已穩定保留。",
+    "route": "Core (controlled teacher review only)",
+    "formal_gate_approved": false,
+    "formal_release_authorized": false
+  },
+  "publication": {
+    "status": "DRAFT_FOR_TEACHER_REVIEW",
+    "release_quality_review": "NOT_RUN",
+    "classroom_validated": false,
+    "teacher_approved": false,
+    "note": "Source Alignment 部分可核；自動化 QA 通過也不能取代教師的內容核對及正式發行 Gate。"
+  }
+}

@@ -1,0 +1,41 @@
+name: Starter Source-Lock QA
+
+on:
+  pull_request:
+    paths:
+      - "curriculum/starter/**"
+      - "tools/build-starter-pack.cjs"
+      - "tests/starter-pack.test.cjs"
+      - "examples/starter-be/**"
+      - ".github/workflows/starter-source-qa.yml"
+  push:
+    branches: [main]
+    paths:
+      - "curriculum/starter/**"
+      - "tools/build-starter-pack.cjs"
+      - "tests/starter-pack.test.cjs"
+      - "examples/starter-be/**"
+      - ".github/workflows/starter-source-qa.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  source-locked-preview:
+    name: Validate source and regenerate previews
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run source and item map regression tests
+        run: node tests/starter-pack.test.cjs
+      - name: Check Source and Pedagogy locks
+        run: node tools/build-starter-pack.cjs --check
+      - name: Regenerate all four views from one item map
+        run: node tools/build-starter-pack.cjs
+      - name: Fail if committed previews differ from generated files
+        run: git diff --exit-code -- examples/starter-be/

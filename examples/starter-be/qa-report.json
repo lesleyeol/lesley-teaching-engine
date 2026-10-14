@@ -1,0 +1,20 @@
+{
+  "build_status": "DRAFT_FOR_TEACHER_REVIEW",
+  "errors": [],
+  "warnings": [
+    "正式教材版本尚未由教師對照封面／版權資訊核實。",
+    "現行來源未取得教師核准；不能正式發行。",
+    "原始課本含已作答／訂正，不得使用原題作獨立掌握證據。",
+    "特定學生是否已完整學習本範圍尚未獲獨立證明。",
+    "正式 Gate 未核准；本稿不標示達標或精熟。",
+    "正式發行 QA 與教師審核尚未完成；僅可建立草稿預覽。"
+  ],
+  "counts": {
+    "guided": 3,
+    "independent": 7,
+    "transfer": 2,
+    "delayed": 4
+  },
+  "status": "DRAFT_FOR_TEACHER_REVIEW",
+  "attribution": "teacher-created synthetic questions based on verified limited textbook pages; no master approval"
+}
