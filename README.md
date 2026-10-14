@@ -24,6 +24,7 @@ https://lesleyeol.github.io/lesley-teaching-engine/
 ## Source-bound Starter Unit Pack（限定範圍教材示範）
 
 - [來源治理、教學證據及操作說明](docs/STARTER_SOURCE_TO_PACKET.md)
+- [學生 A4 預覽](examples/starter-be/student.html) · [教師指引](examples/starter-be/teacher.html) · [答案解析](examples/starter-be/answer.html) · [延後複查卡](examples/starter-be/delayed.html)（公開示範題，**不作保密正式測驗**）
 - [題目與答案共用資料](curriculum/starter/subject-be.items.json) · [來源範圍與教學鎖定](curriculum/starter/subject-be.manifest.json)
 - 使用 `node tools/build-starter-pack.cjs --check` 檢查來源限制、`node tests/starter-pack.test.cjs` 執行測試，再用 `node tools/build-starter-pack.cjs` 生成 A4 HTML 預覽。
 - **本版本仍是待教師審閱的 DRAFT**：課本版次、正式教師核准與 Release QA 未完成，不得宣稱學生已獨立掌握或正式教材已發布。
