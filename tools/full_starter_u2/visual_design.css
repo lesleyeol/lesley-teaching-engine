@@ -1,0 +1,143 @@
+/* Lesley Visual Layer v0.2 — PRINT FIRST / NO PEDAGOGY CHANGE
+   Palette: Radix Colors light slate 1,2,3,6,7,8,11,12.
+   Exact tokens are from radix-ui/colors pinned commit dbdb85470547c7d34b9001f48fddb08ded335979, src/light.ts.
+   The parent renderer and item bank remain authoritative for stems/answers/source/QA.
+   Fontsource: typography-selection principles only. No font binaries bundled.
+*/
+:root {
+  --slate-1:#fcfcfd; --slate-2:#f9f9fb; --slate-3:#f0f0f3;
+  --slate-4:#e8e8ec; --slate-5:#e0e1e6; --slate-6:#d9d9e0;
+  --slate-7:#cdced6; --slate-8:#b9bbc6; --slate-9:#8b8d98;
+  --slate-10:#80838d; --slate-11:#60646c; --slate-12:#1c2024;
+  --ink:#1c2024; --muted:#50545d; --border:#8b8d98; --panel:#f0f0f3;
+  --student-size:13.5pt;
+}
+html,body {
+  background:#f0f0f3;
+  color:var(--ink);
+  font-family:"Noto Sans TC","Noto Sans CJK TC","Microsoft JhengHei",sans-serif;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+.book {background:#fff;}
+.page {
+  padding:16.5mm 16.5mm 17mm;
+  background:#fff;
+}
+.page-head {
+  height:25mm;
+  margin-bottom:5mm;
+  border-bottom:2px solid var(--slate-12);
+  align-items:flex-start;
+}
+.kicker {font-size:9.3pt;letter-spacing:.09em;color:var(--slate-11);line-height:1.4;}
+h1 {font-size:21.3pt;line-height:1.19;font-weight:700;color:var(--ink);letter-spacing:.005em;}
+h2 {font-size:14pt;color:var(--ink);font-weight:700;line-height:1.32;}
+.meta {font-size:9.7pt;color:var(--muted);line-height:1.55;}
+.unit-pill {background:var(--slate-3);color:var(--slate-12);border:1.5px solid var(--slate-9);border-radius:4px;padding:2.6mm 3.4mm;font-size:9.9pt;font-weight:700;}
+.body {height:231mm;overflow:hidden;}
+.lead {font-size:12.1pt;line-height:1.63;color:var(--ink);margin-bottom:4.1mm;}
+.rule {font-size:11.1pt;line-height:1.67;border-left:4px solid var(--slate-11);background:var(--slate-3);padding:3.5mm 4.5mm;margin:3.5mm 0 4.6mm;color:var(--ink);}
+.notice {border:1px solid var(--slate-8);border-left:3px solid var(--slate-11);border-radius:3px;background:#fff;color:#3c414a;padding:3mm 3.5mm;font-size:9.8pt;line-height:1.6;margin:3mm 0;}
+.context {font:11.5pt/1.67 "Clear Sans",Arial,"Noto Sans CJK TC",sans-serif;background:var(--slate-2);border:1px solid var(--slate-8);border-radius:3px;padding:3mm 4mm;color:var(--ink);}
+.item {padding:3.15mm 0 3.35mm;border-bottom:1px solid var(--slate-6);}
+.item-head {display:flex;align-items:flex-start;gap:3mm;margin-bottom:1.4mm;}
+.num {font:700 11.4pt/1.4 "Clear Sans",Arial,sans-serif;color:var(--ink);min-width:8mm;padding-top:1px;}
+.prompt {font:500 var(--student-size)/1.6 "Noto Sans TC","Noto Sans CJK TC","Clear Sans",sans-serif;letter-spacing:.005em;overflow-wrap:break-word;}
+.english {font-family:"Clear Sans",Arial,"Noto Sans CJK TC",sans-serif;}
+.code {font:8pt/1.6 "Clear Sans",Arial,sans-serif;color:var(--muted);white-space:nowrap;letter-spacing:.015em;}
+/* Handwriting: ascender, x-height, baseline, descender. Not purely decorative. */
+.write-line {
+  height:15mm;margin:2.5mm 0 0 11mm;
+  border-top:1px solid var(--slate-8);border-bottom:1px solid var(--slate-8);
+  background:linear-gradient(to bottom, transparent 66%, var(--slate-8) 66%, var(--slate-8) calc(66% + 1px), transparent calc(66% + 1px));
+  position:relative;
+}
+.write-line:before {content:"";top:33%;bottom:auto;left:0;border-top:1px dashed var(--slate-9);border-bottom:0;width:100%;position:absolute;}
+.small-line {height:9.5mm;margin-left:11mm;border-bottom:1.2px solid var(--slate-9);}
+.compact-items .item {padding:2.1mm 0;}
+.compact-items .small-line {height:6.8mm;}
+.compact-items .write-line {height:12.5mm;}
+.oralline {font-size:10pt;color:var(--muted);margin-left:11mm;line-height:1.55;}
+.footer {border-top:1px solid var(--slate-7);color:var(--muted);font-size:8.3pt;bottom:8.5mm;left:16.5mm;right:16.5mm;padding-top:2.5mm;}
+.family,.distance,.map {border:1px solid var(--slate-8);border-radius:4px;background:#fff;padding:2.8mm;margin:2.5mm 0 4mm;}
+.family svg,.distance svg,.map svg {max-height:58mm;}
+.steps {gap:4mm;}
+.steps div {font-size:11pt;line-height:1.65;border:1.5px solid var(--slate-8);border-radius:4px;padding:4mm;}
+.lesson-card {background:var(--slate-2);border:1.5px solid var(--slate-8);border-radius:4px;padding:4.5mm;margin:6mm 0;}
+.lesson-card h2 {font-size:14pt;}
+.status {border-radius:3px;background:var(--slate-3);border:1px solid var(--slate-8);color:var(--ink);font-size:9.5pt;font-weight:700;padding:2.2mm 3.2mm;}
+.kp-grid div {font-size:9.6pt;}
+.table {font-size:9.6pt;line-height:1.55;}
+.table th,.table td {border-color:var(--slate-7);padding:2mm 1.5mm;}
+.table th {background:var(--slate-3);color:var(--ink);}
+.table.compact {font-size:8.9pt;line-height:1.53;}
+.table.compact td {padding:1.6mm 1mm;}
+.vocabgrid {gap:3mm 5.5mm;}
+.vocabrow {border-bottom:1px solid var(--slate-7);min-height:10mm;padding:3mm 1.2mm;gap:2.5mm;font-size:10.2pt;align-items:flex-start;}
+.vocabrow .en {font:700 11.1pt/1.4 "Clear Sans",Arial,sans-serif;color:var(--ink);}
+.vocabrow .zh {font-size:9.6pt;line-height:1.45;color:var(--muted);}
+.vrecall {gap:4mm 5mm;}
+.vrecall-item {min-height:19mm;border:1px solid var(--slate-8);border-radius:3px;padding:3mm;font-size:10.8pt;}
+.vrecall-item .blank {margin-top:4mm;height:5.6mm;border-color:var(--slate-9);}
+.teacher-row {border-bottom:1px solid var(--slate-7);padding:2.35mm 0;}
+.teacher-row .id {font:700 9.1pt "Clear Sans",Arial,sans-serif;color:var(--muted);}
+.teacher-row .q {font-size:9.8pt;line-height:1.45;}
+.teacher-row .answer {font-size:10.4pt;color:var(--ink);}
+.teacher-row .reason {font-size:8.9pt;line-height:1.48;color:#42474f;}
+.teacher-detail {font-size:9.7pt;line-height:1.6;}
+.record label {font-size:10.2pt;}
+@media screen {
+  body {background:var(--slate-3);}
+  .book {box-shadow:0 12px 42px #1c202419;}
+}
+@media screen and (max-width:700px) {
+  html,body {width:100%;overflow-x:hidden;background:#fff;}
+  .book {margin:0;max-width:none;width:100%;box-shadow:none;}
+  .page {width:100%;height:auto;min-height:0;overflow:visible;margin:0 0 10px;padding:18px 20px 38px;break-after:auto;border-bottom:2px solid var(--slate-7);}
+  .page-head {height:auto;min-height:78px;margin-bottom:16px;}
+  .body {height:auto;overflow:visible;}
+  .page-head h1 {font-size:22px;}
+  .meta {font-size:13px;}
+  .unit-pill {min-width:0;font-size:12px;padding:6px 9px;}
+  .lead,.prompt {font-size:17px;line-height:1.6;}
+  .item {padding:11px 0 14px;}
+  .write-line {height:56px;margin-top:12px;margin-left:20px;}
+  .small-line {height:41px;margin-left:20px;}
+  .footer {position:static;margin-top:26px;padding-top:12px;font-size:10px;}
+  .steps,.guidegrid,.vocabgrid,.vrecall,.kp-grid {grid-template-columns:1fr;}
+  .code {font-size:10px;}
+  .table {font-size:12px;}
+  .table.compact {font-size:11px;}
+}
+@media print {
+  html,body {background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .book {margin:0;box-shadow:none;}
+  .page {box-shadow:none;outline:none;}
+  .unit-pill {background:#fff;border:1.5px solid #444;color:#222;}
+  .rule,.status {background:#f0f0f0 !important;}
+  .lesson-card,.context {background:#f8f8f8 !important;}
+  .table th {background:#ececec !important;}
+  .footer {color:#555;}
+}
+/* Letter-writing tasks use the same four-line writing geometry as longer answers. */
+.item.handwriting .small-line {
+  position:relative;
+  margin-top:2.7mm;
+  height:15mm;
+  border-top:1px solid var(--slate-8);
+  border-bottom:1px solid var(--slate-8);
+  background:linear-gradient(to bottom, transparent 66%, var(--slate-8) 66%,var(--slate-8) calc(66% + 1px),transparent calc(66% + 1px));
+}
+.item.handwriting .small-line:before {
+  content:""; position:absolute;top:33%;left:0;width:100%;border-top:1px dashed var(--slate-9);
+}
+/* Compact conceptual comparison, sourced verbatim from the guided rule text only. */
+.rule-comparison {background:var(--slate-3);border-left:4px solid var(--slate-11);padding:3mm 4mm;margin:3mm 0 4mm;}
+.rule-comparison .rule-cells {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2mm;}
+.rule-comparison.two .rule-cells {grid-template-columns:repeat(2,minmax(0,1fr));}
+.rule-comparison .rule-cell {display:flex;align-items:center;justify-content:center;background:#fff;border:1.25px solid var(--slate-9);border-radius:2px;min-height:14mm;text-align:center;font:700 11.3pt/1.45 "Clear Sans","Noto Sans CJK TC",sans-serif;padding:2mm;}
+.rule-comparison .rule-note {font-size:10.2pt;line-height:1.5;margin-top:2mm;color:var(--ink);}
+@media screen and (max-width:700px) {.rule-comparison .rule-cells,.rule-comparison.two .rule-cells {grid-template-columns:1fr;}}
+/* Slightly stronger baseline contrast for grayscale office printers. */
+.write-line,.item.handwriting .small-line {border-top-color:var(--slate-9);border-bottom-color:var(--slate-10);}
