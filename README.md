@@ -41,6 +41,15 @@ https://lesleyeol.github.io/lesley-teaching-engine/
 
 **發行狀態：DRAFT_FOR_TEACHER_REVIEW / READY_WITH_LIMITS。** 請勿把此 PR 視作已核准正式學生考卷，也不得把文字拼讀練習當作官方音檔的聽力證據。正式版次、已教進度、音檔及完整 Release QA 尚未確認；此版不會自動覆寫既有 PWA 的學生紀錄。
 
+### A4 視覺改版 v0.2｜可列印、可手機閱讀（待教師審核）
+
+- [視覺設計與 QA 紀錄](docs/STARTER_U2_VISUAL_GUIDE.md) · [Mermaid 教師關聯圖](docs/STARTER_UNIT2_RELATION_MAP.md)
+- [新版視覺樣式](tools/full_starter_u2/visual_design.css) · [同源重排生成器](tools/full_starter_u2/render_visual.py)
+- 本次僅選用 PR #4 工具庫的 **Radix Colors** 色階、**Fontsource** 字體選用原則、**Mermaid** 關聯圖；不強制整合八項工具。
+- **13.5 pt** 學生題目、四線書寫格、按單元意義分隔規則、可自適應的螢幕閱讀頁；A4 黑白影印仍為優先。
+- **不修改** PR #9 的共同題庫（46 項知識點、185 題、65 項單字）、答案、來源、Gate 或學生私有紀錄；新版在 `output_visual/` 建立，不覆寫原始教材。
+- 此改版只完成**視覺 QA 草稿**，不代表正式來源已核定或學生已學會。PDF 預覽與完整包從 ChatGPT 交付，不將課本照片或個資上傳此公開儲存庫。
+
 ## Privacy
 
 - Data is stored locally in the browser.
