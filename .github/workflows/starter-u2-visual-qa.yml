@@ -1,0 +1,29 @@
+name: Starter-Unit2 Visual Layer QA
+on:
+  pull_request:
+    paths:
+      - 'tools/full_starter_u2/visual_design.css'
+      - 'tools/full_starter_u2/render_visual.py'
+      - 'tools/full_starter_u2/test_visual_pack.py'
+      - 'tools/full_starter_u2/unit_scope_item_bank.json'
+      - 'docs/STARTER_U2_VISUAL_GUIDE.md'
+      - '.github/workflows/starter-u2-visual-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/full_starter_u2/visual_design.css'
+      - 'tools/full_starter_u2/render_visual.py'
+      - 'tools/full_starter_u2/test_visual_pack.py'
+      - '.github/workflows/starter-u2-visual-qa.yml'
+permissions:
+  contents: read
+jobs:
+  static-visual-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Same-source rendering and student-answer separation
+        run: python tools/full_starter_u2/test_visual_pack.py
