@@ -1,0 +1,28 @@
+{
+  "schema": "lesley-item-map-v0.1",
+  "unit_id": "hanlin7a-starter-subject-be",
+  "instructions": {
+    "guided": "看主詞，填入 am、is 或 are。",
+    "independent": "不看前頁。讀句子，填入正確的 be 動詞。",
+    "transfer": "依說話者的身分，填入主格代名詞與 be 動詞。",
+    "delayed": "不看前次學習單。填入正確的 be 動詞。"
+  },
+  "items": [
+    {"id":"G01","stage":"guided","prompt":"I ____ Mark.","answers":["am"],"target":"pronoun-be","construct":"Guided Practice","source_refs":["S1"],"cognitive_level":"rule application with support","rationale":"I 搭配 am；當堂引導練習不得算獨立掌握。","diagnosis":"若錯，先檢查主詞辨識，不直接推論記憶不穩。","leakage":"與規則表同頁，僅供引導。"},
+    {"id":"G02","stage":"guided","prompt":"They ____ Kelly and Ben.","answers":["are"],"target":"pronoun-be","construct":"Guided Practice","source_refs":["S1"],"cognitive_level":"rule application with support","rationale":"They 搭配 are；此句重新組合課本中的名字。","diagnosis":"檢查複數人稱代名詞與 are 的對應。","leakage":"與規則表同頁，僅供引導。"},
+    {"id":"G03","stage":"guided","prompt":"She ____ Tina.","answers":["is"],"target":"pronoun-be","construct":"Guided Practice","source_refs":["S1"],"cognitive_level":"rule application with support","rationale":"She 搭配 is。","diagnosis":"檢查第三人稱單數與 is。","leakage":"與規則表同頁，僅供引導。"},
+    {"id":"I01","stage":"independent","prompt":"You ____ Jan.","answers":["are"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"You 搭配 are；不同於引導練習的主詞與姓名組合。","diagnosis":"把 you 當單數而選 is，屬主詞－be 對應可能混淆。","leakage":"學生頁無字庫及答案。"},
+    {"id":"I02","stage":"independent","prompt":"It ____ Lucky.","answers":["is"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"It 搭配 is；名稱 Lucky 出自課本主詞表。","diagnosis":"it 錯誤搭配 are，檢查單數主詞對應。","leakage":"學生頁無字庫及答案。"},
+    {"id":"I03","stage":"independent","prompt":"We ____ Gary and Mark.","answers":["are"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"We 搭配 are；兩個已見姓名重新組合。","diagnosis":"主格 we 與 are 配對是否穩定。","leakage":"學生頁無字庫及答案。"},
+    {"id":"I04","stage":"independent","prompt":"He ____ Ben.","answers":["is"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"He 搭配 is。","diagnosis":"檢查 he 的單數配對。","leakage":"學生頁無字庫及答案。"},
+    {"id":"I05","stage":"independent","prompt":"I ____ Tina.","answers":["am"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"I 搭配 am，採不同於 G01 的組合。","diagnosis":"I 若填 is，屬 am 的專屬配對待修復。","leakage":"學生頁無字庫及答案。"},
+    {"id":"I06","stage":"independent","prompt":"They ____ Jan and Kelly.","answers":["are"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"They 搭配 are。","diagnosis":"檢查 they 的複數配對。","leakage":"學生頁無字庫及答案。"},
+    {"id":"I07","stage":"independent","prompt":"She ____ Jan.","answers":["is"],"target":"pronoun-be","construct":"Pure Core","source_refs":["S1"],"cognitive_level":"independent application","rationale":"She 搭配 is；與 G03 的完整句不同。","diagnosis":"檢查 she 的單數配對。","leakage":"學生頁無字庫及答案。"},
+    {"id":"T01","stage":"transfer","context_zh":"Ben 與 Tina 兩人一起說話，介紹自己。","prompt":"____ ____ Ben and Tina.","answers":["We","are"],"target":"pronoun-perspective-and-be","construct":"Near Transfer L2","source_refs":["S1"],"cognitive_level":"perspective transfer","rationale":"兩人共同自我介紹，用 We are；判斷說話者視角。","diagnosis":"We 錯屬視角問題；are 錯屬 be 配對問題，應分開記錄。","leakage":"題幹提供必要說話者資訊，但不給英文字庫。"},
+    {"id":"T02","stage":"transfer","context_zh":"Gary 站在旁邊，向人介紹 Kelly 與 Jan。","prompt":"____ ____ Kelly and Jan.","answers":["They","are"],"target":"pronoun-perspective-and-be","construct":"Near Transfer L2","source_refs":["S1"],"cognitive_level":"perspective transfer","rationale":"介紹在場的另外兩人，用 They are；視角由第一人稱變為第三人稱複數。","diagnosis":"They 錯屬指涉／視角問題；are 錯屬 be 配對問題。","leakage":"題幹提供必要說話者資訊，但不給英文字庫。"},
+    {"id":"D01","stage":"delayed","prompt":"I ____ Gary.","answers":["am"],"target":"pronoun-be","construct":"Delayed Retrieval (new item)","source_refs":["S1"],"cognitive_level":"delayed no-cue recall","rationale":"後續課程在無提示情況重新回想 I / am。","diagnosis":"記錄實際延後天數與所需提示。","leakage":"僅供教師於延後課程單獨發放，不能提前展示。"},
+    {"id":"D02","stage":"delayed","prompt":"They ____ Mark and Jan.","answers":["are"],"target":"pronoun-be","construct":"Delayed Retrieval (new item)","source_refs":["S1"],"cognitive_level":"delayed no-cue recall","rationale":"改變姓名組合，重新回想 They / are。","diagnosis":"記錄實際延後天數與所需提示。","leakage":"不得與立即測驗同時發放。"},
+    {"id":"D03","stage":"delayed","prompt":"She ____ Mrs. Lin.","answers":["is"],"target":"pronoun-be","construct":"Delayed Retrieval (new item)","source_refs":["S1"],"cognitive_level":"delayed no-cue recall","rationale":"She 搭配 is，使用課本人物名稱形式。","diagnosis":"檢查第三人稱單數；記錄延後天數。","leakage":"不得與立即測驗同時發放。"},
+    {"id":"D04","stage":"delayed","prompt":"He ____ Mr. Lin.","answers":["is"],"target":"pronoun-be","construct":"Delayed Retrieval (new item)","source_refs":["S1"],"cognitive_level":"delayed no-cue recall","rationale":"He 搭配 is，內容與立即檢核不同。","diagnosis":"檢查 he 與 be；記錄延後天數。","leakage":"不得與立即測驗同時發放。"}
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-15",
+  "status": "STATIC_AND_RENDER_QA_ONLY_NOT_FORMAL_RELEASE",
+  "tests": 19,
+  "passed": 19,
+  "failures": [],
+  "checklist": [
+    {
+      "check": "All 46 source knowledge points are explicitly listed",
+      "passed": true
+    },
+    {
+      "check": "All three requested units are present",
+      "passed": true
+    },
+    {
+      "check": "All 185 questions have unique ID",
+      "passed": true
+    },
+    {
+      "check": "All knowledge points have at least one traceable item",
+      "passed": true
+    },
+    {
+      "check": "Every item references an existing source and has an answer",
+      "passed": true
+    },
+    {
+      "check": "All check/delayed items carry no explicit author hints",
+      "passed": true
+    },
+    {
+      "check": "Retained legacy Starter PR8 has 16 exact source records",
+      "passed": true
+    },
+    {
+      "check": "Vocabulary Word Bank Unit1 exactly 29 and Unit2 36",
+      "passed": true
+    },
+    {
+      "check": "No audio-dependent question is falsely marked as listening-validated",
+      "passed": true
+    },
+    {
+      "check": "No contradictory official release claim",
+      "passed": true
+    },
+    {
+      "check": "All required printable output files exist",
+      "passed": true
+    },
+    {
+      "check": "No page content overflow reported",
+      "passed": true
+    },
+    {
+      "check": "All PDF counts match their explicit A4 HTML page layouts",
+      "passed": true
+    },
+    {
+      "check": "Student practice does not contain teacher-only answer/rationale labels",
+      "passed": true
+    },
+    {
+      "check": "All check items excluded from guided student booklet",
+      "passed": true
+    },
+    {
+      "check": "All delayed IDs excluded from student practice and check booklet",
+      "passed": true
+    },
+    {
+      "check": "Every item is covered in teacher or answer key",
+      "passed": true
+    },
+    {
+      "check": "All 65 vocabulary source entries are present in student vocabulary handout",
+      "passed": true
+    },
+    {
+      "check": "Print PDFs are no larger than 2 MB each",
+      "passed": true
+    }
+  ],
+  "knowledge_points": 46,
+  "items": 185,
+  "vocabulary": {
+    "Unit 1": 29,
+    "Unit 2": 36
+  },
+  "audio_pending": 4,
+  "pages": {
+    "student_practice": 19,
+    "starter_student": 5,
+    "unit1_student": 4,
+    "unit2_student": 8,
+    "review_student": 1,
+    "independent_check_teacher_hold": 10,
+    "delayed_teacher_hold": 4,
+    "teacher_complete": 36,
+    "answer_key": 19,
+    "vocabulary_companion": 12,
+    "source_matrix": 8
+  }
+}

@@ -29,6 +29,18 @@ https://lesleyeol.github.io/lesley-teaching-engine/
 - 使用 `node tools/build-starter-pack.cjs --check` 檢查來源限制、`node tests/starter-pack.test.cjs` 執行測試，再用 `node tools/build-starter-pack.cjs` 生成 A4 HTML 預覽。
 - **本版本仍是待教師審閱的 DRAFT**：課本版次、正式教師核准與 Release QA 未完成，不得宣稱學生已獨立掌握或正式教材已發布。
 
+## Starter–Unit 2｜全範圍來源對照與教材草稿
+
+本次提供以正式課本掃描**可核對部分**為基礎的完整範圍對照：**46 個知識點、185 題練習／檢核／延後提取，以及 Unit 1＋2 的 65 項 Word Bank**。舊版 Starter be 16 題原文及答案保持不變。
+
+- [知識點逐項對照與題號追溯](docs/STARTER_UNIT2_KNOWLEDGE_MATRIX.md)
+- [來源、限制、列印與 QA 紀錄](docs/STARTER_UNIT2_FULL_PACK_QA.md)
+- [原始題目資料與來源鎖定](tools/full_starter_u2/unit_scope_item_bank.json)
+- [建立及檢查 A4 學生／教師／答案版的程式](tools/full_starter_u2/render_pack.py)
+- [離線資料核驗](tests/test_starter_u2_bank.py)
+
+**發行狀態：DRAFT_FOR_TEACHER_REVIEW / READY_WITH_LIMITS。** 請勿把此 PR 視作已核准正式學生考卷，也不得把文字拼讀練習當作官方音檔的聽力證據。正式版次、已教進度、音檔及完整 Release QA 尚未確認；此版不會自動覆寫既有 PWA 的學生紀錄。
+
 ## Privacy
 
 - Data is stored locally in the browser.

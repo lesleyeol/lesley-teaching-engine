@@ -1,0 +1,27 @@
+name: Starter to Unit 2 source and coverage QA
+on:
+  pull_request:
+    paths:
+      - 'tools/full_starter_u2/**'
+      - 'tests/test_starter_u2_bank.py'
+      - '.github/workflows/starter-u2-full-scope.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/full_starter_u2/**'
+      - 'tests/test_starter_u2_bank.py'
+      - '.github/workflows/starter-u2-full-scope.yml'
+jobs:
+  test-source-and-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate 46 knowledge points, 185 items, and original Starter items
+        run: python tests/test_starter_u2_bank.py
+      - name: Rebuild source question map deterministically
+        run: python tools/full_starter_u2/author_data.py
+      - name: Require tracked question map to be reproducible
+        run: git diff --exit-code -- tools/full_starter_u2/unit_scope_item_bank.json
