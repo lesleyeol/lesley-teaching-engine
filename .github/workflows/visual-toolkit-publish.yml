@@ -1,0 +1,119 @@
+name: Preserve Visual Toolkit Source Archives
+
+on:
+  push:
+    branches: [toolkit/visual-design-20261006]
+    paths: [.github/workflows/visual-toolkit-publish.yml]
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TOOLKIT_TAG: visual-toolkit-sources-2026-10-06
+    steps:
+      - name: Retrieve the already verified source artifact
+        run: gh run download 37342614754 --repo "$GH_REPO" --name visual-toolkit-eight-sources --dir sources
+      - name: Recheck sources and prepare durable downloads
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, zipfile
+          root = pathlib.Path('sources')
+          report_file = root / 'download-report.json'
+          report_bytes = report_file.read_bytes()
+          expected_report = 'c035ec9772c5d777c84bd0778f258c5493bbbc7b18a7a7ba64ab5f7b163b8953'
+          assert hashlib.sha256(report_bytes).hexdigest() == expected_report, 'Source report mismatch'
+          report = json.loads(report_bytes)
+          expected_ids = {'roughjs','shadcn-ui','radix-colors','github-readme-stats','mermaid','simple-icons','fontsource','markdown-badges'}
+          assert len(report['projects']) == 8 and {p['id'] for p in report['projects']} == expected_ids
+          assert report['errors'] == [] and report['font_binaries_included'] is False
+          forbidden = {'.woff','.woff2','.ttf','.otf','.ttc','.eot','.dfont','.pfa','.pfb','.fon'}
+          total_files = 0
+          for project in report['projects']:
+              name = project['archive_file']
+              assert pathlib.PurePosixPath(name).name == name
+              source = root / name
+              with source.open('rb') as handle:
+                  assert hashlib.file_digest(handle, 'sha256').hexdigest() == project['archive_sha256'], name
+              assert source.stat().st_size == project['archive_bytes'], name
+              with zipfile.ZipFile(source) as archive:
+                  assert archive.testzip() is None, name
+                  entries = archive.infolist()
+                  assert all(pathlib.PurePosixPath(x.filename).suffix.lower() not in forbidden for x in entries), name
+                  count = sum(not x.is_dir() for x in entries)
+                  assert count == project['included_files'], name
+                  total_files += count
+          assert total_files == 22807
+          combined = pathlib.Path('visual-toolkit-eight-sources.zip')
+          with zipfile.ZipFile(combined, 'w', zipfile.ZIP_STORED) as archive:
+              for source in sorted(root.iterdir()):
+                  assert source.is_file()
+                  archive.write(source, source.name)
+          with zipfile.ZipFile(combined) as archive:
+              assert archive.testzip() is None
+          files = sorted(root.iterdir()) + [combined]
+          lines = []
+          for source in files:
+              with source.open('rb') as handle:
+                  digest = hashlib.file_digest(handle, 'sha256').hexdigest()
+              lines.append(digest + '  ' + source.name)
+          pathlib.Path('SHA256SUMS.txt').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          notes = '''# 視覺設計工具庫｜八項來源快照
+
+          這是工具素材的收藏版本，不是 Teaching Engine 應用程式更新。沒有修改 main、既有教學頁面、Gate 或正式部署。
+
+          **下載：** `visual-toolkit-eight-sources.zip` 是全部八個專案的整合包；也可以只下載個別專案 ZIP。
+
+          **已完成：** 八個官方原始碼來源，逐一鎖定 commit、SHA-256 與 ZIP CRC 驗證，共 22,807 個來源檔案。原始授權文件保留。
+
+          **未宣稱完成：** 依賴安裝、應用整合、瀏覽器／手機測試、完整資安審查。來源為當時預設分支的 commit，不保證是穩定發行版。
+
+          **排除：** 字體二進位檔與符號連結。Fontsource 收錄程式碼與文件，不是已安裝的完整字體庫。詳細排除清單見 `download-report.json`。
+
+          **README Stats：** 原專案依使用者清單保留；其官方 README 已宣布不再維護，僅作備查，不作新專案預設。
+
+          **工具選用指南：** https://github.com/lesleyeol/lesley-teaching-engine/tree/toolkit/visual-design-20261006/toolkit/visual-design
+
+          這份 Release 不是 latest，不改動正式產品版本。相較 Actions 暫存包，本 Release 不使用 90 天 artifact 自動到期機制；仍受 repository／release 存續影響。
+          '''
+          pathlib.Path('release-notes.md').write_text('\n'.join(line.strip() for line in notes.splitlines()) + '\n', encoding='utf-8')
+          print('Verified 8 projects and 22807 source files. Prepared 12 release assets.')
+          PY
+      - name: Publish isolated toolkit source release
+        shell: bash
+        run: |
+          gh release create "$TOOLKIT_TAG" \
+            sources/*.zip sources/download-report.json sources/README.txt \
+            visual-toolkit-eight-sources.zip SHA256SUMS.txt \
+            --repo "$GH_REPO" \
+            --target "$GITHUB_SHA" \
+            --title "視覺設計工具庫｜8 項來源快照｜2026-10-06" \
+            --notes-file release-notes.md \
+            --prerelease \
+            --latest=false
+      - name: Verify published asset inventory
+        shell: bash
+        run: |
+          gh api "repos/$GH_REPO/releases/tags/$TOOLKIT_TAG" > release.json
+          python3 - <<'PY'
+          import json, os, pathlib
+          release = json.loads(pathlib.Path('release.json').read_text())
+          names = {asset['name'] for asset in release['assets']}
+          expected = {p.name for p in pathlib.Path('sources').iterdir()} | {'visual-toolkit-eight-sources.zip','SHA256SUMS.txt'}
+          assert names == expected and len(release['assets']) == 12
+          assert release['draft'] is False and release['prerelease'] is True
+          assert all(asset['state'] == 'uploaded' and asset['size'] > 0 for asset in release['assets'])
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+              out.write('# Toolkit sources preserved\n\n')
+              out.write(release['html_url'] + '\n\n')
+              out.write('12 release assets verified. This is a non-latest prerelease for source preservation, not an application update.\n')
+          print('RELEASE_VERIFIED ' + release['html_url'])
+          PY
