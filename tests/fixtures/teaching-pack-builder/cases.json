@@ -1,0 +1,209 @@
+{
+  "kind": "synthetic-contract-mutations-not-real-unit-acceptance",
+  "base_manifest": "curriculum/starter/subject-be.manifest.json",
+  "base_item_map": "curriculum/starter/subject-be.items.json",
+  "cases": [
+    {
+      "name": "existing-source-bound-draft",
+      "changes": [],
+      "expect_status": "DRAFT_FOR_TEACHER_REVIEW"
+    },
+    {
+      "name": "missing-source-pages",
+      "changes": [
+        {
+          "op": "delete",
+          "path": [
+            "manifest",
+            "content_authority",
+            "sources"
+          ]
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "source-readiness-blocked",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "content_authority",
+            "source_readiness"
+          ],
+          "value": "BLOCKED"
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "malformed-item-array",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "item_map",
+            "items"
+          ],
+          "value": {}
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "other-unit-not-supported",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "item_map",
+            "unit_id"
+          ],
+          "value": "unit8"
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "answer-count-mismatch",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "item_map",
+            "items",
+            0,
+            "answers"
+          ],
+          "value": [
+            "am",
+            "are"
+          ]
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "unverified-vocabulary",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "item_map",
+            "items",
+            0,
+            "prompt"
+          ],
+          "value": "My cat ____ Mark."
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "unknown-source-reference",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "item_map",
+            "items",
+            0,
+            "source_refs"
+          ],
+          "value": [
+            "MISSING"
+          ]
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "support-removal-missing",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "pedagogy_lock",
+            "support_removal_point"
+          ],
+          "value": ""
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "non-boolean-approval",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "publication",
+            "teacher_approved"
+          ],
+          "value": "true"
+        }
+      ],
+      "expect_status": "BLOCKED"
+    },
+    {
+      "name": "flags-cannot-authorize-release",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "publication",
+            "teacher_approved"
+          ],
+          "value": true
+        },
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "publication",
+            "release_quality_review"
+          ],
+          "value": "PASS"
+        },
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "pedagogy_lock",
+            "formal_gate_approved"
+          ],
+          "value": true
+        },
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "pedagogy_lock",
+            "formal_release_authorized"
+          ],
+          "value": true
+        }
+      ],
+      "expect_status": "DRAFT_FOR_TEACHER_REVIEW"
+    },
+    {
+      "name": "unsupported-learning-target",
+      "changes": [
+        {
+          "op": "set",
+          "path": [
+            "manifest",
+            "pedagogy_lock",
+            "learning_target"
+          ],
+          "value": "Teach Unit 8 negatives"
+        }
+      ],
+      "expect_status": "BLOCKED"
+    }
+  ]
+}
