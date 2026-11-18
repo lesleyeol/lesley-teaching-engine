@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:lesley:teaching-pack-builder:starter-output:0.1",
+  "title": "Teaching Pack Builder pilot check result",
+  "type": "object",
+  "properties": {
+    "validation_scope": {
+      "const": "starter-subject-be-contract-only"
+    },
+    "status": {
+      "enum": [
+        "BLOCKED",
+        "DRAFT_FOR_TEACHER_REVIEW"
+      ]
+    },
+    "release_authorized": {
+      "const": false
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "guided": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "independent": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "transfer": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "delayed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "guided",
+        "independent",
+        "transfer",
+        "delayed"
+      ],
+      "additionalProperties": false
+    },
+    "artifact_names": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "student.html",
+          "teacher.html",
+          "answer.html",
+          "delayed.html"
+        ]
+      }
+    }
+  },
+  "required": [
+    "validation_scope",
+    "status",
+    "release_authorized",
+    "errors",
+    "warnings",
+    "counts",
+    "artifact_names"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "BLOCKED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "errors": {
+            "minItems": 1
+          },
+          "artifact_names": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "errors": {
+            "maxItems": 0
+          },
+          "artifact_names": {
+            "minItems": 4,
+            "maxItems": 4
+          }
+        }
+      }
+    }
+  ]
+}
